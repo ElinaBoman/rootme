@@ -15,6 +15,10 @@ body {
     font-style: normal;;
 }
 
+#delivery-banner {
+    background-color: rgb(103, 141, 103);
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
