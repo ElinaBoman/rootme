@@ -17,13 +17,13 @@
                 Plants
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">All Plants</a>
-                <a href="" class="dropdown-item">Cuttings</a>
-                <a href="" class="dropdown-item">Climbing Plants</a>
-                <a href="" class="dropdown-item">Aroider</a>
-                <a href="" class="dropdown-item">Hoyas</a>
-                <a href="" class="dropdown-item">Philidendrons</a>
-                <a href="" class="dropdown-item">Rare Plants</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Plants</a>
+                <a href="{% url 'products' %}?category=cuttings" class="dropdown-item">Cuttings</a>
+                <a href="{% url 'products' %}?category=climbing_plants" class="dropdown-item">Climbing Plants</a>
+                <a href="{% url 'products' %}?category=aroids" class="dropdown-item">Aroider</a>
+                <a href="{% url 'products' %}?category=hoyas" class="dropdown-item">Hoyas</a>
+                <a href="{% url 'products' %}?category=philidendrons" class="dropdown-item">Philidendrons</a>
+                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons" class="dropdown-item">Rare Plants</a>
                 
             </div>
         </li>
@@ -33,9 +33,9 @@
                 Planters, Soil & Others
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Planters</a>
-                <a href="" class="dropdown-item">Soil & Fertilizer</a>
-                <a href="" class="dropdown-item">Beneficial Insects</a>
+                <a href="{% url 'products' %}?category=planters" class="dropdown-item">Planters</a>
+                <a href="{% url 'products' %}?category=soil_and_fertilizer" class="dropdown-item">Soil & Fertilizer</a>
+                <a href="{% url 'products' %}?category=beneficial_insects" class="dropdown-item">Beneficial Insects</a>
             </div>
         </li>
 
@@ -44,8 +44,8 @@
                 Last Chance
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Plants</a>
-                <a href="" class="dropdown-item">Others</a>
+                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons" class="dropdown-item">Plants</a>
+                <a href="{% url 'products' %}?category=planters,soil_and_fertilizer,beneficial_insects" class="dropdown-item">Others</a>
             </div>
         </li>
     </ul>
