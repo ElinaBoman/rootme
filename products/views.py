@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.db.models.functions import Lower
 # Imports search query, q will fetch product that has search in either name or description.
 from django.db.models import Q
 from .models import Product, Category
@@ -21,12 +22,14 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direcetion = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
+
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')

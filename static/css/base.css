@@ -77,10 +77,14 @@ body {
     z-index: -1;
 }
 
-a.category-badge > span.badge.hover {
+a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: white !important;
 }
+
+/* Footer */
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
