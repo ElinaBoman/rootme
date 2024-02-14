@@ -5,10 +5,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons,rare_plants" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -17,13 +16,13 @@
                 Plants
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Plants</a>
+                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons,rare_plants" class="dropdown-item">All Plants</a>
                 <a href="{% url 'products' %}?category=cuttings" class="dropdown-item">Cuttings</a>
                 <a href="{% url 'products' %}?category=climbing_plants" class="dropdown-item">Climbing Plants</a>
                 <a href="{% url 'products' %}?category=aroids" class="dropdown-item">Aroider</a>
                 <a href="{% url 'products' %}?category=hoyas" class="dropdown-item">Hoyas</a>
                 <a href="{% url 'products' %}?category=philidendrons" class="dropdown-item">Philidendrons</a>
-                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons" class="dropdown-item">Rare Plants</a>
+                <a href="{% url 'products' %}?category=rare_plants" class="dropdown-item">Rare Plants</a>
                 
             </div>
         </li>
@@ -44,8 +43,8 @@
                 Last Chance
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons" class="dropdown-item">Plants</a>
-                <a href="{% url 'products' %}?category=planters,soil_and_fertilizer,beneficial_insects" class="dropdown-item">Others</a>
+                <a href="{% url 'products' %}?category=last_chance_plants" class="dropdown-item">Plants</a>
+                <a href="{% url 'products' %}?category=last_chance_others" class="dropdown-item">Others</a>
             </div>
         </li>
     </ul>
