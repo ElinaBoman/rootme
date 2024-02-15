@@ -82,6 +82,19 @@ a.category-badge > span.badge:hover {
     color: white !important;
 }
 
+.back-to-top-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.back-to-top-link {
+    display: inline-block; 
+    cursor: pointer;
+    border: 1px solid black;
+}
 /* Footer */
 
 

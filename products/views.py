@@ -25,7 +25,7 @@ def all_products(request):
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
-                direcetion = request.GET['direction']
+                direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
@@ -43,7 +43,8 @@ def all_products(request):
                 return redirect(reverse('products'))
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-    current_sorting = f'{ sort}_{direction}'
+
+    current_sorting = f'{sort}_{direction}'
     #Context sends data stored in product key to template products.html
     context = {
         'products': products,
