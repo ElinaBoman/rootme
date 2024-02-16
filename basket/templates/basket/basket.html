@@ -24,7 +24,7 @@
             <div class="col">
                 {% if basket_items %}
                 <div class="table-responsive">
-                    <table class="table table-sm table-borderless w-75">
+                    <table class="table table-sm table-borderless">
                         <tr>
                                 <th class="py-3">Product information</th>
                                 <th class="py-3">Name:</th>
@@ -51,7 +51,30 @@
                                 <p class="my-0">{{ item.product.price}}</p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <form class="form update-form"action="" method="POST">
+                                   {% csrf_token %}
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn btn-black rounded-0"
+                                                    data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                    <span class="icon"><i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn btn-black rounded" data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <a class="update-link text-info" href="">Update</a>
+                                <a class="remove-link text-danger float-right" href="">Remove</a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">{{ item.product.price}}</p>
@@ -101,4 +124,26 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block postloadjs%}
+{{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+<script type="text/javascript">
+    $('.remove-link').click(function(e){
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    $('.remove-link').click(function(e){
+        var csrfToken = "{{ csrf_token }}"
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/basket/remove/${itemId}`;
+        var data = {'csrfmoddlewaretoken': csrfToken};
+        
+        $.post(url, data)
+        .done(function(){
+            location.reload();
+        })
+    })
+</script>
 {% endblock %}
