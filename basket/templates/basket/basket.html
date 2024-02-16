@@ -51,7 +51,7 @@
                                 <p class="my-0">{{ item.product.price}}</p>
                             </td>
                             <td class="py-3">
-                                <form class="form update-form"action="" method="POST">
+                                <form class="form update-form"action="{% url 'adjust_basket' item.item_id %}" method="POST">
                                    {% csrf_token %}
                                     <div class="form-group">
                                         <div class="input-group">
@@ -73,8 +73,8 @@
                                         </div>
                                     </div>
                                 </form>
-                                <a class="update-link text-info" href="">Update</a>
-                                <a class="remove-link text-danger float-right" href="">Remove</a>
+                                <a class="update-link text-info">Update</a>
+                                <a class="remove-link text-danger float-right">Remove</a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">{{ item.product.price}}</p>
@@ -129,7 +129,7 @@
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
 <script type="text/javascript">
-    $('.remove-link').click(function(e){
+    $('.update-link').click(function(e){
         var form = $(this).prev('.update-form');
         form.submit();
     })
