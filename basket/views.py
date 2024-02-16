@@ -10,8 +10,11 @@ def view_basket(request):
 
 def add_to_basket(request, item_id):
     """Add products to shopping basket"""
+   
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
+    print('redirect url'+ redirect_url)
+    print(request.path)
     basket = request.session.get('basket', {})
 
     if item_id in list(basket.keys()):
@@ -20,7 +23,6 @@ def add_to_basket(request, item_id):
         basket[item_id] = quantity
     
     request.session['basket'] = basket
-    print(request.session['basket'])
 
     return redirect(redirect_url)
 
