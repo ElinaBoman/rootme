@@ -24,7 +24,7 @@
             <div class="col">
                 {% if basket_items %}
                 <div class="table-responsive">
-                    <table class="table table-sm table-borderless">
+                    <table class="table table-sm table-borderless w-75">
                         <tr>
                                 <th class="py-3">Product information</th>
                                 <th class="py-3">Name:</th>
@@ -58,35 +58,35 @@
                             </td>
                         </tr>
                         {% endfor %}
-                        <!--Copied form Code Institute walkthrough project LINK-->
-                        <tr>
-                            <td colspan="5" class="pt-5 text-right">
-                                <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                                {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 text-danger">
-                                        You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
-                                    </p>
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colespan="5" class="text-right">
-                                <a href="{% url 'products' %}" class="btn border-black rounded-0 btn-lg">
-                                    <span>
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span>Back To Store</span>
-                                </a>
-                                <a href="" class="btn border-black rounded-0 btn-lg">Secure Checkout
-                                <span class="icon">
-                                    <i class="fa-solid fa-cash-register"></i>
-                                </span>
-                                </a>
-                            </td>
-                        </tr>
                     </table>
+                    <tr>
+                         <!--Copied form Code Institute walkthrough project LINK-->
+                        <td colspan="5" class="text-right w-auto">
+                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+                            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                            {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 text-danger">
+                                    You could get free delivery by spending just <strong>${{ free_delivery_delta }}</strong> more!
+                                </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colespan="5" class="text-right">
+                            <a href="{% url 'products' %}" class="btn border-black rounded-0 btn-lg">
+                                <span>
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span>Back To Store</span>
+                            </a>
+                            <a href="" class="btn border-black rounded-0 btn-lg">Secure Checkout
+                            <span class="icon">
+                                <i class="fa-solid fa-cash-register"></i>
+                            </span>
+                            </a>
+                        </td>
+                    </tr>
                 </div>
                 {% else %}
                 <p class="lead mb-5">You currently don't have any products in you basket.</p>
