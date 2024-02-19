@@ -43,8 +43,7 @@ def basket_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'total_sum': total_sum
     }
-
-    print(context)
+    
 
     return context 
 
