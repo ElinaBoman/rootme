@@ -110,6 +110,19 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Toast css */
+
+.message-container {
+    z-index: 99;
+    position: fixed;
+    top: 80px;
+    left: 15px
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
 /* Footer */
 
 
