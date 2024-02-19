@@ -8,6 +8,41 @@
         </button>
     </div>
     <div class="toast-body bg-white">
-        {{ message }}        
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3"> 
+            </div>
+        </div>
+         {% if total_sum %}
+         <p class="logo-font bg-white text-black py-1">Your Basket {{ product.count }}</p>
+        <div class="basket-notifivation-wrapper">
+        {% endif %}
+            {% for item in basket_items %}
+            <div class="row">
+                <div class="col-3 my-1">
+                    <img class="w-100" src="{{ item.product.image.url }}">
+                </div>
+                <div class="col-9">
+                    <p class="my-0">Product Name: {{ item.product.name }}</p>
+                    <p class="my-0">Quantity: {{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col">
+                    <p class="mt-3 mb-1 text-black">
+                        Total {% if free_delivery > 0 %} (Exc. delivery) {% endif %}:
+                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                    </p>
+                    {% if free_delivery > 0 %}
+                    <p class="mb-0 p-2 bg-warning text-black text-center">Spend ${{ free_delivery}} more to get a free delivery!</p>
+                    {% endif %}
+                    <a class="btn btn-black rounded-0 btn-block" href="{% url 'view_basket' %}">Go to Checkout! </a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
