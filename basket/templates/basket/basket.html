@@ -74,7 +74,7 @@
                                     </div>
                                 </form>
                                 <a class="update-link text-info">Update</a>
-                                <a class="remove-link text-danger float-right">Remove</a>
+                                <a class="remove-link text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">{{ item.product.price}}</p>
@@ -135,10 +135,10 @@
     })
 
     $('.remove-link').click(function(e){
-        var csrfToken = "{{ csrf_token }}"
+        var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/basket/remove/${itemId}`;
-        var data = {'csrfmoddlewaretoken': csrfToken};
+        var url = `/basket/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken};
         
         $.post(url, data)
         .done(function(){

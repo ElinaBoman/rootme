@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
+
+
 def view_basket(request):
     """
     View to return basket.html
@@ -38,9 +40,13 @@ def adjust_basket(request, item_id):
 
 
 def remove_from_basket(request, item_id):
-    basket = request.session.get('basket', {})
-    basket.pop(item_id)
-    return HttpResponse(status=200)
+    try:
+        basket = request.session.get('basket', {})
+        basket.pop(item_id)
+        request.session['basket'] = basket
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)
 
 
 
