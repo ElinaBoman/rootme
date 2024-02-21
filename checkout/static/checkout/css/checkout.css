@@ -49,7 +49,7 @@ https://github.com/Code-Institute-Solutions/boutique_ado_v1
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(103, 141, 103);
+  background: rgb(103, 141, 103, .85);
   z-index: 9999;
 }
 
