@@ -5,7 +5,6 @@ from django.conf import settings
 
 from .models import Order, OrderLineItem
 from products.models import Product
-from profiles.models import UserProfile
 import stripe
 import json
 import time
@@ -23,4 +22,20 @@ class StripeWH_Handler:
         """
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
+            status=200)
+    
+    def handle_payment_intent_succeeded(self, event):
+        """
+        Handle the payment_intent.succeeded webhook from Stripe
+        """
+        return HttpResponse(
+            content=f'Unhandled webhook received: {event["type"]}',
+            status=200)
+
+    def handle_payment_intent_payment_failed(self, event):
+        """
+        Handle the payment_intent.payment_failed webhook from Stripe
+        """
+        return HttpResponse(
+            content=f'Webhook received: {event["type"]}',
             status=200)
