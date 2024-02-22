@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from .models import Order, OrderLineItem
-from .products import Product
+from products.models import Product
 import json
 import time
+import stripe
 
 class StripeWH_Handler:
     """
@@ -27,7 +28,10 @@ class StripeWH_Handler:
         pid = intent.id
         basket = intent.metadata.basket
         save_info = intent.metadata.save_info
-
+        
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
         billing_details = stripe_charge.billing_details 
         shipping_details = intent.shipping
         total_sum = round(stripe_charge.amount / 100, 2) 
@@ -43,9 +47,9 @@ class StripeWH_Handler:
             try:
                 order = Order.objects.get(
                     user_name__iexact=shipping_details.name,
-                    email__iexact=shipping_details.email,
-                    mobile_number__iexact=shipping_details.mobile_number,
-                    country__iexact=shipping_details.country,
+                    email__iexact=billing_details.email,
+                    mobile_number__iexact=shipping_details.phone,
+                    country__iexact=shipping_details.address.country,
                     postalcode__iexact=shipping_details.postalcode,
                     city__iexact=shipping_details.city,
                     street_address1__iexact=shipping_details.street_address1,
