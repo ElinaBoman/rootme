@@ -35,12 +35,11 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details 
         shipping_details = intent.shipping
         total_sum = round(stripe_charge.amount / 100, 2) 
-
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-
+        print(shipping_details)
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -48,14 +47,14 @@ class StripeWH_Handler:
                 order = Order.objects.get(
                     user_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
-                    mobile_number__iexact=shipping_details.phone,
+                    mobile_number__iexact=billing_details.phone,
                     country__iexact=shipping_details.address.country,
-                    postalcode__iexact=shipping_details.postalcode,
-                    city__iexact=shipping_details.city,
-                    street_address1__iexact=shipping_details.street_address1,
-                    street_address2__iexact=shipping_details.street_address2,
-                    county__iexact=shipping_details.state,
-                    total_sum__iexact=shipping_details.total_sum,
+                    postalcode__iexact=shipping_details.address.postal_code,
+                    city__iexact=shipping_details.address.city,
+                    street_address1__iexact=shipping_details.address.line1,
+                    street_address2__iexact=shipping_details.address.line2,
+                    county__iexact=shipping_details.address.state,
+                    total_sum__iexact=total_sum,
                     original_basket=basket,
                     stripe_pid=pid,
                 )
@@ -73,14 +72,14 @@ class StripeWH_Handler:
                 try:
                     order = Order.objects.create(
                         user_name=shipping_details.name,
-                        email=shipping_details.email,
-                        mobile_number=shipping_details.mobile_number,
-                        country=shipping_details.country,
-                        postalcode=shipping_details.postalcode,
-                        city=shipping_details.city,
-                        street_address1=shipping_details.street_address1,
-                        street_address2=shipping_details.street_address2,
-                        county=shipping_details.state,
+                        email=billing_details.email,
+                        mobile_number=billing_details.phone,
+                        country=shipping_details.address.country,
+                        postalcode=shipping_details.address.postal_code,
+                        city=shipping_details.address.city,
+                        street_address1=shipping_details.address.line1,
+                        street_address2=shipping_details.address.line2,
+                        county=shipping_details.address.state,
                         original_basket=basket,
                         stripe_pid=pid,
                     )

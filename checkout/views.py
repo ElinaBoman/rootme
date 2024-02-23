@@ -15,6 +15,11 @@ if os.path.exists("env.py"):
 
 @require_POST
 def cache_checkout_data(request):
+    """"
+    Store customer meta data. Basket is the products the customer has palced in the basket
+    save_info for customer who chooses to save their info. This would be shipping and billing details.
+    username is saved to store previous purchases realated to a customer
+    """
     try:
         # Paymentintent id
         pid = request.POST.get('client_secret').split('_secret')[0]
@@ -34,10 +39,27 @@ def cache_checkout_data(request):
 def checkout(request):
     """
     View to return checkout.html
+    handles checkout process. First we get the stipe keys.
     """
     stripe_public_key = os.environ.get('STRIPE_PUBLIC_KEY')
     stripe_secret_key = os.environ.get('STRIPE_SECRET_KEY')
+    """
+    Here we check if the method is Post, if it is we get the basket from the session,
+    then we create a form  with user information that we store in form_data.
+    OrderForm will take the form_data and then we check if the data is valid. If the form is valid
+    it will be saved to the database. Then we extract information the paymentid from the POST data.
+    Then we create a new order instance but we don't save it commit=False.
+    We save the the stripe payment instance id and the basket information.
+    If for some reason a product in the basket does not exist there will be a message explaining this to
+    the customer. The order will be deleted and customer will be redirected to the basket view.
+    If everything is ok we save the request to save user information for future payments.
+    If something is wrong with the form there will be a error message. 
+    If there is a GET request (this would be the first time a user loads checkout)
+    we will get the basket from the session, is basket is empty show error message and user is redirected to product page.
+    If there are products in basket we will calculate the total sum and create a stripe payment intention with the amount and 
+    currency. 
 
+    """
     if request.method == 'POST':
         basket = request.session.get('basket', {})
         form_data = {
@@ -114,7 +136,9 @@ def checkout_success(request, order_id):
     Handle successful checkouts
     """
     save_info = request.session.get('save_info')
+    print('save_info', save_info)
     order = get_object_or_404(Order, order_id=order_id)
+    print('order_id', order_id)
     messages.success(request, f'Order has been successfully processed!\
         Your order number is {order_id}. A confirmation email \
         will be sent to {order.email}')
@@ -126,5 +150,6 @@ def checkout_success(request, order_id):
     context = {
         'order': order,
     }
+
 
     return render(request, template, context)

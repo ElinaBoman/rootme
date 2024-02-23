@@ -2,7 +2,7 @@ from django.db import models
 import uuid
 from django.conf import settings
 from django.db.models import Sum
-
+from django_countries.fields import CountryField
 from products.models import Product
 
 
@@ -11,7 +11,7 @@ class Order(models.Model):
     user_name = models.CharField(max_length=60, null=False, blank=False)
     email = models.EmailField(max_length=60, null=False, blank=False)
     mobile_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=30, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postalcode = models.CharField(max_length=30, null=False, blank=False)
     city = models.CharField(max_length=40, null=False, blank=False)
     street_address1 = models.CharField(max_length=80, null=False, blank=False)
