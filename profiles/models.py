@@ -25,5 +25,5 @@ class UserProfile(models.Model):
         """
         if created:
             UserProfile.objects.create(user=instance)
-        # Existing users: just save profile
-        instance.userprofile.save
+            #Existing users: just save profile
+            instance.userprofile.save()
