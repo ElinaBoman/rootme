@@ -23,9 +23,19 @@
 ## Future Features
 
 ## Technologies Used
-## Languages Used
-## Technologies and Programs Used:
-## Frameworks Libraries and Programs Used
+### Languages Used
+- HTML
+- CSS
+- JavaScript
+- Python
+
+### Framework and Programs Used:
+- Bootstrap
+- Django
+- Django-allauth
+
+### Libraries Used
+- Pillow
 ## Code Validation
 ### HTML valiation
 ### CSS validation

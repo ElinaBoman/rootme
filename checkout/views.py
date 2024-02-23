@@ -75,6 +75,7 @@ def checkout(request):
 
         } 
         order_form = OrderForm(form_data)
+        print(order_form)
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -138,7 +139,6 @@ def checkout_success(request, order_id):
     save_info = request.session.get('save_info')
     print('save_info', save_info)
     order = get_object_or_404(Order, order_id=order_id)
-    print('order_id', order_id)
     messages.success(request, f'Order has been successfully processed!\
         Your order number is {order_id}. A confirmation email \
         will be sent to {order.email}')
