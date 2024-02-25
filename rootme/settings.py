@@ -178,6 +178,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+DEFAULT_FROM_EMAIL = 'rootme@example.com'
 # Stripe
 STRIPE_CURRENCY = 'usd'
 FREE_DELIVERY_THRESHOLD = 30

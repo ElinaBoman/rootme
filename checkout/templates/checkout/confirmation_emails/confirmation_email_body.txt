@@ -1,0 +1,24 @@
+Hello {{ order.user_name }}!
+
+This is a confirmation of your order at Root|Me, order information can be found below.
+
+Order Number: {{order.order_id }}
+Order Date: {{ order.date }}
+Order Total: {{ order.order_total }}
+Order Delivery: {{ order.delivery_fee }}
+Grand Total: {{ order.total_sum }}
+
+Shipping information:
+
+Adress
+{{ order.street_address1 }}
+{{ order.city }}
+{{ order.postalcode }}
+{{ order.country }}
+
+If you have any questions, contact us at {{ contact_email }}.
+
+Thanks for you order! 
+
+Best regards
+Root|Me 
