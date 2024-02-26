@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-8d8umwuh0rjo5!xg)#lta83i=mte*02vu0(a8*8*eawh8(sowh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-elinaboman-rootme-b8p8j873314.ws-eu108.gitpod.io']
+ALLOWED_HOSTS = ['elinaBoman-rootme.herokuapp.com', '8000-elinaboman-rootme-b8p8j873314.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -122,13 +122,17 @@ WSGI_APPLICATION = 'rootme.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-   'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-       'NAME': BASE_DIR / 'db.sqlite3',
-   }
-}
+if 'DATABASE_URL in os.environ':
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation
