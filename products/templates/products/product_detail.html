@@ -44,6 +44,12 @@
                             </a>
                         </p>
                         {% endif %}
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a class="info" href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a  class="danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                        {% endif %}
                         <p class="mt-1">{{ product.description|safe }}</p>
                         <form action="{% url 'add_to_basket' product.id %}" class="form" method="POST">
                             {% csrf_token %}
