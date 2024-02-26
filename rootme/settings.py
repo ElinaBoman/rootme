@@ -215,6 +215,7 @@ STRIPE_CURRENCY = 'usd'
 FREE_DELIVERY_THRESHOLD = 30
 STANDARD_DELIVERY_PERCENTAGE = 15
 
+
 # Email
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
