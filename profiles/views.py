@@ -10,7 +10,6 @@ def profile_view(request):
     """
     Display user profiles.
     """
-    
     profile = get_object_or_404(UserProfile, user=request.user)
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
