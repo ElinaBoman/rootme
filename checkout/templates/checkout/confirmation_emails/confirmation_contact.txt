@@ -1,0 +1,8 @@
+Hello {{ order.user_name }}!
+
+Thank you for reaching out!
+We will respond shortly.
+
+
+Best regards
+Root|Me 
