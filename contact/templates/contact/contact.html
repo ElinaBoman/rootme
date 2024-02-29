@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
-{% endblock %}
-
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
@@ -25,16 +20,120 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-lg-6">
-            
-            <form class="mt-3" action="{% url 'contact_view' %}" method="POST" id="contact-forn">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button class="btn btn-black rounded-0 float-right" type="submit" >Send</button>
-            </form>
-        
-        </div>
-    </div>
-</div>
-{% endblock %}
+        <div class="col-12 col-lg-6 mt-3">
+            <h5>Commonly Asked Questions:</h5>
+            <p class="text-muted">If you are not able to find the answer below,
+                feel free to contact us! <br> 
+                We answer within 1-2 business days.</p>
+            <div id="accordion" role="tablist">
+                <div class="card border-0">
+                    <div class="card-header bg-white" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" class="text-muted" href="#collapse1" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                How long does shipping take?
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="collapse1" class="collapse text-black" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="card-body">
+                            Shipping times vary depending on your location and the specific items ordered. Typically,
+                            orders are processed within 1-2 business days, and standard shipping within the continental
+                            US takes 3-5 business days.
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion" role="tablist">
+                    <div class="card border-0">
+                        <div class="card-header text-black bg-white" role="tab" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" class="text-muted" href="#collapse2" aria-expanded="true"
+                                    aria-controls="collapse2">
+                                    What if my plant arrives damaged?
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapse2" class="collapse text-black" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="card-body">
+                                We take great care in packaging our plants to ensure they arrive in optimal condition.
+                                In the rare event that your plant arrives damaged, please contact our customer service
+                                team with a photo of the plant within 24 hours of delivery, and we'll be happy to assist
+                                you with a replacement or refund.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion" role="tablist">
+                        <div class="card border-0">
+                            <div class="card-header text-black bg-white" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" class="text-muted" href="#collapse2" aria-expanded="true"
+                                        aria-controls="collapse2">
+                                        Do you offer gift wrapping services?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse text-black" role="tabpanel"
+                                aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    Yes, we offer gift wrapping services for a small additional fee. Simply select the
+                                    gift wrapping option at checkout, and we'll make sure your order is beautifully
+                                    wrapped and ready to be presented.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion" role="tablist">
+                        <div class="card border-0">
+                            <div class="card-header text-black bg-white" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" class="text-muted" href="#collapse2" aria-expanded="true"
+                                        aria-controls="collapse2">
+                                        Do you offer gift wrapping services?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse text-black" role="tabpanel"
+                                aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    Yes, we offer gift wrapping services for a small additional fee. Simply select the
+                                    gift wrapping option at checkout, and we'll make sure your order is beautifully
+                                    wrapped and ready to be presented.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="accordion" role="tablist">
+                        <div class="card border-0">
+                            <div class="card-header text-black bg-white" role="tab" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" class="text-muted" href="#collapse2" aria-expanded="true"
+                                        aria-controls="collapse2">
+                                        Do you offer gift wrapping services?
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse text-black" role="tabpanel"
+                                aria-labelledby="headingOne">
+                                <div class="card-body">
+                                    Yes, we offer gift wrapping services for a small additional fee. Simply select the
+                                    gift wrapping option at checkout, and we'll make sure your order is beautifully
+                                    wrapped and ready to be presented.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+
+                <div class="col-12 col-lg-6">
+                    <form class="mt-3" action="{% url 'contact_view' %}" method="POST" id="contact-forn">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="btn btn-black  float-right" type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
