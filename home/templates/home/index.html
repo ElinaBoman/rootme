@@ -11,17 +11,36 @@
 </div>
 {% endblock %}
 {% block content %}
- <div class="container h-100">
+<div class="container h-100 mt-3">
     <div class="row h-100">
         <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">Spring is here!</h1>
+            <h1 class="display-4 logo-font text-black mt-3">Spring is here!</h1>
             <div class="my-5">
                 <h4>
                     <a href="{% url 'products' %}" class="shop-button btn btn-lg py-3 text-uppercase">Shop now!</a>
                 </h4>
             </div>
-
         </div>
+        <section>
+            <h4 class="text-uppercase">Reviews:</h4>
+            <div class="col-sm-12 col-md-6">
+                <blockquote class="blockquote">
+                    <p class="small">Thanks to Root|Me, I've created my own little green oasis indoors. I'm so pleased with my new
+                        plants!
+                    </p>
+                    <footer class="blockquote-footer small">Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                </blockquote>
+            </div>
+            <div class="col-sm-12 col-md-6 pb-3">
+                <blockquote class="blockquote">
+                    <p class="small">Root|Me's products make the perfect gift! Their selection of indoor plants and accessories adds a
+                        touch of greenery and joy to any space. I've gifted their plants to friends and family, and
+                        they've
+                        been thrilled every time. Root|Me truly offers gifts that keep on growing</p>
+                    <footer class="blockquote-footer small">Jane Doe on <cite title="Twitter">Twitter</cite></footer>
+                </blockquote>
+            </div>
+        </section>
     </div>
- </div>
+</div>
 {% endblock %}

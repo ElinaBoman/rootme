@@ -75,8 +75,11 @@
                                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                             </a>
                                         </p>
-                                        {% endif %}
-                                        {% if request.user.is_superuser %}
+                                        <form action="{% url 'add_product_to_wishlist' product.id %}" class="form" method="POST">
+                                            {% csrf_token %}
+                                            <Button type="submit" onclick="Toggle1()" href="" id="wishbtn" class="btn"><i class="fas fa-heart"></i></Button>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
                                         <small class="ml-3">
                                             <a class="info" href="{% url 'edit_product' product.id %}">Edit |</a>
                                             <a  class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
@@ -148,5 +151,17 @@
                 window.location.replace(currentUrl);
             }
         })
+    </script>
+    <script type="text/javascript">
+        var btnvar1 = document.getElementById('wishbtn');
+    
+    function Toggle1(){
+        if (btnvar1.style.color =="red") {
+            btnvar1.style.color = "grey"
+        }
+        else{
+            btnvar1.style.color = "red"
+        }
+    }
     </script>
  {% endblock %}
