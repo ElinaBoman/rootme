@@ -1,0 +1,14 @@
+
+#wish_quantity = int(request.POST.get('quantity'))
+redirect_url = request.POST.get('redirect_url')
+#wishlist = request.session.get('wish_product', {})
+
+if item_id in list(wishlist.keys()):
+    wishlist[item_id] += quantity
+    messages.success(request, f'Updated {wish_product.name} quantity to {wishlist[item_id]}')
+else:
+    wishlist[item_id] = quantity
+    messages.success(request, f'Added {wish_product.name} to Wishlist!')
+request.session['wishlist'] = wishlist
+
+return redirect(redirect_url)
