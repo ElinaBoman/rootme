@@ -70,11 +70,13 @@
                                     <div class="col">
                                         <div class="d-flex">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                            {% if request.user.is_authenticated %}
                                             <form action="{% url 'add_product_to_wishlist' product.id %}" id="wishform" class="form" method="POST" enctype="multipart/form-data">
                                                 {% csrf_token %}
                                                 <Button type="submit" onclick="Toggle1()" href="" id="wishbtn" class="btn"><i class="fas fa-heart"></i></Button>
                                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                             </form>
+                                            {% endif %}
                                         </div>
                                         {% if product.category %}
                                         <p class="small mt-1 mb-0">

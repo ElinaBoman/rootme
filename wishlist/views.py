@@ -28,7 +28,7 @@ def add_product_to_wishlist(request, product_id):
         messages.error(request, f'Product {product.name} already exists in your wishlist!')
     else:
         wishlist_item = WishList.objects.create(
-            user_profile=user_profile,
+            user=user_profile,
             product=product
         )
         messages.success(request,f'Product {wishlist_item.product.name} has been added to wishlist successfully!')

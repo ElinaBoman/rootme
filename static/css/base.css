@@ -10,8 +10,9 @@ body {
 }
 
 .title {
-    font-family: "Protest Revolution", sans-serif !important;
-    font-weight: 400;
+    font-family: "Protest Revolution", sans-serif !important; 
+    font-weight: 600;
+    font-size: 5rem;
     font-style: normal;;
 }
 
