@@ -5,7 +5,9 @@ from django.db.models.functions import Lower
 # Imports search query, q will fetch product that has search in either name or description.
 from django.db.models import Q
 from .models import Product, Category
-from .forms import ProductForm 
+from .forms import ProductForm
+
+
 def all_products(request):
     """
     View to return products.html
