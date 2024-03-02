@@ -30,7 +30,20 @@ def add_product_to_wishlist(request, product_id):
     else:
         wishlist_item = WishList.objects.create(
             user=user_profile,
-            product=product
+            product=wish_product
         )
         messages.success(request,f'Product {wishlist_item.product.name} has been added to wishlist successfully!')
     return redirect(reverse('products'))
+
+def delete_product_from_wishlist(request, product_id):
+
+    
+    user_profile = UserProfile.objects.get(user=request.user)
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist_item = WishList.objects.get(user=user_profile, product=product)
+   
+    
+    wishlist_item.delete()
+    messages.success(request, f' {product.name} has been removed from wishlist!')
+    return redirect('wishlist_view')
+    
