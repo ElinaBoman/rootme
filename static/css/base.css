@@ -43,7 +43,7 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
+.btn-green {
     background: rgb(63, 120, 87);
     color: white;
 }
@@ -55,9 +55,9 @@ input[name='q']::placeholder {
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-green:hover,
+.btn-green:active,
+.btn-green:focus {
     background: #222;
     color: white;
 }
@@ -275,12 +275,12 @@ a.category-badge > span.badge:hover {
         }
 
         .btn.btn-outline-black,
-        .btn.btn-black {
+        .btn.btn-green {
             padding: .375rem .375rem;
         }
 
         .btn.btn-outline-black.btn-lg,
-        .btn.btn-black.btn-lg {
+        .btn.btn-green.btn-lg {
             padding: .375rem .375rem;
             font-size: .75rem;
         }

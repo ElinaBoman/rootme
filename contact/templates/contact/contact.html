@@ -137,7 +137,7 @@
             <form class="mt-3" action="{% url 'contact_view' %}" method="POST" id="contact-forn">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black  float-right" type="submit">Send</button>
+                <button class="btn btn-green  float-right" type="submit">Send</button>
             </form>
         </div>
     </div>
