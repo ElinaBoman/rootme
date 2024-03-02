@@ -202,6 +202,31 @@ a.category-badge > span.badge:hover {
 
 /* Footer */
 
+.main-footer{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(184, 199, 184, 0.13);
+    z-index: 99;
+    color: #000;
+}
+
+.footer-content {
+    bottom: 0%;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.main-footer svg {
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+}
+
 /* Allauth tamplates */
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
@@ -221,11 +246,34 @@ a.category-badge > span.badge:hover {
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
+
+@media (min-width: 500px) {
+    .footer-content {
+      bottom: 0%;
+      margin-top: 50px;
+      color: darkslategray;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
   }
+  @media (min-width: 500px) {
+  .footer-content {
+    bottom: 0%;
+    margin-top: 50px;
+    color: darkslategray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
   
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
@@ -240,6 +288,7 @@ a.category-badge > span.badge:hover {
       .header-container {
           padding-top: 164px;
       }
+
 }
 
       /* Pad the top a bit when navbar is collapsed on mobile, copied from Code Institute walkthrough */
@@ -289,3 +338,4 @@ a.category-badge > span.badge:hover {
             padding: .25rem .5rem !important;
         }
     }
+
