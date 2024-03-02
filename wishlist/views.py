@@ -11,6 +11,7 @@ def wishlist_view(request):
     """
     user_profile = UserProfile.objects.get(user=request.user)
     user_wishlist = WishList.objects.filter(user=user_profile)
+    print('request', request.user)
     context = {
         'user_wishlist' : user_wishlist
     }
@@ -21,15 +22,15 @@ def wishlist_view(request):
 
 def add_product_to_wishlist(request, product_id):
 
-    product = get_object_or_404(Product, pk=product_id)
+    wish_product = get_object_or_404(Product, pk=product_id)
     user_profile = UserProfile.objects.get(user=request.user)
     
-    if WishList.objects.filter(user=user_profile, product=product).exists():
-        messages.error(request, f'Product {product.name} already exists in your wishlist!')
+    if WishList.objects.filter(user=user_profile, product=wish_product).exists():
+        messages.error(request, f'Product {wish_product.name} already exists in your wishlist!')
     else:
         wishlist_item = WishList.objects.create(
             user=user_profile,
             product=product
         )
         messages.success(request,f'Product {wishlist_item.product.name} has been added to wishlist successfully!')
-    return redirect(reverse('wishlist_view'))
+    return redirect(reverse('products'))

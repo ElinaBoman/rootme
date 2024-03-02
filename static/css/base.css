@@ -44,7 +44,7 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: rgb(63, 120, 87);
     color: white;
 }
 
@@ -253,7 +253,7 @@ a.category-badge > span.badge:hover {
         }
     
 
-        .display-4.logo-font.text-black {
+        .logo-font.text-black {
             font-size: 2rem;
         }
 
@@ -274,13 +274,13 @@ a.category-badge > span.badge:hover {
             font-size: 0.9rem;
         }
 
-        .btn.btn-outline-black.,
-        .btn.btn-black. {
+        .btn.btn-outline-black,
+        .btn.btn-black {
             padding: .375rem .375rem;
         }
 
-        .btn.btn-outline-black..btn-lg,
-        .btn.btn-black..btn-lg {
+        .btn.btn-outline-black.btn-lg,
+        .btn.btn-black.btn-lg {
             padding: .375rem .375rem;
             font-size: .75rem;
         }
