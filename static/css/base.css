@@ -46,6 +46,7 @@ body {
 .btn-green {
     background: rgb(63, 120, 87);
     color: white;
+    border: 1px solid black;
 }
 
 input[name='q']::placeholder {

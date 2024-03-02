@@ -60,3 +60,6 @@
 ## Credits
 
 Heart button https://codemmit.com/likeBtn
+https://getwaves.io/ waves creation footer
+https://rgbacolorpicker.com/ color picker
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container mt-3">
     <div class="row">
         <div class="col"></div>
     </div>
@@ -13,11 +13,11 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col text-center">
                 <h2 class="logo-font">Products</h2>
                 {% for current in current_categories %}
                 <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ current.name }}">
-                    <span class="p-2 mt-2 badge badge-white text-black border border-black ">{{ current.friendly_name }}</span>
+                    <span class="p-2 badge badge-white text-black border border-black ">{{ current.friendly_name }}</span>
                 </a>
                 {% endfor %}
                 <hr class="w-50 mb-1">
@@ -28,7 +28,7 @@
         -->
         <div class="row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
+                <div class="row mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm  border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -160,11 +160,11 @@
         var btnvar1 = document.getElementById('wishbtn');
     
     function Toggle1(){
-        if (btnvar1.style.color =="red") {
+        if (btnvar1.style.color =="white") {
             btnvar1.style.color = "grey"
         }
         else{
-            btnvar1.style.color = "red"
+            btnvar1.style.color = "white"
         }
     }
     </script>
