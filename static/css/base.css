@@ -131,8 +131,6 @@ a.category-badge > span.badge:hover {
 }
 
 
-
-
 /* basket.html */
 
 .img-sizing-checkout {
@@ -202,34 +200,13 @@ a.category-badge > span.badge:hover {
 }
 
 /* Footer */
-
-.main-footer{
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(184, 199, 184, 0.13);
-    display: flex;
-    z-index: 99;
-    color: #000;
-    position: relative;
-}
-
-.footer-content {
-    bottom: 0%;
-    margin-top: 50px;
-    color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 100;
-    position: relative;
-}
-
 .main-footer svg {
     z-index: -1;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    position: sticky; 
 }
 
 /* Allauth tamplates */
@@ -252,22 +229,6 @@ a.category-badge > span.badge:hover {
 
 /* Slightly larger container on xl screens */
 
-@media (min-width: 500px) {
-    .footer-content {
-      bottom: 0%;
-      margin-top: 50px;
-      color: darkslategray;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 30px;
-    }
-  }
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-  }
   @media (min-width: 500px) {
   .footer-content {
     bottom: 0%;
@@ -277,6 +238,8 @@ a.category-badge > span.badge:hover {
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+    position: absolute;
+
   }
 }
   
@@ -290,22 +253,10 @@ a.category-badge > span.badge:hover {
           z-index: 1030;
       }
   
-      .header-container {
-          padding-top: 164px;
-      }
-
 }
 
       /* Pad the top a bit when navbar is collapsed on mobile, copied from Code Institute walkthrough */
     @media (max-width: 991px) {
-        .header-container {
-            padding-top: 116px;
-        }
-
-        body {
-            height: calc(100vh - 116px);
-        }
-    
 
         .logo-font.text-black {
             font-size: 2rem;
