@@ -16,6 +16,7 @@ body {
     font-style: normal;;
 }
 
+
 #delivery-banner {
     background-color: rgb(103, 141, 103);
 }
@@ -27,10 +28,6 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
 }
 
 .main-logo-link {
@@ -260,6 +257,7 @@ a.category-badge > span.badge:hover {
 
         .nav-link {
             padding: 0.15rem;
+            font-weight: 200;
         }
 
         .nav-link i.fa-lg {
