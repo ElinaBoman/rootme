@@ -200,13 +200,9 @@ a.category-badge > span.badge:hover {
 }
 
 /* Footer */
-.main-footer svg {
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    position: sticky; 
+.footer-main {
+    background-color: rgba(103, 141, 103);
+    
 }
 
 /* Allauth tamplates */
