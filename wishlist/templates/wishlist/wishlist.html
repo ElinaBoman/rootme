@@ -1,68 +1,55 @@
 {% extends 'base.html' %}
-
 {% load static %}
+{% load basket_tools %}
 
-{% block title %}WishList{% endblock %}
 {% block page_header %}
-
 <div class="container">
     <div class="row">
         <div class="col"></div>
     </div>
 </div>
 {% endblock %}
+
 {% block content %}
 <div class="overlay"></div>
+
 <div class="container">
+    <h2 class="ml-5 mt-3">My Wishlist</h2>
+    <hr class="col-lg-10">
+    
     <div class="row">
-        <div class="col-12 col-md-6 mt-3 mr-md-2">
-            <hr>
-            <h2 class="logo-font mt-3">My Wishlist</h2>
-            <hr>
-        </div>
-        <div class="row p-2 mb-4 m-2">
-            <div class="col-12">
-                {% if user_wishlist %}
-                <ul class="list-group">
-                    {% for item in user_wishlist %}
-                    <li class="list-group-item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-2 col-sm-4">
-                                <a href="{% url 'product_detail' item.product.id %}">
-                                    {% if item.product.image %}
-                                    <img class="w-100 wishlist-prod" src="{{ item.product.image.url }}"
-                                        alt="{{ item.product.name }}">
-                                    {% else %}
-                                    <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png"
-                                        alt="{{ item.product.name }}">
-                                    {% endif %}
-                                </a>
-                            </div>
-                            <div class="col-lg-6 col-sm-4 text-left">
-                                <p class="my-0">{{ item.product.name }}</p>
-                            </div>
-                            <div class="col-lg-4 col-sm-4">
-                                <a href="{% url 'delete_product_from_wishlist' item.product_id %}" class="wishlist-delete">
-                                    <i class="fas fa-trash wishlist-icon"></i> Remove
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+        {% if user_wishlist %}
+            {% for item in user_wishlist %}
+            <div class="col-12 col-md-4 text-center">
+                {% if item.product.image %}
+                    <img class="w-100 col-lg-5 wishlist-prod" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                 {% else %}
-                <div class="col-12 text-center my-5">
-                    <p class="p-txt">Your wishlist is empty.</p>
-                </div>
+                    <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ item.product.name }}">
                 {% endif %}
             </div>
-        </div>
+            <div class="col-12 col-md-4">
+                <p><strong>Product Information:</strong></p>
+                <p class="text-muted">Name: {{ item.product.name }}</p>
+                <p class="text-muted">Price: {{ item.product.price }}</p>
+            </div>
+            <div class="col-12 col-md-4 text-center">
+                <a href="{% url 'delete_product_from_wishlist' item.product_id %}">
+                    <i class="fas fa-trash wishlist-icon"></i> Remove
+                </a>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-12 text-center">
+                <h3>Your wishlist is empty.</h3>
+                <a href="{% url 'products' %}" class="btn btn-green btn-lg mt-3 float-right">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Let's go shopping!</span>
+                </a>
+            </div>
+        {% endif %}
     </div>
+</div>
 
-    {% endblock %}
-
-    {% block postloadjs%}
-    {{ block.super }}
-    {% include 'products/includes/quantity_input_script.html' %}
-
-    {% endblock %}
+{% endblock %}
