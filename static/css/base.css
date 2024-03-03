@@ -211,6 +211,7 @@ a.category-badge > span.badge:hover {
     display: flex;
     z-index: 99;
     color: #000;
+    position: relative;
 }
 
 .footer-content {
@@ -221,6 +222,7 @@ a.category-badge > span.badge:hover {
     flex-direction: column;
     justify-content: center;
     z-index: 100;
+    position: relative;
 }
 
 .main-footer svg {
