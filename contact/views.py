@@ -10,9 +10,8 @@ from django.conf import settings
 
 
 # Create your views here.
-def _send_confirmation_email():
+def _send_confirmation_email(customer_email):
     """Send confirmation email to customer"""
-    customer_email = Contact.contact_email
     subject = 'Q&A'
     body = 'Thank you for reaching out, we will be in contact with you shortly!\nBest regards,\nRoot|Me'
     send_mail(
@@ -29,10 +28,12 @@ def contact_view(request):
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)
+        print('form', form)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been sent, we will contact you shortly!')
-            _send_confirmation_email()
+            customer_email = form.cleaned_data['contact_email']
+            _send_confirmation_email(customer_email)
             return redirect('contact_view')
 
         else:
