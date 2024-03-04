@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['rootme-fcab110145ab.herokuapp.com', '8000-elinaboman-rootme-b8p8j873314.ws-eu108.gitpod.io']
 
@@ -211,7 +211,7 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-DEFAULT_FROM_EMAIL = 'rootme@example.com'
+
 # Stripe
 STRIPE_CURRENCY = 'usd'
 FREE_DELIVERY_THRESHOLD = 30
