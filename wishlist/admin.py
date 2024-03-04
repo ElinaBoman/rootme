@@ -4,3 +4,4 @@ from .models import WishList
 # Register your models here.
 
 admin.site.register(WishList)
+

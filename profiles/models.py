@@ -4,7 +4,10 @@ from django_countries.fields import CountryField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-
+"""
+The UserProfile model has been created 
+with Code Institute walktrough
+"""
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_mobile_number = models.CharField(max_length=20, null=True, blank=True)
