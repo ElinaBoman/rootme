@@ -63,7 +63,6 @@ def checkout(request):
 
     """
     if request.method == 'POST':
-        print(f'request.POST : {request.POST}')
         basket = request.session.get('basket', {})
         form_data = {
             'user_name': request.POST['user_name'],
@@ -80,7 +79,6 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             cleaned_data = order_form.cleaned_data
-            print('CLEANED', cleaned_data)
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
@@ -172,6 +170,7 @@ def checkout_success(request, order_id):
         if save_info:
             profile_data = {
                 'default_mobile_number': order.mobile_number,
+                'default_country' : order.country,
                 'default_postalcode': order.postalcode,
                 'default_city': order.city,
                 'default_street_address1': order.street_address1,

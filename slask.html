@@ -77,3 +77,10 @@ return redirect(redirect_url)
 
 
     Grand Total: {{ order.total_sum }}
+
+
+    profile = UserProfile.objects.get(user__username=username)
+    print("user profile: ", profile)
+    print("country: ", profile.default_country)
+    print("shipping country: ", shipping_details.address.country)
+    print(len(shipping_details.address.country))
