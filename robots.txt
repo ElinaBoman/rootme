@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /basket/
+Sitemap: https://rootme-fcab110145ab.herokuapp.com/sitemap.xml

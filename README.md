@@ -272,7 +272,7 @@ GitHub will then create a clone of repository at chosen location. By default you
 All product images has been borrowd from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
 
-As allways I want to thank my mentor Brian O'Hair, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey! 
+As always I want to thank my mentor Brian O'Hair, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey! 
 
 Thanks to all my colleguages on slack, it has been a pleasure getting to know all of you!
 
