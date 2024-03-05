@@ -198,7 +198,12 @@ a.category-badge > span.badge:hover {
 
 /* Footer */
 .footer-main {
-    background-color: rgba(103, 141, 103);  
+    background-color: rgba(103, 141, 103);
+    color: white;  
+}
+
+.social-media-links i {
+    color: white;
 }
 
 /* Allauth tamplates */

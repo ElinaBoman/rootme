@@ -26,7 +26,7 @@ The main goal for Root me is to find people who wants to buy plants, for them se
 ![amIresponsive](/media/readme/am-i-responsive.png)
 
 [The live web site can be found here! ](https://rootme-fcab110145ab.herokuapp.com/)
-
+[The live web site can be found here! ](https://wwww.facebook.com/profile.php?id=61556797013382)
 ## UX
 The design of the website has been created to resemble the main product, plants. The goal was to create a design that was inspired by nature with green and calming tones.
 The colors used on the website are mostly green and white. The white is to keep the overall look of the website clean and adding more focus to the product. In the begining the main background was green, but this took away too much attention from the products as the images would not stand out from the background. 
@@ -172,35 +172,34 @@ I would also like to work a bit more with adding stock numbers that will inform 
 - urllib3
 
 Framework and Websites
-Flake8: https://flake8.pycqa.org/en/latest/ To search for errors and unused libraries.
-chatGPT: https://chat.openai.com/ For troubleshooting and writing text content.
-Pexels: https://www.pexels.com/sv-se/ To search for images.
-Google: https://www.google.com/webhp?hl=sv&sa=X&sqi=2&pjf=1&ved=0ahUKEwjD2YDFqvmDAxW_AhAIHcSrBckQPAgJ To search for information.
-CSS validator: https://jigsaw.w3.org/css-validator/ Validate CSS.
-Html validator: https://validator.w3.org/ Validate HTML.
-Jshint: https://jshint.com/ Validate javascript.
-Code Institutes py linter: https://pep8ci.herokuapp.com/ Validate Python.
-Gitpod: https://gitpod.io/workspaces API.
-GitHub: https://github.com/ Pushing all code and creating Kanban board.
-LucidChart: https://www.lucidchart.com/ For creating flowchart and database charts.
-Balsamiq: https://balsamiq.com/ To create all wireframes.
-Google Fonts: https://fonts.google.com/ To search for and borrow fonts.
-Font Awesome: https://fontawesome.com/ For borrowing font icons.
-Bootstrap: https://getbootstrap.com/ and https://getbootstrap.com/docs/5.3/getting-started/introduction/ To create classes.
-Favicon: https://favicon.io/ To create Kettlebell image - image was taken from google and then converted to favicon.
-Amazon: https://www.amazon.se/ref=nav_bb_logo - to store images
-Google Excel: https://www.google.com/sheets/about/ To create sheets for documentation.
-Heroku: https://dashboard.heroku.com/ To deploy app.
-PostgreSQL Database.
-EmailJS: https://www.emailjs.com/ Email function.
-Stack Overflow: https://stackoverflow.com/ Troubleshooting.
-W3Schools: https://www.w3schools.com/ Readin documentation.
-Youtube: https://www.youtube.com/ Link in footer and trouble shooting.
-Coolors: https://coolors.co/ To create a color chart.
-Am I responsive: https://ui.dev/amiresponsive For testing wireframes.
-Code institute tutorials/ Walkthrough project
-Lighthouse testing Creating a lighthouse report.
-Elephant SQL: https://customer.elephantsql.com/login To handle the database.
+- Flake8: https://flake8.pycqa.org/en/latest/ To search for errors and unused libraries.
+- chatGPT: https://chat.openai.com/ For troubleshooting and writing text content.
+- Pexels: https://www.pexels.com/sv-se/ To search for images.
+- Google: https://www.google.com/webhp?hl=sv&sa=X&sqi=2&pjf=1&ved=0ahUKEwjD2YDFqvmDAxW_AhAIHcSrBckQPAgJ To search for information.
+- CSS validator: https://jigsaw.w3.org/css-validator/ Validate CSS.
+- Html validator: https://validator.w3.org/ Validate HTML.
+- Jshint: https://jshint.com/ Validate javascript.
+- Code Institutes py linter: https://pep8ci.herokuapp.com/ Validate Python.
+- Gitpod: https://gitpod.io/workspaces API.
+- GitHub: https://github.com/ Pushing all code and creating Kanban board.
+- LucidChart: https://www.lucidchart.com/ For creating flowchart and database charts.
+- Balsamiq: https://balsamiq.com/ To create all wireframes.
+- Google Fonts: https://fonts.google.com/ To search for and borrow fonts.
+- Font Awesome: https://fontawesome.com/ For borrowing font icons.
+- Bootstrap: https://getbootstrap.com/ and https://getbootstrap.com/docs/5.3/getting-started/introduction/ To create classes.
+- Favicon: https://favicon.io/ To create Kettlebell image - image was taken from google and then converted to favicon.
+- Amazon: https://www.amazon.se/ref=nav_bb_logo - to store images
+- Google Excel: https://www.google.com/sheets/about/ To create sheets for documentation.
+- Heroku: https://dashboard.heroku.com/ To deploy app.
+- PostgreSQL Database.
+- Stack Overflow: https://stackoverflow.com/ Troubleshooting.
+- W3Schools: https://www.w3schools.com/ Readin documentation.
+- Youtube: https://www.youtube.com/ Link in footer and trouble shooting.
+- Coolors: https://coolors.co/ To create a color chart.
+- Am I responsive: https://ui.dev/amiresponsive For testing wireframes.
+- Code institute tutorials/ Walkthrough project
+- Lighthouse testing Creating a lighthouse report.
+- Elephant SQL: https://customer.elephantsql.com/login To handle the database.
 
 ## Code Validation
 ### HTML valiation

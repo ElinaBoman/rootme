@@ -117,7 +117,11 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
+                                {% if request.user.is_authenticated %}
+                                <div><i class="fa-solid fa-user-check"></i></div>
+                                {% else %}
                                 <div><i class="fas fa-user fa-lg"></i></div>
+                                {% endif %}
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
@@ -214,10 +218,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="text-center col-12">
-                <i class="fab fa-twitter-square fa-xl mt-1 px-3"></i>
-                <i class="fab fa-instagram-square fa-xl mt-1 px-3"></i>
-                <i class="fab fa-youtube-square fa-xl mt-1 px-3"></i>
+            <div class="text-center col-12 social-media-links">
+                <a href="https://www.facebook.com/profile.php?id=61556797013382"><i class="fab fa-facebook-square fa-xl mt-1 px-3"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square fa-xl mt-1 px-3"></i></a>
+                <a href="https://www.youtube.com/"><i class="fab fa-youtube-square fa-xl mt-1 px-3"></i></a> 
             </div>
         </div>
         </div>
