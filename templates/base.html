@@ -195,17 +195,17 @@
 
     {% endblock %}
     <!-- Footer -->
-    <footer class="footer-main">
-        <div class="container-fluid">
+    <footer class="footer-main d-flex justify-content-center">
+        <div class="container mt-3">
         <div class="row">
-            <div class="col-md-4 mt-3">
+            <div class="col-md-5 ml-lg-5">
                 <h5>Contact Us</h5>
-                <p>For inquiries or support, contact us during our office hours:</p>
+                <p>For inquiries or support, contact us <a class="text-black" href="{% url 'contact_view' %}">here!</a></p>
+                <p>Or if you rather speak to us directly our phone support is open during our office hours:</p>
                 <p>Phone Number: +46 (0) 123 456 789</p>
-                <p>Or send us a message <a class="text-black" href="{% url 'contact_view' %}">here!</a></p>
                 <p>You can also contact us at our social medias!</p>
             </div>
-            <div class="col-md-4 mt-3">
+            <div class="col-md-5 ml-lg-5">
                 <h5>Office Hours</h5>
                 <ul class="list-unstyled">
                     <li>Monday - Friday: 9:00 AM - 5:00 PM</li>

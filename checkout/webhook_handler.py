@@ -50,12 +50,13 @@ class StripeWH_Handler:
         pid = intent.id
         basket = intent.metadata.basket
         save_info = intent.metadata.save_info
-        
+        print('saveINFO', save_info)
         stripe_charge = stripe.Charge.retrieve(
             intent.latest_charge
         )
         billing_details = stripe_charge.billing_details 
         shipping_details = intent.shipping
+        print("shipping details: ", shipping_details)
         total_sum = round(stripe_charge.amount / 100, 2) 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -65,9 +66,14 @@ class StripeWH_Handler:
         # Update profile information if save_info was checked
         profile = None
         username = intent.metadata.username
+        print("username: ", username)
         if username != 'AnonymousUser':
 
             profile = UserProfile.objects.get(user__username=username)
+            print("user profile: ", profile)
+            print("country: ", profile.default_country)
+            print("shipping country: ", shipping_details.address.country)
+            print(len(shipping_details.address.country))
             if save_info:
                 profile.default_mobile_number=billing_details.phone,
                 profile.default_country=shipping_details.address.country,
@@ -77,7 +83,7 @@ class StripeWH_Handler:
                 profile.default_street_address2=shipping_details.address.line2,
                 profile.default_county=shipping_details.address.state,
                 profile.save()
-
+                
         order_exists = False
         attempt = 1
         while attempt <= 5:
@@ -123,6 +129,7 @@ class StripeWH_Handler:
                         original_basket=basket,
                         stripe_pid=pid,
                     )
+                    print('ORDERTOLONG', order)
                     for item_id, item_data in json.loads(basket).items():
                         product = Product.objects.get(id=item_id)
                         if isinstance(item_data, int):
