@@ -76,7 +76,7 @@ class StripeWH_Handler:
             print(len(shipping_details.address.country))
             if save_info:
                 profile.default_mobile_number=billing_details.phone,
-                profile.default_country=shipping_details.address.country,
+                #profile.default_country=shipping_details.address.country,
                 profile.default_postalcode=shipping_details.address.postal_code,
                 profile.default_city=shipping_details.address.city,
                 profile.default_street_address1=shipping_details.address.line1,
