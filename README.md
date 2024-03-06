@@ -5,9 +5,29 @@ Root me is an e-commerce store selling plants, cuttings and other plant associat
 The targeted audience are people who wants to grow their own plants, but also for finding the perfect gift among plant lovers.
 
 
-Project goals
+## Project goals
+### Strategy Plane
+#### Purpose
+The purpose of this project was to create a project that satisfyed the assesment criteria of Code Instututes Project 5, E-commerce module. Some of the criterias were:
+- Create a functioning E-commerce store
+- User can checkout their products via payment system, Stripe. 
+- Have authentication system for users
+- Have full CRUD functionallity 
+- Use search enginge optimasation and descriptive meta tags
+- User is be able to sign up to newsletters 
 
-Customer goals
+The criterias required three custom made models that suited the project. The models I created were 
+- Wishlist
+
+User can store products in a wishlist by clicking Add to wish button in products view. In the wishlist view the user can see their added wishes and remove them from the wishlist.
+- Contact
+
+The user can send messages to the company from the Q&A view. The user will then recieve a confirmation email that the form has been submitted. The message will be saved into the admin panel. 
+- Product
+
+This module was a part of Code Institute walktrough project, but I have altered it to suit this project and added fields to make it custom made. 
+
+##### Customer goals
 This projects aims to create a inviting and easy navigated website for customers. To accive this following features has been created:
 - The user can search and filter trough products
 - The user can create and manage their user profle.
@@ -16,7 +36,7 @@ This projects aims to create a inviting and easy navigated website for customers
 - The user can display prevously created orders inside their profile
 - The user can sign up to a newsletter
 
-Business goals
+#### Business goals
 The main goal for Root me is to find people who wants to buy plants, for them self or as a gift. As a business owner it is therefore important to be able to find theese people, but also having a easy to mange inventory on the website. To accive this following features exist on the website:
 - The admin can manage the store form the live site
 - Collect email addresses for newsletter
@@ -27,6 +47,7 @@ The main goal for Root me is to find people who wants to buy plants, for them se
 
 [The live web site can be found here! ](https://rootme-fcab110145ab.herokuapp.com/)
 [The live web site can be found here! ](https://wwww.facebook.com/profile.php?id=61556797013382)
+
 ## UX
 The design of the website has been created to resemble the main product, plants. The goal was to create a design that was inspired by nature with green and calming tones.
 The colors used on the website are mostly green and white. The white is to keep the overall look of the website clean and adding more focus to the product. In the begining the main background was green, but this took away too much attention from the products as the images would not stand out from the background. 
@@ -39,7 +60,8 @@ Most of the text content is black. To be able to prioritaze the content on the w
 
 ![Color-schema](/media/readme/theme-color.png)
 
-### Purpose
+
+
 ### User Stories
 ### Implementation of User Stories 
 ### Wireframes
@@ -60,7 +82,9 @@ User can send a contact form, recieve confirmation email. The message will also 
 ## Agile Methodology
 In the early stages of the product I started thinking about how to create a user firendly website and how create a proffesional impression. Theese are some of the ares I wrote down. 
 
-Users needs:
+In order to create a good user experience and also strategies how to design the project I tried to answer following questions.
+
+ What are the User needs?
 - See prices
 - Get ideas for gifts
 - Information about plants
@@ -68,19 +92,19 @@ Users needs:
 - See images of the plants
 - Be able to buy pots and other compliments
 
-Features to provide those needs:
+What Features can be provide to satisfy those needs?
 - Have prices and information about the plants displayed
 - Offer to wrap plants as gifts, have gift cards and small presents that can be attached to the plant
 - Show the plants in environments that inspires users to buy the plants
 - Have category's for plants, pots and other needs
 
-How to make information easy to understand and available for users:
+How can I make information easy to understand?
 - With clear descriptive text 
 - Easy layout to navigate
 - Have filters for users to navigate
 
-How to demonstrate expertise, authoritativeness and
-trustworthiness in content:
+How can I demonstrate expertise, authoritativeness and
+trustworthiness in the content?
 - Professional language
 - No misspellings
 - Nice looking pictures that are consistent in style
@@ -90,13 +114,15 @@ trustworthiness in content:
 - Have social media platforms where previous buyers can show off their plants
 
 
-Help users to discover other relevant parts of web application with:
+How can I help users to discover other relevant parts of web application?
 - Links to social medias
 - Have a front end that makes users want to stay on the website
 - Have features that shows similar plants as the user has been interested in earlier
 - Show plants that are suitable in similar environments
-### Canban board and issues
-This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories. Good to have, Must have and Nice to have. All issues were not finished, but all Must have were completed.
+
+### Canban board and MosCOW Prioritization
+This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW priorizitation. I gave all my issues labels such as, Good to have, Must have and Nice to have. The must have were required for the assesment criterias but from a users perspective. The good to have were to improve user experience but not required in the finished project. The nice to have were from my on perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+
 ![issues](/media/readme/issues.png)
 ![issues](/media/readme/issues-continiue.png)
 
@@ -115,7 +141,23 @@ Then I tried reaserching thir relevance and compared it to similar words. When I
 ![SEO](/media/readme/seo-green.png)
 
 
-### Sprints - milestones
+### Sprints - Milestones
+The issues were then categories into sprints. I tried to create a cronological order for how all my issues would be handled in a certin timeframe. This to make sure that I would be able to finish the project on time with all the Must have finished. Even tough I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realze early in the the project that I had to work on time management and make sure I would at least have an MVP in the end of the project. 
+
+**Sprint**|**Sprint**|**Start**|**Finished**
+:-----:|:-----:|:-----:|:-----:
+1|Project setup|5/1-24|11/1-24
+2|AllAuth and Basic Navigation|12/1-24|15/1-24
+3|Products views and func.|16/1-24|20/1-24
+4|Shopping basket func.|21/1-24|24/2-24
+5|Setting up AWS, database and deployment|25/1-24|25/1-24
+6|Contact, Q&A views and funct.|25/1-24|27/1-24
+7|Wishlist view and funct.|27/1-24|1/2-24
+8|Overall design, colors, fonts ets...|1/2-24|2/2-2024
+9|Debugging and testing|2/2-24|6/2-24
+10|Read me docs|2/2-24|11/2-24
+
+
 ## Existing Features
 ### Navbar and Footer
 ### Footer
