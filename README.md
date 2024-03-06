@@ -1,10 +1,13 @@
 # Contents
 ## Root| Me
+![amIresponsive](/media/readme/am-i-responsive.png)
+### Introduction
 Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a allreday planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow thir own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
 
 The targeted audience are people who wants to grow their own plants, but also for finding the perfect gift among plant lovers.
 
 ## Table of Contents
+
 - [General](#general)
   - [Table of Contents](#table-of-contents)
   - [Project Goals](#project-goals)
@@ -31,9 +34,9 @@ The targeted audience are people who wants to grow their own plants, but also fo
   - [Framework and Websites](#framework-and-websites)
 - [Deployment](#deployment)
 - [Credits](#credits)
-## Project goals
-### Strategy Plane
-#### Purpose
+
+
+## Overview
 The purpose of this project was to create a project that satisfyed the assesment criteria of Code Instututes Project 5, E-commerce module. Some of the criterias were:
 - Create a functioning E-commerce store
 - User can checkout their products via payment system, Stripe. 
@@ -69,10 +72,8 @@ The main goal for Root me is to find people who wants to buy plants, for them se
 - Use a payment system called Stripe
 - Adding, delete and update products via Product Management link on website
 
-![amIresponsive](/media/readme/am-i-responsive.png)
-
 [The live web site can be found here! ](https://rootme-fcab110145ab.herokuapp.com/)
-[The live web site can be found here! ](https://wwww.facebook.com/profile.php?id=61556797013382)
+[Facebook page](https://wwww.facebook.com/profile.php?id=61556797013382)
 
 ## UX
 The design of the website has been created to resemble the main product, plants. The goal was to create a design that was inspired by nature with green and calming tones.
@@ -86,23 +87,7 @@ Most of the text content is black. To be able to prioritaze the content on the w
 
 ![Color-schema](/media/readme/theme-color.png)
 
-## Apps
-This project consist of six apps. Theese have all been planned out to create a good userexperience.
-### Products app 
-The user can see all products, filter them into different categories and add them into their basket. 
-### Basket app
-The user can store their products and also go to the secure checkout to purchase their products.
-### User app - allauth
-User can register, login and logout.
-### Profile app
-User can save profile information and update if needed.
-### Wishlist app
-User can add products to a wishlist. 
-### Contact app
-User can send a contact form, recieve confirmation email. The message will also be saved in the admin panel. 
-## Agile Methodology
-In the early stages of the product I started thinking about how to create a user firendly website and how create a proffesional impression.
-
+## Strategy Plaane
 In order to create a good user experience and also strategies how to design the project I tried to answer following questions.
 
  What are the User needs?
@@ -141,8 +126,9 @@ How can I help users to discover other relevant parts of web application?
 - Have features that shows similar plants as the user has been interested in earlier
 - Show plants that are suitable in similar environments
 
+## Agile Methodologies
 ### Canban board and MosCOW Prioritization
-This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW priorizitation. I gave all my issues labels such as, Good to have, Must have and Nice to have. The must have were required for the assesment criterias but from a users perspective. The good to have were to improve user experience but not required in the finished project. The nice to have were from my on perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW priorizitation. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assesment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
 
 ![issues](/media/readme/issues.png)
 ![issues](/media/readme/issues-continiue.png)
@@ -150,12 +136,9 @@ This project has been planned with with agile methodology. Before any code was w
 To visit project canban board, follow this link:
 [canban board](https://github.com/users/ElinaBoman/projects/6)
 
-When I had created theese issues I started to plan the models that I would need in this project to be able to satisfy my issues. I also tried to start thinking about which models should be realted to eachother and what kind of table it would be. Below is an early sketch of my models. They were later modifyied and do not represent the finished product, but the relationship between them stayed the same.
-
-![Database models](/media/readme/database-models.png)
 
 ### Sprints - Milestones
-The issues were then categories into sprints. I tried to create a cronological order for how all my issues would be handled in a certin timeframe. This to make sure that I would be able to finish the project on time with all the Must have finished. Even tough I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realze early in the the project that I had to work on time management and make sure I would at least have an MVP in the end of the project. 
+The issues were then categories into sprints. I tried to create a cronological order for how all my issues would be handled in a certin timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even tough I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lessons. Creating these sprints made me realize early in the the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
 
 **Sprint**|**Sprint**|**Start**|**Finished**
 :-----:|:-----:|:-----:|:-----:
@@ -172,42 +155,42 @@ The issues were then categories into sprints. I tried to create a cronological o
 
 ## Marketing
 #### Facebook
-To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companys. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefullt generate grater revanue for the Root Me company. 
+To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companys. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate grater revanue for the Root Me company. 
 
 #### MailChimp
-Users who visit the website are also asked to sign up to news letter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
 ![Home](/media/readme/news-letter.png)
 
 #### SEO
-Early in the project development I started reserching and planning search engined optimatization. I wrote down keywords that I thought would be appropriate for a e-commerce selling plants. I tried short- and longtailed words. Some of the shorttailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. 
-Then I tried reaserching thir relevance and compared it to similar words. When I started finishing up the project I tried implementing some of these words so imporve my search results. 
+Early in the project development I started reserching and planning search engined optimatization. I wrote down keywords that I thought would be appropriate for a e-commerce selling plants. I tried short- and longtailed words. Some of the shorttailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my SEO words and 
+reaserch thir relevance and compared it to similar words. When I started finishing up the project I tried implementing some of these words to imporve my search optimization. 
 
-While finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
+Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
 
 ### User Stories
-**Issue nr**|**User Stories: As a User**|**Label**|**Finished**
------|-----|-----|-----
-1|As a user I can create an account so that I can save order history.|Must have |YES
-2|As a user I can select an add items to shopping cart on the website so that I can buy them.|Must have |YES
-3|As a user I can add shipping information and update it when needed so that I can have orders deliverd to my address.|Must have |YES
-4|As a user I can read information about products so that I can decide if the product is suitable for me.|Must have |YES
-5|As a user I can update my shopping cart so that I can manage my orders.|Must have |YES
-6|As a user I can delete items in my shopping cart so I can update my orders.|Must have |YES
-7|As a user I can select view shipping information so that I can make sure my order is being send to the right address.|Must have |YES
-8|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
-9|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website is not working.|Must have |YES
-13|As a user I can filter through category's with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
-14|As a user I can add items to shopping cart and then leave website and still have items inside so that I can buy later.|Good to have|YES
-15|As a user I can search on the website for specific products so that I can see if website have what I'm looking for.|Must have |YES
-16|As a user I can select if my order is a gift so that I can gift them with nice wrapping and a card.|Nice to have|NO
-17|As a user I can also buy pots and dirt that are suitable for my products I can give the best care for my products.|Good to have|YES
+**Issue nr**|**Epic**|**User Stories: As a User**|**Label**|**Finished**
+-----|----|-----|-----|-----
+1|Account|As a user I can create an account so that I can save order history.|Must have |YES
+2|Basket|As a user I can select an add items to shopping cart on the website so that I can buy them.|Must have |YES
+3|Account|As a user I can add shipping information and update it when needed so that I can have orders deliverd to my address.|Must have |YES
+4|Products|As a user I can read information about products so that I can decide if the product is suitable for me.|Must have |YES
+5|Basket|As a user I can update my shopping cart so that I can manage my orders.|Must have |YES
+6|Basket|As a user I can delete items in my shopping cart so I can update my orders.|Must have |YES
+7||AccountAs a user I can select view shipping information so that I can make sure my order is being send to the right address.|Must have |YES
+8|Products|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
+9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website is not working.|Must have |YES
+13|Products|As a user I can filter through category's with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
+14|Basket|As a user I can add items to shopping cart and then leave website and still have items inside so that I can buy later.|Good to have|YES
+15|Products|As a user I can search on the website for specific products so that I can see if website have what I'm looking for.|Must have |YES
+16|Products|As a user I can select if my order is a gift so that I can gift them with nice wrapping and a card.|Nice to have|NO
+17|Products|As a user I can also buy pots and dirt that are suitable for my products I can give the best care for my products.|Good to have|YES
 
 **Issue nr**|**User Stories: As site owner**|**Label**|**Finished**
 -----|-----|-----|-----
-10|As a site owner I can select an add/edit/delete products on the website so that I can manage stock information.|Must have |YES
-11|As a site owner I can have access to user information so that I can contact customers if necessary.|Must have |YES
-12|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
-18|As a site owner I can view information and make suggestions about what compliments that are good to have together with chosen plant so that I can increase my profit.|Good to have|NO
+10|Management|As a site owner I can select an add/edit/delete products on the website so that I can manage stock information.|Must have |YES
+11|User information|As a site owner I can have access to user information so that I can contact customers if necessary.|Must have |YES
+12|Social media|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
+18|Products|As a site owner I can view information and make suggestions about what compliments that are good to have together with chosen plant so that I can increase my profit.|Good to have|NO
 ### Implementation of User Stories 
 - 1. User is able to create an account and save order history by checking save information box in checkout form. The Order history can then be accesed inside the user profile.
 - 2. The user can add/edit and delete products in their basket.
@@ -225,10 +208,25 @@ While finishing the project a sitemap.xml and robots.txt file was created to opt
 - 15. The user can enter text input to search for products in main navigation. 
 - 17. The user is able to see what pot size the plants requires and then search for suitable pots. 
 
+## Scope plane
+When I started this project I realized quickly that to be able to learn and manege new teqniques such as Stripe, there would not be a lot of time to focus on Nice to Have or Good to Have issues. Even tough there were some features that I was very eagre to create I had to stick with an MVP. Therefore I decided on which featurer that would be essential for the project and just making sure I finished those first.
 
+#### Essential Features:
+- User can create account
+- Payment system with Stripe
+- Having a working contactform
+- Create a wishlist
+- Having full CRUD within user shopping basket
+- Having full CRUD for admin to manage products
+- Users being able to update profile
+- User actions are met with corresponding toast message
 
+## Structural Plane
+This project was built form a Code Institute Walktrough project called Boutique Ado. After having all functionallity in place from Boutique Ado I started to create my own project. To make this project into my own I redesigned the front end and then had my own functions on the backend. Most of the design has been built with Bootstrap.
+
+## Skeleton & Surface Planes
 ### Wireframes
-For this project I created Wireframes with Balsamiq tool. I decided to do this for pages that would need more stucture depending on wireframe size. 
+For this project I created Wireframes with Balsamiq tool. I decided to do this for pages that would need more stucture depending on wireframe size. The wireframes were only a tool to plan the structure and do not represent the finished product.
 <details>
 <summary>Home</summary>
 
@@ -241,12 +239,20 @@ For this project I created Wireframes with Balsamiq tool. I decided to do this f
 ![Products](/media/readme/balsamiq-product.png)
 
 </details>
-<summary>Contact</summary>
+
 <details>
+<summary>Contact</summary>
+
 ![Contact](/media/readme/balsamic-contact.png)
 </details>
 
+### Database Schema
+Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be realted to eachother and what kind of table it would be. Below is an early sketch of my models. They were later modifyied and do not represent the finished product, but the relationship between them stayed the same. The database models sketch was created with Lucidchart.
+
+![Database models](/media/readme/database-models.png)
+
 ## Existing Features
+
 ### Navbar and Footer
 ### Footer
 ### Shop
