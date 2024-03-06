@@ -77,12 +77,13 @@ def checkout(request):
                         order=order,
                         product=product,
                         quantity=item_data,
-                    )
+                        )
                     order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, ("One of the products \
-                                   in your basket wasn't found in our database \
-                                   Please contact us for further assistance."))
+                                   in your basket wasn't found in \
+                                   our database. Please contact us \
+                                   for further assistance."))
                     order.delete()
                     return redirect(reverse('view_basket'))
             request.session['save_info'] = 'save-info' in request.POST
@@ -139,6 +140,7 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_id):
     """
     Handle successful checkouts
@@ -171,11 +173,10 @@ def checkout_success(request, order_id):
 
     if 'basket' in request.session:
         del request.session['basket']
-    
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
     }
-
 
     return render(request, template, context)
