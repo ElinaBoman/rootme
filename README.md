@@ -87,7 +87,7 @@ Most of the text content is black. To be able to prioritaze the content on the w
 
 ![Color-schema](/media/readme/theme-color.png)
 
-## Strategy Plaane
+## Strategy Plane
 In order to create a good user experience and also strategies how to design the project I tried to answer following questions.
 
  What are the User needs?

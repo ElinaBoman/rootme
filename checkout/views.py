@@ -1,4 +1,5 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import (render, reverse, redirect,
+                              get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from .forms import OrderForm
@@ -12,14 +13,16 @@ import stripe
 import json
 import os
 if os.path.exists("env.py"):
-  import env
+    import env
 
 
 @require_POST
 def cache_checkout_data(request):
     """"
-    Store customer meta data. Basket is the products the customer has palced in the basket
-    save_info for customer who chooses to save their info. This would be shipping and billing details.
+    Store customer meta data. Basket is the products
+    the customer has palced in the basket save_info
+    for customer who chooses to save their info.
+    This would be shipping and billing details.
     username is saved to store previous purchases realated to a customer
     """
     try:
@@ -45,23 +48,7 @@ def checkout(request):
     """
     stripe_public_key = os.environ.get('STRIPE_PUBLIC_KEY')
     stripe_secret_key = os.environ.get('STRIPE_SECRET_KEY')
-    """
-    Here we check if the method is Post, if it is we get the basket from the session,
-    then we create a form  with user information that we store in form_data.
-    OrderForm will take the form_data and then we check if the data is valid. If the form is valid
-    it will be saved to the database. Then we extract information the paymentid from the POST data.
-    Then we create a new order instance but we don't save it commit=False.
-    We save the the stripe payment instance id and the basket information.
-    If for some reason a product in the basket does not exist there will be a message explaining this to
-    the customer. The order will be deleted and customer will be redirected to the basket view.
-    If everything is ok we save the request to save user information for future payments.
-    If something is wrong with the form there will be a error message. 
-    If there is a GET request (this would be the first time a user loads checkout)
-    we will get the basket from the session, is basket is empty show error message and user is redirected to product page.
-    If there are products in basket we will calculate the total sum and create a stripe payment intention with the amount and 
-    currency. 
 
-    """
     if request.method == 'POST':
         basket = request.session.get('basket', {})
         form_data = {
@@ -74,11 +61,9 @@ def checkout(request):
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county']
-
-        } 
+        }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            cleaned_data = order_form.cleaned_data
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
@@ -95,22 +80,23 @@ def checkout(request):
                     )
                     order_line_item.save()
                 except Product.DoesNotExist:
-                    message.error(request,
-                    ("One of the peoducts in your basket wasn't found in our database"
-                     "Please contact us for further assistance."))
+                    messages.error(request, ("One of the products \
+                                   in your basket wasn't found in our database \
+                                   Please contact us for further assistance."))
                     order.delete()
                     return redirect(reverse('view_basket'))
             request.session['save_info'] = 'save-info' in request.POST
             save_info = request.session['save_info']
             return redirect(reverse('checkout_success', args=[order.order_id]))
         else:
-            messages.error(request, 'There was an error with your form. \ Please check your information again.')
-    else:   
+            messages.error(request, 'There was an error with your form. \
+                           Please check your information again.')
+    else:
         basket = request.session.get('basket', {})
         if not basket:
             messages.error(request, "There are no products in you basket")
             return redirect(reverse('products'))
-        
+
         current_basket = basket_contents(request)
         total = current_basket['total_sum']
         stripe_total = round(total * 100)
@@ -125,12 +111,12 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    'full_name': profile.user.get_full_name(),
+                    'user_name': profile.user.get_full_name(),
                     'email': profile.user.email,
-                    'phone_number': profile.default_mobile_number,
+                    'mobile_number': profile.default_mobile_number,
                     'country': profile.default_country,
-                    'postcode': profile.default_postalcode,
-                    'town_or_city': profile.default_city,
+                    'postalcode': profile.default_postalcode,
+                    'city': profile.default_city,
                     'street_address1': profile.default_street_address1,
                     'street_address2': profile.default_street_address2,
                     'county': profile.default_county,
@@ -139,8 +125,6 @@ def checkout(request):
                 order_form = OrderForm()
         else:
             order_form = OrderForm()
-
-        order_form = OrderForm
 
         if not stripe_public_key:
             messages.warning(request, 'Stripe public key is missing. \
@@ -170,7 +154,7 @@ def checkout_success(request, order_id):
         if save_info:
             profile_data = {
                 'default_mobile_number': order.mobile_number,
-                'default_country' : order.country,
+                'default_country': order.country,
                 'default_postalcode': order.postalcode,
                 'default_city': order.city,
                 'default_street_address1': order.street_address1,

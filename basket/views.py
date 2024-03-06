@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render,
+                              redirect, reverse, HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
-
 
 
 def view_basket(request):
@@ -10,6 +10,7 @@ def view_basket(request):
     """
 
     return render(request, 'basket/basket.html')
+
 
 def add_to_basket(request, item_id):
     """Add products to shopping basket"""
@@ -20,31 +21,40 @@ def add_to_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+        messages.success(request, f'Updated {product.name}' +
+                         f'quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
-        messages.success(request, f'Added {product.name} to basket')
+        messages.success(request, f'Added {product.name}' + 
+                        f'to basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
 
 
 def adjust_basket(request, item_id):
+    """
+    Adjust quantity in basket or takes the whole
+    item out.
+    """
     quantity = int(request.POST.get('quantity'))
     product = get_object_or_404(Product, pk=item_id)
     basket = request.session.get('basket', {})
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request, f' Updated quantity to {basket[item_id]} {product.name}')
-       
+        messages.success(request, f" Updated quantity to" + 
+                         f"{basket[item_id]} {product.name}")
+
     else:
         basket.pop(item_id)
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
 
 
-
 def remove_from_basket(request, item_id):
+    """"
+    Remove item from basket.
+    """
     product = get_object_or_404(Product, pk=item_id)
     try:
         basket = request.session.get('basket', {})
@@ -56,6 +66,5 @@ def remove_from_basket(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-
 
 
