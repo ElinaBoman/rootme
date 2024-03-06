@@ -4,7 +4,33 @@ Root me is an e-commerce store selling plants, cuttings and other plant associat
 
 The targeted audience are people who wants to grow their own plants, but also for finding the perfect gift among plant lovers.
 
-
+## Table of Contents
+- [General](#general)
+  - [Table of Contents](#table-of-contents)
+  - [Project Goals](#project-goals)
+- [UX](#ux)
+  - [Development](#development)
+  - [Flowchart](#flowchart)
+  - [User Stories](#user-stories)
+  - [Colors and Fonts](#colors-and-fonts)
+  - [Wireframes](#wireframes)
+- [General Features](#general-features)
+  - [Features](#features)
+- [Database](#database)
+- [Testing](#testing)
+  - [Code Validation](#code-validation)
+  - [Testing User Stories](#testing-user-stories)
+  - [Manual Testing](https://github.com/ElinaBoman/the-muscle-factory/blob/main/docs/readme%20docs/README-TESTING.md)
+  - [Lighthouse Testing](#lighthouse-testing)
+  - [Browser Testing](#browser-testing)
+- [Future Improvements](#future-improvements)
+- [Bugs](#bugs)
+- [Technologies Used](#technologies-used)
+  - [Libraries](#libraries)
+    - [Packages](#packages)
+  - [Framework and Websites](#framework-and-websites)
+- [Deployment](#deployment)
+- [Credits](#credits)
 ## Project goals
 ### Strategy Plane
 #### Purpose
@@ -185,7 +211,39 @@ While finishing the project a sitemap.xml and robots.txt file was created to opt
 12|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
 18|As a site owner I can view information and make suggestions about what compliments that are good to have together with chosen plant so that I can increase my profit.|Good to have|NO
 ### Implementation of User Stories 
+- 1. User is able to create an account and save order history by checking save information box in checkout form. The Order history can then be accesed inside the user profile.
+- 2. The user can add/edit and delete products in their basket.
+- 3. The user can enter shipping information in checkout form. The user can also add shipping information in My profile.
+- 4. The user can read about all products in the products detail section by clicking the product image. 
+- 5. The user has full CRUD funcionality of their shopping basket.
+- 6. The user can delete product items from shopping basket.
+- 7. The user can view shipping information after the secure checkout is finished. The user will also recieve a email with related information. 
+- 8. On the products page the user can filter trough categories by product, price or simply search for certain products in the text input field. 
+- 9. The user can easily navigate on the website by main navigation bar. The user will recieve helpful toast messages when performin acctions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
+- 10. The store owner have full CRUD functionallity over the products and can update, edit or delete products.
+- 11. The site owner will have information about user inside the django admin panel. 
+- 12. The customers can visit Root Me's Facebook page by clicking social media link in footer. There are also links to instagram and youtube but there is no content related to Root Me in thoose links.
+- 14. The users basket is stored in sessions so the user can leave the site but still have their products inside the basket. This will ofcourse not work if the user updates cash since the session disapears. 
+- 15. The user can enter text input to search for products in main navigation. 
+- 17. The user is able to see what pot size the plants requires and then search for suitable pots. 
+
+
+
 ### Wireframes
+For this project I created Wireframes with Balsamiq tool. I decided to do this for pages that would need more stucture depending on wireframe size. 
+<details>
+<summary>Home</summary>
+
+![Home](/media/readme/balsamiq-home.png)
+</details>
+<summary>Products</summary>
+
+![Products](/media/readme/balsamiq-product.png)
+</details>
+<summary>Contact</summary>
+
+![Contact](/media/readme/balsamic-contact.png)
+</details>
 
 ## Existing Features
 ### Navbar and Footer
