@@ -176,13 +176,11 @@ To promote the Root Me website a Facebook site was created. Facebook allows a ch
 
 #### MailChimp
 Users who visit the website are also asked to sign up to news letter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+![Home](/media/readme/news-letter.png)
 
 #### SEO
 Early in the project development I started reserching and planning search engined optimatization. I wrote down keywords that I thought would be appropriate for a e-commerce selling plants. I tried short- and longtailed words. Some of the shorttailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. 
 Then I tried reaserching thir relevance and compared it to similar words. When I started finishing up the project I tried implementing some of these words so imporve my search results. 
-
-![SEO](/media/readme/seo.png)
-![SEO](/media/readme/seo-green.png)
 
 While finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
 
@@ -236,12 +234,15 @@ For this project I created Wireframes with Balsamiq tool. I decided to do this f
 
 ![Home](/media/readme/balsamiq-home.png)
 </details>
+
+<details>
 <summary>Products</summary>
 
 ![Products](/media/readme/balsamiq-product.png)
+
 </details>
 <summary>Contact</summary>
-
+<details>
 ![Contact](/media/readme/balsamic-contact.png)
 </details>
 
