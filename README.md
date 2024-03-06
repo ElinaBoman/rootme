@@ -252,12 +252,28 @@ Early in the project I started thinking about the models that I would need in th
 ![Database models](/media/readme/database-models.png)
 
 ## Existing Features
-
 ### Navbar and Footer
+The navbar has a clean look with easy navigation. There is a banner encouraging users to spend more money to get free delivery. The profile fontawsome icon will change if the user is signed in. The navbar categories will not be displayed on smaller screen sizes as they will instead be placed inside a hamburger bar. 
 ### Footer
+The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wishes to contatc Root Me a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social medias, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content. 
+### Home 
+The Home page has some made up reviews displayed from happy customers. There is also a big button for users to go directly into the product section.
 ### Shop
+Inside the shop all products are displayed. The user is able to sort the products trough a sort by field. The products are represented with image, name, price and category. If the user is signed in there is also a Add to Wishlist button. To make it easy for the user to navigate the products page there is a Up to Top button along the right hand side.
+### Product Detail 
+By clicking the image on the products page the user is dericted to products detail page. Here the user can read a description of chosen product. See what stadge the plant is in, If it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the Add to basket button. 
+The quantity select box will be disabeled if value is too low (0) or to high (99). 
 ### Shoping Basket
+Inside the basket the user has full CRUD functionalliy. The user can See, read, update and delete products. When the user is ready there is a Secure Checkout button that takes the user to the Checkout form. 
+### Checkout form 
+Here the user can insert information about shipping and billing. Signed in users can also choose to save information to their user profile. If the user is not signed in he/she is provided with links to create an account if they wish to save contact form information. When the form has been finished the user can enter card information. To test this use following information, Cardnumber: 4242 4242 4242 4242. Add then any numbers to fill out experation date and CVC. To test unsuccesfull card payment use, Cardnumber: 4000 0000 0000 0002. Add any numbers to finish the input field. If the payment has been successfull the user is redirected to a success view where the order and shipping information is displayed.
 ### User authentication
+The user can commit several different actions on the website without being a registered user. However to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will recieve an email to confirm the email address. When the email address has been confirmed the user can sign in. 
+To then sign in and sign out is very easy. The login and logout buttons are aviable from my profile in the main navigation bar. 
+### Wishlist
+A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also chose to take out the product from the Wishlist by clicking the remove link. 
+### Contact 
+Inside the Q&A view the user can read about normally asked questions. If the user has a question that has not been answered within the Q&A he/she is instructed to use the contact form. 
 
 ## Future Features
 
