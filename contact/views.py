@@ -26,7 +26,6 @@ def contact_view(request):
     """
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        print('form', form)
         if form.is_valid():
             form.save()
             messages.success(request, 'Your message has been sent, \

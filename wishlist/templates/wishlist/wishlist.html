@@ -13,10 +13,9 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="container">
-    <h2 class="ml-5 mt-3">My Wishlist</h2>
-    <hr class="col-lg-10">
-    
+<div class="container min-height">
+    <h2 class="mt-5">My Wishlist</h2>
+    <hr>
     <div class="row">
         {% if user_wishlist %}
             {% for item in user_wishlist %}
@@ -39,9 +38,9 @@
             </div>
             {% endfor %}
         {% else %}
-            <div class="col-12 text-center">
+            <div class="col-12">
                 <h3>Your wishlist is empty.</h3>
-                <a href="{% url 'products' %}" class="btn btn-green btn-lg mt-3 float-right">
+                <a href="{% url 'products' %}" class="btn btn-green btn-lg mt-5">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>
                     </span>

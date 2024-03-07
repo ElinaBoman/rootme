@@ -12,11 +12,9 @@ def wishlist_view(request):
     """
     user_profile = UserProfile.objects.get(user=request.user)
     user_wishlist = WishList.objects.filter(user=user_profile)
-    print('request', request.user)
     context = {
         'user_wishlist': user_wishlist
     }
-    print('userwish', user_wishlist)
     template = 'wishlist/wishlist.html'
     return render(request, template, context)
 

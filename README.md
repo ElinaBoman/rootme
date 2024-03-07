@@ -293,8 +293,6 @@ I would also like to work a bit more with adding stock numbers that will inform 
 - Python
 - JSON
 
-
-
 ### Framework and Programs Used:
 - Bootstrap
 - Django
@@ -355,13 +353,25 @@ Framework and Websites
 - XML Sitemap: https://www.xml-sitemaps.com/ Generate sitemap
 
 ## Code Validation
+All validation has been documented and can be found inside the media/readme folders.
 ### HTML valiation
+All code has been passed trough W3 validation service. One error was left unsolved. This error was found in checkout.html and is is belived to occurre because the element that the label belongs to is inside an If statement. So this is not really an error and was left unsolved. 
+![Contact error](/media/readme/w3-html-validation/checkout.png)
+
 ### CSS validation
+All CSS has been passed trough W3 validation without errors.
+
 ### JavaScript validation
+
 ### Pep 8
+All Pytohn code has been passed trough CI pytohn linter.
+
 ### Python validator
+All python code was tested with flake8. Some errors were left unfixed. This was because the code has not been written by me. The errors occure in migrations and make_url. Some line too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up. 
+
 ## Tests
 ## Lighthouse
+![Lighthouse](/media/readme/lighthouse.png)
 ## Manual tests
 
 ## Project Bugs and Solutions:

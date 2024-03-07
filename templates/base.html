@@ -114,7 +114,7 @@
                         </a>
                     </li>
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" class="user-options" data-toggle="dropdown"
+                        <a class="text-black nav-link" href="#" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 {% if request.user.is_authenticated %}
@@ -125,7 +125,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" id="dropdown-menu-base" aria-labelledby="dropdown-menu-base">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
