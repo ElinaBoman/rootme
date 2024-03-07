@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse, HttpResponse
+from django.shortcuts import (render, get_object_or_404,
+                              redirect, reverse)
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.functions import Lower
-# Imports search query, q will fetch product that has search in either name or description.
 from django.db.models import Q
 from .models import Product, Category
 from .forms import ProductForm
@@ -33,7 +33,6 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -44,11 +43,11 @@ def all_products(request):
             if not query:
                 messages.error(request, "Please enter search criteria!")
                 return redirect(reverse('products'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                        description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-    #Context sends data stored in product key to template products.html
     context = {
         'products': products,
         'search_term': query,
@@ -63,7 +62,6 @@ def product_detail(request, product_id):
     View to return products_detail.html
     """
     product = get_object_or_404(Product, pk=product_id)
-    #Context sends data stored in product key to template products.html
     context = {
         'product': product,
     }
@@ -76,7 +74,7 @@ def add_product(request):
     if not request.user.is_superuser:
         messages.error(request, 'Only store admin can do that.')
         return redirect(reverse('home'))
-   
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -84,8 +82,9 @@ def add_product(request):
             messages.success(request, 'Product has been added successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Something went wrong! Please check if form is valid.')
-    else:    
+            messages.error(request, 'Something went wrong! \
+                           Please check if form is valid.')
+    else:
         form = ProductForm()
     template = 'products/add_product.html'
     context = {
@@ -106,10 +105,12 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, f'You have successfully updated {product.name}')
+            messages.success(request,
+                             f'You have successfully updated {product.name}')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Something went wrong! Please ensure the form is valid.')
+            messages.error(request, 'Something went wrong! \
+                           Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing { product.name }')
@@ -124,13 +125,12 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """For admin to update products"""
+    """For admin to delete products"""
     if not request.user.is_superuser:
         messages.error(request, 'Only store admin can do that.')
         return redirect(reverse('home'))
-        
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'You have successfully deleted product')
     return redirect(reverse('products'))
-

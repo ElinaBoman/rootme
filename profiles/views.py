@@ -3,7 +3,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .models import UserProfile
 from .forms import UserProfileForm
-from checkout.models import Order, OrderLineItem
+from checkout.models import Order
+
 
 @login_required
 def profile_view(request):
@@ -15,9 +16,11 @@ def profile_view(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile has been updated successfully')
+            messages.success(request,
+                             'Profile has been updated successfully')
         else:
-            messages.error(request, 'Update failed, make sure the form is valid.')
+            messages.error(request, 'Update failed, \
+                           make sure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -28,9 +31,8 @@ def profile_view(request):
         'orders': orders,
         'on_profile_view': True,
     }
-
-
     return render(request, template, context)
+
 
 def order_history(request, order_id):
     order = get_object_or_404(Order, order_id=order_id)
@@ -38,6 +40,6 @@ def order_history(request, order_id):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'from_profile': True,  
+        'from_profile': True,
     }
     return render(request, template, context)

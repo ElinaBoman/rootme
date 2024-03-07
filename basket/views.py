@@ -1,5 +1,5 @@
-from django.shortcuts import (render,
-                              redirect, reverse, HttpResponse, get_object_or_404)
+from django.shortcuts import (render, redirect, reverse,
+                              HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
 
@@ -25,8 +25,8 @@ def add_to_basket(request, item_id):
                          f'quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
-        messages.success(request, f'Added {product.name}' + 
-                        f'to basket')
+        messages.success(request, f'Added {product.name} \
+                         to basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -42,7 +42,7 @@ def adjust_basket(request, item_id):
     basket = request.session.get('basket', {})
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request, f" Updated quantity to" + 
+        messages.success(request, f" Updated quantity to" \
                          f"{basket[item_id]} {product.name}")
 
     else:
@@ -66,5 +66,3 @@ def remove_from_basket(request, item_id):
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)
-
-

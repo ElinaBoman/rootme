@@ -1,19 +1,17 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ContactForm
-from contact.models import Contact
-from .forms import ContactForm
 from django.core.mail import send_mail
-from django.template.loader import render_to_string
 from django.conf import settings
+from .forms import ContactForm
 
 
-
-# Create your views here.
 def _send_confirmation_email(customer_email):
-    """Send confirmation email to customer"""
+    """
+    Send confirmation email to customer
+    """
     subject = 'Q&A'
-    body = 'Thank you for reaching out, we will be in contact with you shortly!\nBest regards,\nRoot|Me'
+    body = 'Thank you for reaching out, we will be in \
+            contact with you shortly!\n Best regards,\nRoot|Me'
     send_mail(
         subject,
         body,
@@ -31,13 +29,15 @@ def contact_view(request):
         print('form', form)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your message has been sent, we will contact you shortly!')
+            messages.success(request, 'Your message has been sent, \
+                             we will contact you shortly!')
             customer_email = form.cleaned_data['contact_email']
             _send_confirmation_email(customer_email)
             return redirect('contact_view')
 
         else:
-            messages.error(request, 'Message failed, make sure the form is valid.')
+            messages.error(request, 'Message failed, \
+                           make sure the form is valid.')
     else:
         form = ContactForm()
 
@@ -46,6 +46,4 @@ def contact_view(request):
         'form': form,
         'on_contact_view': True,
     }
-    return render(request, 'contact/contact.html', context)
-
-
+    return render(request, template, context)

@@ -1,12 +1,10 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
-
 
 
 class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=300, null=True, blank=True)
     friendly_name = models.CharField(max_length=300, null=True, blank=True)
 
@@ -15,6 +13,7 @@ class Category(models.Model):
 
     def get_friendly_name(self):
         return self.friendly_name
+
 
 class Product(models.Model):
     """
@@ -34,13 +33,17 @@ class Product(models.Model):
         ('Has been planted', 'Has been planted'),
     )
 
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True,
+                                 blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=300, null=True, blank=True)
     name = models.CharField(max_length=300)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     description = models.TextField()
-    pot_size = models.TextField(max_length=10, choices=POT_SIZE, null=True, blank=True)
-    current_stadge = models.CharField(max_length=300, choices=OPTION_CURRENT_STADGE, null=True, blank=True)
+    pot_size = models.TextField(max_length=10, choices=POT_SIZE,
+                                null=True, blank=True)
+    current_stadge = models.CharField(max_length=300,
+                                      choices=OPTION_CURRENT_STADGE,
+                                      null=True, blank=True)
     image_url = models.URLField(max_length=1200, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
