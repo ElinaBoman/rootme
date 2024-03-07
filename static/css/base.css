@@ -235,7 +235,7 @@ a.category-badge > span.badge:hover {
     flex-direction: row;
     justify-content: center;
     gap: 30px;
-    position: absolute;
+    
 
   }
 }
@@ -279,5 +279,11 @@ a.category-badge > span.badge:hover {
         .increment-qty, .decrement-qty {
             padding: .25rem .5rem !important;
         }
-    }
 
+     
+    }
+    @media (min-width: 991px){
+    .min-height {
+        min-height: 30vw;
+        }
+    }
