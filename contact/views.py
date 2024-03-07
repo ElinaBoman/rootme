@@ -47,3 +47,4 @@ def contact_view(request):
         'on_contact_view': True,
     }
     return render(request, template, context)
+
