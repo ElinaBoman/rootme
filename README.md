@@ -276,7 +276,6 @@ A signed in user is able to store products inside a wishlist. Inside the Wishlis
 Inside the Q&A view the user can read about normally asked questions. If the user has a question that has not been answered within the Q&A he/she is instructed to use the contact form. 
 
 ## Future Features
-
 There are a lot of features that I would like to add. As mentioned in my issues I would like for the user to be able to sort plants into categories such as plant needs. This would be to allow users to filter plants that suits them. 
 
 I would also like to imporve the wishlist in the future so the user can email their wishlist to them self or someone else with their wishes. 
@@ -355,19 +354,17 @@ Framework and Websites
 ## Code Validation
 All validation has been documented and can be found inside the media/readme folders.
 ### HTML valiation
-All code has been passed trough W3 validation service. One error was left unsolved. This error was found in checkout.html and is is belived to occurre because the element that the label belongs to is inside an If statement. So this is not really an error and was left unsolved. 
+All code has been passed trough W3 validation service. One error was left unsolved. This error was found in checkout.html and is is belived to occurre because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
 ![Contact error](/media/readme/w3-html-validation/checkout.png)
 
 ### CSS validation
 All CSS has been passed trough W3 validation without errors.
-
 ### JavaScript validation
 
 ### Pep 8
 All Pytohn code has been passed trough CI pytohn linter.
-
 ### Python validator
-All python code was tested with flake8. Some errors were left unfixed. This was because the code has not been written by me. The errors occure in migrations and make_url. Some line too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up. 
+All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occure in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up. 
 
 ## Tests
 ## Lighthouse
@@ -375,6 +372,19 @@ All python code was tested with flake8. Some errors were left unfixed. This was 
 ## Manual tests
 
 ## Project Bugs and Solutions:
+- Saving informaton to user profile
+There has been an issue with saving information to user profile. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleard the tulpe will become a tule inside a nother tulpe and so on. This problem does not occure everytime so it has been really hard to find the key to this error. I have printed out the information in the terminal to see waht was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because it is not anything wrong with tha database as I have tested to use index to get only a part of the value in the inputfields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
+Status: Unsolved
+
+<details>
+<summary>Bug</summary>
+
+![Bug documentation](/media/readme/profile-bug.png)
+</details>
+
+- Django Countries
+I have a second bug that is thought to be related to the first bug. As Django Coutries only accepts 2 charactes inside the field. Theese would create big problems while going trough checkout because the intent_success function would not work because the contry filed is too long. Like previously mentioned it is proberbly realted to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out every thing worked fine. 
+Status: Temporarily fix, Unsolved
 
 ## Deployment
 ### Create Heroku app
