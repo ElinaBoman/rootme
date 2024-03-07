@@ -32,6 +32,7 @@ urlpatterns = [
     path('wishlist/', include('wishlist.urls')),
     path('summernote/', include('django_summernote.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 handler404 = 'boutique_ado.views.handler404'
 
 
