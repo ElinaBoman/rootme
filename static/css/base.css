@@ -199,7 +199,7 @@ a.category-badge > span.badge:hover {
 /* Footer */
 .footer-main {
     background-color: rgba(103, 141, 103);
-    color: white;  
+    color: white;
 }
 
 .social-media-links i {
@@ -240,18 +240,6 @@ a.category-badge > span.badge:hover {
   }
 }
   
-  /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
-      .fixed-top-desktop-only {
-          position: fixed;
-          top: 0;
-          right: 0;
-          left: 0;
-          z-index: 1030;
-      }
-  
-}
-
       /* Pad the top a bit when navbar is collapsed on mobile, copied from Code Institute walkthrough */
     @media (max-width: 991px) {
 
