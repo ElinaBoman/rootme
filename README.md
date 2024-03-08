@@ -2,9 +2,9 @@
 ## Root| Me
 ![amIresponsive](/media/readme/am-i-responsive.png)
 ### Introduction
-Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a allreday planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow thir own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
+Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a alreday planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
 
-The targeted audience are people who wants to grow their own plants, but also for finding the perfect gift among plant lovers.
+The targeted audience are people who want to grow their own plants, but also for finding the perfect gift among plant lovers.
 
 ## Table of Contents
 
@@ -37,36 +37,36 @@ The targeted audience are people who wants to grow their own plants, but also fo
 
 
 ## Overview
-The purpose of this project was to create a project that satisfyed the assesment criteria of Code Instututes Project 5, E-commerce module. Some of the criterias were:
+The purpose of this project was to create a project that satisfied the assesment criteria of Code Institutes Project 5, E-commerce module. Some of the criterias were:
 - Create a functioning E-commerce store
 - User can checkout their products via payment system, Stripe. 
 - Have authentication system for users
-- Have full CRUD functionallity 
-- Use search enginge optimasation and descriptive meta tags
+- Have full CRUD functionality 
+- Use search engine optimization and descriptive meta tags
 - User is be able to sign up to newsletters 
 
 The criterias required three custom made models that suited the project. The models I created were 
 - Wishlist
 
-User can store products in a wishlist by clicking Add to wish button in products view. In the wishlist view the user can see their added wishes and remove them from the wishlist.
+The user can store products in a wishlist by clicking the "Add to wish" button in the products view. In the wishlist view the user can see their added wishes and remove them from the wishlist.
 - Contact
 
 The user can send messages to the company from the Q&A view. The user will then recieve a confirmation email that the form has been submitted. The message will be saved into the admin panel. 
 - Product
 
-This module was a part of Code Institute walktrough project, but I have altered it to suit this project and added fields to make it custom made. 
+This module was a part of Code Institute walkthrough project, but I have altered it to suit this project and added fields to make it custom made. 
 
 ##### Customer goals
-This projects aims to create a inviting and easy navigated website for customers. To accive this following features has been created:
+This project aims to create an inviting and easy navigated website for customers. To achieve this following features has been created:
 - The user can search and filter trough products
-- The user can create and manage their user profle.
+- The user can create and manage their user profile.
 - The user can store products that they would like to remember in a wishlist
 - The user can contact Root me via a contact form
-- The user can display prevously created orders inside their profile
+- The user can display previously created orders inside their profile
 - The user can sign up to a newsletter
 
 #### Business goals
-The main goal for Root me is to find people who wants to buy plants, for them self or as a gift. As a business owner it is therefore important to be able to find theese people, but also having a easy to mange inventory on the website. To accive this following features exist on the website:
+The main goal for Root me is to find people who want to buy plants, for themself or as a gift. As a business owner it is therefore important to be able to find these people, but also having an easy to manage inventory on the website. To achieve this following features exist on the website:
 - The admin can manage the store form the live site
 - Collect email addresses for newsletter
 - Use a payment system called Stripe
@@ -77,18 +77,18 @@ The main goal for Root me is to find people who wants to buy plants, for them se
 
 ## UX
 The design of the website has been created to resemble the main product, plants. The goal was to create a design that was inspired by nature with green and calming tones.
-The colors used on the website are mostly green and white. The white is to keep the overall look of the website clean and adding more focus to the product. In the begining the main background was green, but this took away too much attention from the products as the images would not stand out from the background. 
+The colors used on the website are mostly green and white. The white is to keep the overall look of the website clean and adding more focus to the product. In the beginning the main background was green, but this took away too much attention from the products as the images would not stand out from the background. 
 To make the product images really pop the background was set to white, which allowed the beautiful product images to really stand out.
-Green elements where instead added to buttons. This created a nice balance that still had the green nature vibe but also would bring the users attention where it should be, at the products.
+Green elements were instead added to buttons. This created a nice balance that still had the green nature vibe but also would bring the users attention where it should be, at the products.
 
-The green color choosen for the project is called Reseda green, which has a calming green note. Green is a difficult color to work with because to much of it does not create a appeling look. To create a more proffesional look some buttons have black or white background. This created a more organized over all look on the website. 
+The green color chosen for the project is called Reseda green, which has a calming green note. Green is a difficult color to work with because too much of it does not create an appeling look. To create a more professional look some buttons have black or white background. This created a more organized over all look on the website. 
 
-Most of the text content is black. To be able to prioritaze the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) were set to a ashy tone.
+Most of the text content is black. To be able to prioritize the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) were set to an ashy tone.
 
 ![Color-schema](/media/readme/theme-color.png)
 
 ## Strategy Plane
-In order to create a good user experience and also strategies how to design the project I tried to answer following questions.
+In order to create a good user experience and also strategies how to design the project I tried to answer the following questions.
 
  What are the User needs?
 - See prices
@@ -98,11 +98,11 @@ In order to create a good user experience and also strategies how to design the 
 - See images of the plants
 - Be able to buy pots and other compliments
 
-What Features can be provide to satisfy those needs?
+What Features can be provided to satisfy those needs?
 - Have prices and information about the plants displayed
 - Offer to wrap plants as gifts, have gift cards and small presents that can be attached to the plant
 - Show the plants in environments that inspires users to buy the plants
-- Have category's for plants, pots and other needs
+- Have categories for plants, pots and other needs
 
 How can I make information easy to understand?
 - With clear descriptive text 
@@ -128,7 +128,7 @@ How can I help users to discover other relevant parts of web application?
 
 ## Agile Methodologies
 ### Canban board and MosCOW Prioritization
-This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW priorizitation. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assesment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW prioritization. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
 
 ![issues](/media/readme/issues.png)
 ![issues](/media/readme/issues-continiue.png)
@@ -138,7 +138,7 @@ To visit project canban board, follow this link:
 
 
 ### Sprints - Milestones
-The issues were then categories into sprints. I tried to create a cronological order for how all my issues would be handled in a certin timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even tough I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lessons. Creating these sprints made me realize early in the the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
+The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
 
 **Sprint**|**Sprint**|**Start**|**Finished**
 :-----:|:-----:|:-----:|:-----:
@@ -155,66 +155,68 @@ The issues were then categories into sprints. I tried to create a cronological o
 
 ## Marketing
 #### Facebook
-To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companys. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate grater revanue for the Root Me company. 
+To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company. 
 
 #### MailChimp
 Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
 ![Home](/media/readme/news-letter.png)
 
 #### SEO
-Early in the project development I started reserching and planning search engined optimatization. I wrote down keywords that I thought would be appropriate for a e-commerce selling plants. I tried short- and longtailed words. Some of the shorttailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my SEO words and 
-reaserch thir relevance and compared it to similar words. When I started finishing up the project I tried implementing some of these words to imporve my search optimization. 
+Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and
+research their relevance and compare it to similar words. When I started finishing up the project I tried implementing some of these words to improve my search optimization.
 
+Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons.
+ 
 Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
 
 ### User Stories
 **Issue nr**|**Epic**|**User Stories: As a User**|**Label**|**Finished**
 -----|----|-----|-----|-----
 1|Account|As a user I can create an account so that I can save order history.|Must have |YES
-2|Basket|As a user I can select an add items to shopping cart on the website so that I can buy them.|Must have |YES
-3|Account|As a user I can add shipping information and update it when needed so that I can have orders deliverd to my address.|Must have |YES
+2|Basket|As a user I can select and add items to the shopping cart on the website so that I can buy them.|Must have |YES
+3|Account|As a user I can add shipping information and update it when needed so that I can have orders delivered to my address.|Must have |YES
 4|Products|As a user I can read information about products so that I can decide if the product is suitable for me.|Must have |YES
 5|Basket|As a user I can update my shopping cart so that I can manage my orders.|Must have |YES
 6|Basket|As a user I can delete items in my shopping cart so I can update my orders.|Must have |YES
-7||AccountAs a user I can select view shipping information so that I can make sure my order is being send to the right address.|Must have |YES
+7||AccountAs a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
 8|Products|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
-9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website is not working.|Must have |YES
-13|Products|As a user I can filter through category's with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
-14|Basket|As a user I can add items to shopping cart and then leave website and still have items inside so that I can buy later.|Good to have|YES
-15|Products|As a user I can search on the website for specific products so that I can see if website have what I'm looking for.|Must have |YES
+9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website are not working.|Must have |YES
+13|Products|As a user I can filter through categories with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
+14|Basket|As a user I can add items to the shopping cart and then leave the website and still have items inside so that I can buy them later.|Good to have|YES
+15|Products|As a user I can search on the website for specific products so that I can see if the website have what I'm looking for.|Must have |YES
 16|Products|As a user I can select if my order is a gift so that I can gift them with nice wrapping and a card.|Nice to have|NO
-17|Products|As a user I can also buy pots and dirt that are suitable for my products I can give the best care for my products.|Good to have|YES
+17|Products|As a user I can also buy pots and dirt that are suitable for my products. I can give the best care for my products.|Good to have|YES
 
 **Issue nr**|**User Stories: As site owner**|**Label**|**Finished**
 -----|-----|-----|-----
 10|Management|As a site owner I can select an add/edit/delete products on the website so that I can manage stock information.|Must have |YES
 11|User information|As a site owner I can have access to user information so that I can contact customers if necessary.|Must have |YES
 12|Social media|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
-18|Products|As a site owner I can view information and make suggestions about what compliments that are good to have together with chosen plant so that I can increase my profit.|Good to have|NO
+18|Products|As a site owner I can view information and make suggestions about what compliments that are good to have together with the chosen plant so that I can increase my profit.|Good to have|NO
 ### Implementation of User Stories 
-- 1. User is able to create an account and save order history by checking save information box in checkout form. The Order history can then be accesed inside the user profile.
+- 1. User is able to create an account and save order history by checking the save information box in the checkout form. The Order history can then be accessed inside the user profile.
 - 2. The user can add/edit and delete products in their basket.
 - 3. The user can enter shipping information in checkout form. The user can also add shipping information in My profile.
 - 4. The user can read about all products in the products detail section by clicking the product image. 
-- 5. The user has full CRUD funcionality of their shopping basket.
-- 6. The user can delete product items from shopping basket.
-- 7. The user can view shipping information after the secure checkout is finished. The user will also recieve a email with related information. 
-- 8. On the products page the user can filter trough categories by product, price or simply search for certain products in the text input field. 
-- 9. The user can easily navigate on the website by main navigation bar. The user will recieve helpful toast messages when performin acctions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
+- 5. The user has full CRUD functionality of their shopping basket.
+- 6. The user can delete product items from the shopping basket.
+- 7. The user can view shipping information after the secure checkout is finished. The user will also receive an email with related information. 
+- 8. On the products page the user can filter through categories by product, price or simply search for certain products in the text input field. 
+- 9. The user can easily navigate on the website by using the main navigationbar. The user will receive helpful toast messages when performing actions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
 - 10. The store owner have full CRUD functionallity over the products and can update, edit or delete products.
-- 11. The site owner will have information about user inside the django admin panel. 
-- 12. The customers can visit Root Me's Facebook page by clicking social media link in footer. There are also links to instagram and youtube but there is no content related to Root Me in thoose links.
-- 14. The users basket is stored in sessions so the user can leave the site but still have their products inside the basket. This will ofcourse not work if the user updates cash since the session disapears. 
+- 11. The site owner will have information about the user inside the django admin panel. 
+- 12. The customers can visit Root Me's Facebook page by clicking the social media link in the footer. There are also links to instagram and youtube but there is no content related to Root Me in those links.
+- 14. The users basket is stored in sessions so the user can leave the site but still have their products inside the basket. This will of course not work if the user updates cash since the session disappears. 
 - 15. The user can enter text input to search for products in main navigation. 
-- 17. The user is able to see what pot size the plants requires and then search for suitable pots. 
+- 17. The user is able to see what pot size the plants require and then search for suitable pots. 
 
 ## Scope plane
-When I started this project I realized quickly that to be able to learn and manege new teqniques such as Stripe, there would not be a lot of time to focus on Nice to Have or Good to Have issues. Even tough there were some features that I was very eagre to create I had to stick with an MVP. Therefore I decided on which featurer that would be essential for the project and just making sure I finished those first.
+When I started this project I realized quickly that to be able to learn and manage new techniques such as Stripe, there would not be a lot of time to focus on Nice to Have or Good to Have issues. Even though there were some features that I was very eagre to create I had to stick with an MVP. Therefore I decided on which features would be essential for the project and just made sure I finished those first.
 
 #### Essential Features:
 - User can create account
 - Payment system with Stripe
-- Having a working contactform
+- Having a working contact form
 - Create a wishlist
 - Having full CRUD within user shopping basket
 - Having full CRUD for admin to manage products
@@ -222,11 +224,11 @@ When I started this project I realized quickly that to be able to learn and mane
 - User actions are met with corresponding toast message
 
 ## Structural Plane
-This project was built form a Code Institute Walktrough project called Boutique Ado. After having all functionallity in place from Boutique Ado I started to create my own project. To make this project into my own I redesigned the front end and then had my own functions on the backend. Most of the design has been built with Bootstrap.
+This project was built from a Code Institute Walkthrough project called Boutique Ado. After having all functionality in place from Boutique Ado I started to create my own project. To make this project into my own I redesigned the front end and then had my own functions on the backend. Most of the design has been built with Bootstrap.
 
 ## Skeleton & Surface Planes
 ### Wireframes
-For this project I created Wireframes with Balsamiq tool. I decided to do this for pages that would need more stucture depending on wireframe size. The wireframes were only a tool to plan the structure and do not represent the finished product.
+For this project I created Wireframes with the Balsamiq tool. I decided to do this for pages that would need more structure depending on wireframe size. The wireframes were only a tool to plan the structure and do not represent the finished product.
 <details>
 <summary>Home</summary>
 
@@ -247,42 +249,43 @@ For this project I created Wireframes with Balsamiq tool. I decided to do this f
 </details>
 
 ### Database Schema
-Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be realted to eachother and what kind of table it would be. Below is an early sketch of my models. They were later modifyied and do not represent the finished product, but the relationship between them stayed the same. The database models sketch was created with Lucidchart.
+Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is an early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
 
 ![Database models](/media/readme/database-models.png)
 
 ## Existing Features
 ### Navbar and Footer
-The navbar has a clean look with easy navigation. There is a banner encouraging users to spend more money to get free delivery. The profile fontawsome icon will change if the user is signed in. The navbar categories will not be displayed on smaller screen sizes as they will instead be placed inside a hamburger bar. 
+The navbar has a clean look with easy navigation. There is a banner encouraging users to spend more money to get free delivery. The profile Fontawsome icon will change if the user is signed in. The navbar categories will not be displayed on smaller screen sizes as they will instead be placed inside a hamburger bar. 
 ### Footer
-The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wishes to contatc Root Me a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social medias, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content. 
+The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wish to contact Root Me a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social media, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content.
 ### Home 
 The Home page has some made up reviews displayed from happy customers. There is also a big button for users to go directly into the product section.
 ### Shop
-Inside the shop all products are displayed. The user is able to sort the products trough a sort by field. The products are represented with image, name, price and category. If the user is signed in there is also a Add to Wishlist button. To make it easy for the user to navigate the products page there is a Up to Top button along the right hand side.
+Inside the shop all products are displayed. The user is able to sort the products through a sort by field. The products are represented with image, name, price and category. If the user is signed in there is also an "Add to Wishlist" button. To make it easy for the user to navigate the products page there is a "Up to Top" button along the right hand side.
 ### Product Detail 
-By clicking the image on the products page the user is dericted to products detail page. Here the user can read a description of chosen product. See what stadge the plant is in, If it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the Add to basket button. 
-The quantity select box will be disabeled if value is too low (0) or to high (99). 
-### Shoping Basket
-Inside the basket the user has full CRUD functionalliy. The user can See, read, update and delete products. When the user is ready there is a Secure Checkout button that takes the user to the Checkout form. 
+By clicking the image on the products page the user is directed to the product detail page. Here the user can read a description of the chosen product. See what stage the plant is in, If it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the Add to basket button.
+The quantity select box will be disabled if the value is too low (0) or too high (99). 
+### Shopping Basket
+Inside the basket the user has full CRUD functionality. The user can See, read, update and delete products. When the user is ready there is a Secure Checkout button that takes the user to the Checkout form. 
 ### Checkout form 
-Here the user can insert information about shipping and billing. Signed in users can also choose to save information to their user profile. If the user is not signed in he/she is provided with links to create an account if they wish to save contact form information. When the form has been finished the user can enter card information. To test this use following information, Cardnumber: 4242 4242 4242 4242. Add then any numbers to fill out experation date and CVC. To test unsuccesfull card payment use, Cardnumber: 4000 0000 0000 0002. Add any numbers to finish the input field. If the payment has been successfull the user is redirected to a success view where the order and shipping information is displayed.
+Here the user can insert information about shipping and billing. Signed in users can also choose to save information to their user profile. If the user is not signed in he/she is provided with links to create an account if they wish to save contact form information. When the form has been finished the user can enter card information. To test this use the following information, Card Number: 4242 4242 4242 4242. Add then any numbers to fill out the expiration date and CVC. To test unsuccessful card payment use, Card Number: 4000 0000 0000 0002. Add any numbers to finish the input field. If the payment has been successful the user is redirected to a success view where the order and shipping information is displayed.
 ### User authentication
-The user can commit several different actions on the website without being a registered user. However to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will recieve an email to confirm the email address. When the email address has been confirmed the user can sign in. 
-To then sign in and sign out is very easy. The login and logout buttons are aviable from my profile in the main navigation bar. 
+The user can commit several different actions on the website without being a registered user. However, to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will receive an email to confirm the email address. When the email address has been confirmed the user can sign in.
+To then sign in and sign out is very easy. The login and logout buttons are available from my profile in the main navigation bar.
 ### Wishlist
-A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also chose to take out the product from the Wishlist by clicking the remove link. 
+A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also choose to take out the product from the Wishlist by clicking the remove link. 
 ### Contact 
 Inside the Q&A view the user can read about normally asked questions. If the user has a question that has not been answered within the Q&A he/she is instructed to use the contact form. 
 
 ## Future Features
-There are a lot of features that I would like to add. As mentioned in my issues I would like for the user to be able to sort plants into categories such as plant needs. This would be to allow users to filter plants that suits them. 
+There are a lot of features that I would like to add. As mentioned in my issues I would like for the user to be able to sort plants into categories such as plant needs. This would be to allow users to filter plants that suit them.
 
-I would also like to imporve the wishlist in the future so the user can email their wishlist to them self or someone else with their wishes. 
+I would also like to improve the wishlist in the future so the user can email their wishlist to themselves or someone else with their wishes.
 
-I would like to have better giftplanning alternatives. Were the user can enter different kinds of packagin options, adding giftcard and similar things. 
+I would like to have better gift planning alternatives. Where the user can enter different kinds of packaging options, adding giftcard and similar things.
 
 I would also like to work a bit more with adding stock numbers that will inform the user/store owner if a product is finished.
+
 
 ## Technologies Used
 ### Languages Used
@@ -350,11 +353,13 @@ Framework and Websites
 - Lighthouse testing Creating a lighthouse report.
 - Elephant SQL: https://customer.elephantsql.com/login To handle the database.
 - XML Sitemap: https://www.xml-sitemaps.com/ Generate sitemap
+- Rgba Color Picker: https://rgbacolorpicker.com/ color picker
+- CSS Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information
 
 ## Code Validation
 All validation has been documented and can be found inside the media/readme folders.
-### HTML valiation
-All code has been passed trough W3 validation service. One error was left unsolved. This error was found in checkout.html and is is belived to occurre because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
+### HTML Validation
+All code has been passed through W3 validation service. One error was left unsolved. This error was found in checkout.html and it is believed to occur because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
 ![Contact error](/media/readme/w3-html-validation/checkout.png)
 
 ### CSS validation
@@ -364,7 +369,7 @@ All CSS has been passed trough W3 validation without errors.
 ### Pep 8
 All Pytohn code has been passed trough CI pytohn linter.
 ### Python validator
-All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occure in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up. 
+All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occur in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up.
 
 ## Tests
 ## Lighthouse
@@ -372,8 +377,8 @@ All python code was tested with flake8. Some errors were left unfixed. This was 
 ## Manual tests
 
 ## Project Bugs and Solutions:
-- Saving informaton to user profile
-There has been an issue with saving information to user profile. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleard the tulpe will become a tule inside a nother tulpe and so on. This problem does not occure everytime so it has been really hard to find the key to this error. I have printed out the information in the terminal to see waht was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because it is not anything wrong with tha database as I have tested to use index to get only a part of the value in the inputfields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
+- Saving information to user profile
+There has been an issue with saving information to user profiles. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleared the tulpe will become a tulpe inside another tulpe and so on. This problem does not occur every time so it has been really hard to find the key to this error. I have printed out the information in the terminal to see what was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because there is not anything wrong with the database as I have tested to use index to get only a part of the value in the input fields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
 Status: Unsolved
 
 <details>
@@ -383,7 +388,7 @@ Status: Unsolved
 </details>
 
 - Django Countries
-I have a second bug that is thought to be related to the first bug. As Django Coutries only accepts 2 charactes inside the field. Theese would create big problems while going trough checkout because the intent_success function would not work because the contry filed is too long. Like previously mentioned it is proberbly realted to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out every thing worked fine. 
+I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
 Status: Temporarily fix, Unsolved
 
 ## Deployment
@@ -392,7 +397,7 @@ Status: Temporarily fix, Unsolved
 - Install libraries: dj_database_url and psycopg2
 - Install Cloudinary Libraries
 - Create requirements.txt file
-- Create a project with command django-admin startproject rootme . (replace rootme with your project name). Do not forget the "." in the end, it's very important.
+- Create a project with the command django-admin startproject rootme . (replace rootme with your project name). Do not forget the ".'' In the end, it's very important.
 - Create app with command: python manage.py startapp blog (Replace 'blog' with name of your app)
 - To create database models run: python manage.py makemigrations
 - Then run: python manage.py migrate
@@ -404,12 +409,12 @@ Status: Temporarily fix, Unsolved
 - Remove env variable in Heroku settings: DISABLE_COLLECTSTATIC.
 - Make sure that you have created a file called Procfile in project root. Start up command is inside Procfile and will inform Heroku how to run the app.
 - Add your created apps in settings.py under INSTALLED_APPS.
-- To run website you need to add allowed hosts under ALLOWED_HOSTS in settings.py. You
-can find the host name if you try opening up the project with: python manage.py runserver.
+- To run a website you need to add allowed_hosts under ALLOWED_HOSTS in settings.py. You
+can find the hostname if you try opening up the project with: python manage.py runserver.
 
 ### Deployment to heroku
 - Create a Heroku account
-- Log in to Heroku account
+- Login to Heroku account
 - In the dashboard choose "Create new app". It's located in the middle of the dashboard
 - Give the new app a name and choose what region you are from
 - When information is entered, find the tabs to Overview, Resources, Deploy, Metrics, Activity, - Access and Settings. This should be in the upper right of the site. Click the "Settings" tab
@@ -431,28 +436,27 @@ When the project is deployed there will be four green circles with check marks i
 Program starts automagically
 ### Forking the GitHub Repository
 - Log in to your GitHub account, or create a account if you don't have one
-- Go to GitHub repository that you would like to fork. To find the repository, search for the repository URL inside the search bar
+- Go to the GitHub repository that you would like to fork. To find the repository, search for the repository URL inside the search bar
 - At the top of the site in the right corner of the repository page there should be a button called "Fork". Click this button
 - Choose where you would like to fork the repository
-GitHub will then create a clone of repository at chosen location. By default you should be directed to forked repository inside your gitHub account
+GitHub will then create a clone of the repository at chosen location. By default you should be directed to forked repository inside your gitHub account
 ### Making a Local Clone
-### Setting up your local enviroment
+### Setting up your local environment
 ### Getting Stripe keys
 ### Getting email variables from gmail
 ### Setting AWS bucket
 ## Credits
-All product images has been borrowd from: https://gronvaxtriket.se/
+All product images has been borrowed from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
 
-As always I want to thank my mentor Brian O'Hair, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey! 
+As always I want to thank my mentor Brian O'Hair, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey!
 
-Thanks to all my colleguages on slack, it has been a pleasure getting to know all of you!
+Thanks to all my colleagues on slack, it has been a pleasure getting to know all of you!
 
-I would like to thank tutering services at Code Institute and ofcourse Code Institute for this course. 
+I would like to thank tutoring services at Code Institute and of course Code Institute for this course.
 
 
 
-Heart button https://codemmit.com/likeBtn
-https://getwaves.io/ waves creation footer
+
 https://rgbacolorpicker.com/ color picker
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information

@@ -9,6 +9,9 @@ body {
     font-family: "EB Garamond", serif;
 }
 
+.container-404 {
+    background: url('/media/monstera.png') no-repeat top center fixed;
+}
 .title {
     font-family: "Protest Revolution", sans-serif !important; 
     font-weight: 600;

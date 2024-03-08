@@ -40,9 +40,9 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-            Override save method if no order_id
-            has been created, generates order number by calling
-            _generate_order_id()
+        Override save method if no order_id
+        has been created, generates order number by calling
+        _generate_order_id()
         """
         if not self.order_id:
             self.order_id = self._generate_order_id()
@@ -80,9 +80,9 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-            Override save method if no order_id
-            has been created, generates order number by calling
-            _generate_order_id()
+        Override save method if no order_id
+        has been created, generates order number by calling
+        _generate_order_id()
         """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
