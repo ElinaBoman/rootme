@@ -128,13 +128,9 @@ How can I help users to discover other relevant parts of web application?
 
 ## Agile Methodologies
 ### Canban board and MosCOW Prioritization
-This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The issues were then prioritzed into categories according to MosCoW prioritization. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The requirements were then briefly described with acceptance criterias. This would descipe what I would need to do in order to fullfill the issue. The there is a section called Tasks that descibes what needs to be done in order for the issue to be accepted.
 
-![issues](/media/readme/issues.png)
-![issues](/media/readme/issues-continiue.png)
-
-To visit project canban board, follow this link:
-[canban board](https://github.com/users/ElinaBoman/projects/6)
+The issues were then prioritzed into categories according to MosCoW prioritization. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
 
 ### User Stories
 **Issue nr**|**Epic**|**User Stories: As a User**|**Label**|**Finished**
@@ -242,11 +238,13 @@ Because this is a B2C business it is important to have an easy checkout system a
 
 
 #### Facebook
-To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company. 
+To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company.
 
+![Facebook](/media/readme/facebook.png)
 #### MailChimp
+
 Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
-![Home](/media/readme/news-letter.png)
+![Newsletter](/media/readme/news-letter.png)
 
 #### SEO
 Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and

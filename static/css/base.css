@@ -203,6 +203,7 @@ a.category-badge > span.badge:hover {
 .footer-main {
     background-color: rgba(103, 141, 103);
     color: white;
+    line-height: 1.5;
 }
 
 .social-media-links i {
@@ -226,7 +227,7 @@ a.category-badge > span.badge:hover {
 }
 
 .min-height {
-    background-color: #007bff;
+    min-height: 100%;
 
 }
 

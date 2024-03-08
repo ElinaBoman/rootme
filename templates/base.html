@@ -200,18 +200,21 @@
 
     {% endblock %}
     <!-- Footer -->
-    <footer class="footer-main d-flex justify-content-center">
+    <footer class="footer-main container-fluid d-flex justify-content-center">
         <div class="container mt-3">
             <div class="row">
-                <div class="col-md-5 ml-lg-5">
+                <div class="col-md-6">
                     <h5>Contact Us</h5>
                     <p>For inquiries or support, contact us <a class="text-black"
-                            href="{% url 'contact_view' %}">here!</a></p>
-                    <p>Or if you rather speak to us directly our phone support is open during our office hours:</p>
-                    <p>Phone Number: +46 (0) 123 456 789</p>
-                    <p>You can also contact us at our social medias!</p>
+                            href="{% url 'contact_view' %}">here!</a>
+                            <br>
+                    Or if you rather speak to us directly our phone support is open during our office hours:
+                    <br>
+                    Phone Number: +46 (0) 123 456 789
+                    <br>
+                    You can also contact us at our social medias!</p>
                 </div>
-                <div class="col-md-5 ml-lg-5">
+                <div class="col-md-6">
                     <h5>Office Hours</h5>
                     <ul class="list-unstyled">
                         <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
@@ -232,11 +235,11 @@
                             rel="nofollow">
                             <p class="text-white">Privacy Policy</p>
                         </a>
-                        <p class="text-muted small text-center">This website is solely for educational purposes and does
+                        <p class="small text-center">This website is solely for educational purposes and does
                             not offer real products or services for purchase.</p>
-                        <p class="text-muted small text-center">All product images has been borrowed from <a
+                        <p class="small text-center">All product images has been borrowed from <a
                                 href="https://gronvaxtriket.se/product-category/alla-vaxter/" target="_blank"
-                                rel="nofollow"><span class="text-white">Gröna Växtriket</span></a></p>
+                                rel="nofollow"><span class="text-white"> Gröna Växtriket</span></a></p>
                     </div>
                 </div>
             </div>
