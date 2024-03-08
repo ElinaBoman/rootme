@@ -1,4 +1,6 @@
-
+html {
+    height: 100%;
+}
 
 body {
     background: url('/media/monstera-white-background.jpeg') no-repeat top center fixed;
