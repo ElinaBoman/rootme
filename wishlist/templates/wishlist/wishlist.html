@@ -18,35 +18,35 @@
     <hr>
     <div class="row">
         {% if user_wishlist %}
-            {% for item in user_wishlist %}
-            <div class="col-12 col-md-4 text-center">
-                {% if item.product.image %}
-                    <img class="w-100 col-lg-5 wishlist-prod" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                {% else %}
-                    <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ item.product.name }}">
-                {% endif %}
-            </div>
-            <div class="col-12 col-md-4">
-                <p><strong>Product Information:</strong></p>
-                <p class="text-muted">Name: {{ item.product.name }}</p>
-                <p class="text-muted">Price: {{ item.product.price }}</p>
-            </div>
-            <div class="col-12 col-md-4 text-center">
-                <a href="{% url 'delete_product_from_wishlist' item.product_id %}">
-                    <i class="fas fa-trash wishlist-icon"></i> Remove
-                </a>
-            </div>
-            {% endfor %}
+        {% for item in user_wishlist %}
+        <div class="col-12 col-md-4 text-center">
+            {% if item.product.image %}
+            <img class="w-100 col-lg-5 wishlist-prod" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+            {% else %}
+            <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ item.product.name }}">
+            {% endif %}
+        </div>
+        <div class="col-12 col-md-4">
+            <p><strong>Product Information:</strong></p>
+            <p class="text-muted">Name: {{ item.product.name }}</p>
+            <p class="text-muted">Price: {{ item.product.price }}</p>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            <a href="{% url 'delete_product_from_wishlist' item.product_id %}">
+                <i class="fas fa-trash wishlist-icon"></i> Remove
+            </a>
+        </div>
+        {% endfor %}
         {% else %}
-            <div class="col-12">
-                <h3>Your wishlist is empty.</h3>
-                <a href="{% url 'products' %}" class="btn btn-green btn-lg mt-5">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Let's go shopping!</span>
-                </a>
-            </div>
+        <div class="col-12 mb-5">
+            <h3>Your wishlist is empty.</h3>
+            <a href="{% url 'products' %}" class="btn btn-green btn-lg mt-5">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Let's go shopping!</span>
+            </a>
+        </div>
         {% endif %}
     </div>
 </div>
