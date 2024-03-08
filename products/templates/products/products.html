@@ -85,7 +85,7 @@
                                         {% if request.user.is_authenticated %}
                                         <small>
                                             <a class="info" href="{% url 'edit_product' product.id %}">Edit |</a>
-                                            <a  class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            <a  class="text-danger" href="{% url 'delete_product_view' product.id %}">Delete</a>
                                         </small>
                                         {% endif %}
                                         {% endif %}

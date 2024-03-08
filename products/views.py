@@ -124,6 +124,15 @@ def edit_product(request, product_id):
 
 
 @login_required
+def delete_product_view(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    context = {
+        'product': product,
+    }
+    return render(request, 'products/delete_product_admin.html', context)
+
+
+@login_required
 def delete_product(request, product_id):
     """For admin to delete products"""
     if not request.user.is_superuser:
