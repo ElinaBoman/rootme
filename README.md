@@ -136,39 +136,6 @@ This project has been planned with with agile methodology. Before any code was w
 To visit project canban board, follow this link:
 [canban board](https://github.com/users/ElinaBoman/projects/6)
 
-
-### Sprints - Milestones
-The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
-
-**Sprint**|**Sprint**|**Start**|**Finished**
-:-----:|:-----:|:-----:|:-----:
-1|Project setup|5/1-24|11/1-24
-2|AllAuth and Basic Navigation|12/1-24|15/1-24
-3|Products views and func.|16/1-24|20/1-24
-4|Shopping basket func.|21/1-24|24/2-24
-5|Setting up AWS, database and deployment|25/1-24|25/1-24
-6|Contact, Q&A views and funct.|25/1-24|27/1-24
-7|Wishlist view and funct.|27/1-24|1/2-24
-8|Overall design, colors, fonts ets...|1/2-24|2/2-2024
-9|Debugging and testing|2/2-24|6/2-24
-10|Read me docs|2/2-24|11/2-24
-
-## Marketing
-#### Facebook
-To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company. 
-
-#### MailChimp
-Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
-![Home](/media/readme/news-letter.png)
-
-#### SEO
-Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and
-research their relevance and compare it to similar words. When I started finishing up the project I tried implementing some of these words to improve my search optimization.
-
-Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons.
- 
-Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
-
 ### User Stories
 **Issue nr**|**Epic**|**User Stories: As a User**|**Label**|**Finished**
 -----|----|-----|-----|-----
@@ -247,6 +214,47 @@ For this project I created Wireframes with the Balsamiq tool. I decided to do th
 
 ![Contact](/media/readme/balsamic-contact.png)
 </details>
+### Sprints - Milestones
+The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
+
+**Sprint**|**Sprint**|**Start**|**Finished**
+:-----:|:-----:|:-----:|:-----:
+1|Project setup|5/1-24|11/1-24
+2|AllAuth and Basic Navigation|12/1-24|15/1-24
+3|Products views and func.|16/1-24|20/1-24
+4|Shopping basket func.|21/1-24|24/2-24
+5|Setting up AWS, database and deployment|25/1-24|25/1-24
+6|Contact, Q&A views and funct.|25/1-24|27/1-24
+7|Wishlist view and funct.|27/1-24|1/2-24
+8|Overall design, colors, fonts ets...|1/2-24|2/2-2024
+9|Debugging and testing|2/2-24|6/2-24
+10|Read me docs|2/2-24|11/2-24
+
+## Marketing
+#### Buisiness Module
+Root Me is a business-to-consumer (B2C) company. For a B2C company it is important to know who the targeted customers are and how to reach out to them.
+
+In this project a Facebook page was created to be able to reach out to customers. The Facebook page will allow the store owner to publish campaigns and events that will attract the targeted audience.
+
+In this fictitious e-commerce I would imagine the audience to be people of ages between 15-60 years. They are believed to enjoy working with plants as otherwise it would be easier to buy a plant and not a cutting. The audience would be people who enjoy spending time and money on their plants. The customer would be interested in information about how to take the best care of their plants. One way to satisfy the targeted audience would be to have descriptive text of how to take care of plants. On the Facebook page the owner could publish content about how to properly cut cuttings from plants, or show how to trim certain plants. For this project a newsletter subscription is available for users. The news letter could be used to tell customers about what plants are in season or advertise new products that are available in the store.
+
+Because this is a B2C business it is important to have an easy checkout system as the users are impulsive shoppers. Therefore it is important to design the webpage to make it as easy as possible for the customers to click on a product, add it to their basket and checkout. To create greater revenue it would be a good idea to have related products, or other shoppers also bought section right before the checkout.
+
+
+#### Facebook
+To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company. 
+
+#### MailChimp
+Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+![Home](/media/readme/news-letter.png)
+
+#### SEO
+Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and
+research their relevance and compare it to similar words. When I started finishing up the project I tried implementing some of these words to improve my search optimization.
+
+Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons.
+ 
+Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
 
 ### Database Schema
 Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is an early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
@@ -355,6 +363,7 @@ Framework and Websites
 - XML Sitemap: https://www.xml-sitemaps.com/ Generate sitemap
 - Rgba Color Picker: https://rgbacolorpicker.com/ color picker
 - CSS Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information
+-  Privacy Policy Generator https://www.privacypolicygenerator.info/ Generated policy found inside the footer
 
 ## Code Validation
 All validation has been documented and can be found inside the media/readme folders.
@@ -449,14 +458,10 @@ GitHub will then create a clone of the repository at chosen location. By default
 All product images has been borrowed from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
 
+I have used chatGPT to generate information about products and to write text content in Q&A. 
+
 As always I want to thank my mentor Brian O'Hare, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey!
 
 Thanks to all my colleagues on slack, it has been a pleasure getting to know all of you!
 
 I would like to thank tutoring services at Code Institute and of course Code Institute for this course.
-
-
-
-
-https://rgbacolorpicker.com/ color picker
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information

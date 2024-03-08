@@ -114,8 +114,8 @@
                         </a>
                     </li>
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
                             <div class="text-center">
                                 {% if request.user.is_authenticated %}
                                 <div><i class="fa-solid fa-user-check"></i></div>
@@ -125,7 +125,8 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" id="dropdown-menu-base" aria-labelledby="dropdown-menu-base">
+                        <div class="dropdown-menu border-0" id="dropdown-menu-base"
+                            aria-labelledby="dropdown-menu-base">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -201,29 +202,44 @@
     <!-- Footer -->
     <footer class="footer-main d-flex justify-content-center">
         <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-5 ml-lg-5">
-                <h5>Contact Us</h5>
-                <p>For inquiries or support, contact us <a class="text-black" href="{% url 'contact_view' %}">here!</a></p>
-                <p>Or if you rather speak to us directly our phone support is open during our office hours:</p>
-                <p>Phone Number: +46 (0) 123 456 789</p>
-                <p>You can also contact us at our social medias!</p>
+            <div class="row">
+                <div class="col-md-5 ml-lg-5">
+                    <h5>Contact Us</h5>
+                    <p>For inquiries or support, contact us <a class="text-black"
+                            href="{% url 'contact_view' %}">here!</a></p>
+                    <p>Or if you rather speak to us directly our phone support is open during our office hours:</p>
+                    <p>Phone Number: +46 (0) 123 456 789</p>
+                    <p>You can also contact us at our social medias!</p>
+                </div>
+                <div class="col-md-5 ml-lg-5">
+                    <h5>Office Hours</h5>
+                    <ul class="list-unstyled">
+                        <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+                        <li>Saturday - Sunday: Closed</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-5 ml-lg-5">
-                <h5>Office Hours</h5>
-                <ul class="list-unstyled">
-                    <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
-                    <li>Saturday - Sunday: Closed</li>
-                </ul>
+            <div class="row">
+                <div class="text-center col-12 social-media-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556797013382" target="blank" rel="nofollow"><i
+                            class="fab fa-facebook-square fa-xl mt-1 px-3"></i></a>
+                    <a href="https://www.instagram.com/" target="blank" rel="nofollow"><i
+                            class="fab fa-instagram-square fa-xl mt-1 px-3"></i></a>
+                    <a href="https://www.youtube.com/" target="blank" rel="nofollow"><i
+                            class="fab fa-youtube-square fa-xl mt-1 px-3"></i></a>
+                    <div class="text-center col-12 mt-2"><a
+                            href="https://www.termsfeed.com/live/59bd54fd-b75d-43b7-a8dc-8ab0689345a8" target="_blank"
+                            rel="nofollow">
+                            <p class="text-white">Privacy Policy</p>
+                        </a>
+                        <p class="text-muted small text-center">This website is solely for educational purposes and does
+                            not offer real products or services for purchase.</p>
+                        <p class="text-muted small text-center">All product images has been borrowed from <a
+                                href="https://gronvaxtriket.se/product-category/alla-vaxter/" target="_blank"
+                                rel="nofollow"><span class="text-white">Gröna Växtriket</span></a></p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="text-center col-12 social-media-links">
-                <a href="https://www.facebook.com/profile.php?id=61556797013382" target="blank" rel="nofollow"><i class="fab fa-facebook-square fa-xl mt-1 px-3"></i></a>
-                <a href="https://www.instagram.com/" target="blank" rel="nofollow"><i class="fab fa-instagram-square fa-xl mt-1 px-3"></i></a>
-                <a href="https://www.youtube.com/" target="blank" rel="nofollow"><i class="fab fa-youtube-square fa-xl mt-1 px-3"></i></a> 
-            </div>
-        </div>
         </div>
     </footer>
     <!--To show toast messages-->
