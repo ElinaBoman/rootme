@@ -13,7 +13,7 @@
 {% block content %}
 <div class="overlay"></div>
 
-<div class="container min-height">
+<div class="container min-height mb-5">
     <h2 class="mt-5">My Wishlist</h2>
     <hr>
     <div class="row">
@@ -32,8 +32,8 @@
             <p class="text-muted">Price: {{ item.product.price }}</p>
         </div>
         <div class="col-12 col-md-4 text-center">
-            <a href="{% url 'delete_product_from_wishlist' item.product_id %}">
-                <i class="fas fa-trash wishlist-icon"></i> Remove
+            <a href="{% url 'delete_product_from_wishlist' item.product_id %}" class="text-black">
+                <i class="fas fa-trash wishlist-icon text-black"></i> Remove
             </a>
         </div>
         {% endfor %}
