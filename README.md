@@ -469,7 +469,7 @@ https://github.com/Code-Institute-Solutions/boutique_ado_v1
 
 I been inspired by this everneed project: https://github.com/amylour/everneed/tree/main?tab=readme-ov-file#libraries--frameworks  in order to create wishlist app and readme documentation.
 
-I have used chatGPT to generate information about products and to write text content in Q&A. 
+I have used chatGPT to generate information about products, converting excel sheets into readme markdown and to write text content in Q&A. 
 
 As always I want to thank my mentor Brian O'Hare, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey!
 

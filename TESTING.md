@@ -423,24 +423,39 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 
 
 ### User Storie testing
-| Issue nr | Epic      | Criteria                                                                                                                          | Accepted |
-|----------|-----------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| 15       | Products  | Have a search field where user can search for specific products                                                                    | YES      |
-| 14       | Basket    | The user is able to store items in shopping cart session                                                                           | YES      |
-| 3        | account   | "The user is able to enter shipping information<br>The user should be able to store information in profile<br>Checkout form should be pre-filled if shipping information is saved to user" | YES      |
-| 8        | Products  | User can filter through projects by category, price, a-z                                                                          | YES      |
-| 7        | Account   | "User can view shipping information after checkout.<br>User can save order history to profile<br>User will receive auto-reply with order and shipping information" | YES      |
-| 6        | Basket    | User can delete items in shopping cart                                                                                            | YES      |
-| 11       | Account   | "User can contact the company via contact form on the website<br>Message is saved to database<br>User will receive auto-reply"    | YES      |
-| 16       | Products  | Add field that checks if order should be sent as a gift<br>Add product such as wrapping, gift card etc..                        | NO       |
-| 17       | Products  | User has a multipel of pots to chose from<br>User has several maintenance products to chose form                                | NO       |
-| 18       | Products  | Have a section before checkout with suggested products                                                                            | NO       |
-| 12       | Marketing | User can visit Facebook page                                                                                                      | YES      |
-| 13       | Products  | "User can filter product by plant needs<br>Several filters for plants are displayed on website<br>Plants has been categorized after needs" | NO       |
+| Issue nr | Epic             | Criteria                                                                                                                          | Accepted |
+|----------|------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
+| 15       | Products         | Have a search field where user can search for specific products                                                                    | YES      |
+| 14       | Basket           | The user is able to store items in shopping cart session                                                                           | YES      |
+| 3        | account          | "The user is able to enter shipping information<br>The user should be able to store information in profile<br>Checkout form should be pre-filled if shipping information is saved to user" | YES      |
+| 8        | Products         | User can filter through projects by category, price, a-z                                                                          | YES      |
+| 7        | Account          | "User can view shipping information after checkout.<br>User can save order history to profile<br>User will receive auto-reply with order and shipping information" | YES      |
+| 6        | Basket           | User can delete items in shopping cart                                                                                            | YES      |
+| 11       | Account          | "User can contact the company via contact form on the website<br>Message is saved to database<br>User will receive auto-reply"    | YES      |
+| 16       | Products         | Add field that checks if order should be sent as a gift<br>Add product such as wrapping, gift card etc..                        | NO       |
+| 17       | Products         | User has a multipel of pots to chose from<br>User has several maintenance products to chose form                                | NO       |
+| 18       | Products         | Have a section before checkout with suggested products                                                                            | NO       |
+| 12       | Marketing        | User can visit Facebook page                                                                                                      | YES      |
+| 13       | Products         | "User can filter product by plant needs<br>Several filters for plants are displayed on website<br>Plants has been categorized after needs" | NO       |
+| 9        | Active response  | "User can navigate between pages<br>User actions are met with appropriate toast messages"                                        | YES      |
 
 ### Browser Testing
+Project has been tested with
+- Chrome
+- Mozilla Firefox
+- Safari
+For some reason there were a few product images that wasn't displayed. Other then that I did not find any errors.
+
+
 ### Responsiveness
-### Testing User Stories
+Responsiveness has been tested without significant flaws. However, there have been some issues with the footer floating into the text content. The cause of this issue is not entirely clear. Since this project was based on the Boutique Ado project from Code Institute, there may be some issues arising from modifications made to the code. It seems that there is a problem with the height of the project, which leads to issues when adjusting the footer. I attempted to add CSS classes such as position: fixed or absolute, but both classes interfered with the main content and overlapped it. Although the issue was fixed, on very large screens, the footer still places itself directly under the content. This is more of a design flaw and does not disrupt the overall functionality.
+
+### Real World Device Testing
+Project has been tested on 
+- MacBook Air
+- Samsung Galaxy S21
+- ASUS HDMI MHL VX239
 
 ### Dev Tools
-### Real World Device Testing
+
+
