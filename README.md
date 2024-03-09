@@ -365,15 +365,15 @@ Framework and Websites
 
 ## Code Validation
 All validation has been documented and can be found inside the docs/readme/. There are separete folders for html, CSS, javaScript and pep8 folders.
-All testing can be found [here! ]()
+All testing can be found [here! ](https://github.com/ElinaBoman/rootme/blob/main/TESTING.md)
 
 ### HTML Validation
 All code has been passed through W3 validation service. One error was left unsolved. This error was found in checkout.html and it is believed to occur because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
 
 <details>
-<summary>Bug</summary>
+<summary>basket</summary>
 
-![Contact error](/docs/readme/w3-html-validation/checkout.png)
+![basket view](/docs/readme/pep8-testing/basket-p8-1.png)
 </details>
 
 ### CSS validation
