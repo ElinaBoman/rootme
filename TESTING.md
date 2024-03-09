@@ -439,6 +439,22 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 | 13       | Products         | "User can filter product by plant needs<br>Several filters for plants are displayed on website<br>Plants has been categorized after needs" | NO       |
 | 9        | Active response  | "User can navigate between pages<br>User actions are met with appropriate toast messages"                                        | YES      |
 
+## Project Bugs and Solutions:
+- Saving information to user profile
+There has been an issue with saving information to user profiles. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleared the tulpe will become a tulpe inside another tulpe and so on. This problem does not occur every time so it has been really hard to find the key to this error. I have printed out the information in the terminal to see what was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because there is not anything wrong with the database as I have tested to use index to get only a part of the value in the input fields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
+Status: Unsolved
+
+<details>
+<summary>Bug</summary>
+
+![Bug documentation](/docs/readme/readme_images/profile-bug.png)
+</details>
+
+- Django Countries
+I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
+Status: Temporarily fix, Unsolved
+
+
 ### Browser Testing
 Project has been tested with
 - Chrome
@@ -446,6 +462,9 @@ Project has been tested with
 - Safari
 For some reason there were a few product images that wasn't displayed. Other then that I did not find any errors.
 
+### Lighthouse Repport
+
+![Lighthouse](/docs/readme/lighthouse.png)
 
 ### Responsiveness
 Responsiveness has been tested without significant flaws. However, there have been some issues with the footer floating into the text content. The cause of this issue is not entirely clear. Since this project was based on the Boutique Ado project from Code Institute, there may be some issues arising from modifications made to the code. It seems that there is a problem with the height of the project, which leads to issues when adjusting the footer. I attempted to add CSS classes such as position: fixed or absolute, but both classes interfered with the main content and overlapped it. Although the issue was fixed, on very large screens, the footer still places itself directly under the content. This is more of a design flaw and does not disrupt the overall functionality.

@@ -35,9 +35,11 @@
         <div class="dropdown-menu border-0" id="dropdown-menu" aria-labelledby="dropdown-menu">
             {% if request.user.is_authenticated %}
                 <a href="{% url 'wishlist_view' %}" class="dropdown-item">My Wishlist</a>
-                {% if request.user.is_superuser %}
-                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                {% endif %}
+            {% endif %}
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+            {% endif %}
                 <a href="{% url 'profile_view' %}" class="dropdown-item">My Profile</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
@@ -47,12 +49,12 @@
         </div>
     </li>
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
+        <a class="{% if total_sum %} text-success font-weight-bold {% else %} text-black {% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
             <div class="text-center">
                 <div><i class="fas fa-cart-shopping fa-lg"></i></div>
                 <p class="my-0">
-                    {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
+                    {% if total_sum %}
+                        ${{ total_sum|floatformat:2 }}
                     {% else %}
                         $0.00
                     {% endif %}

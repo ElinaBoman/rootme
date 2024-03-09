@@ -142,7 +142,7 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 4|Products|As a user I can read information about products so that I can decide if the product is suitable for me.|Must have |YES
 5|Basket|As a user I can update my shopping cart so that I can manage my orders.|Must have |YES
 6|Basket|As a user I can delete items in my shopping cart so I can update my orders.|Must have |YES
-7||Account| As a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
+7|Account| As a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
 8|Products|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
 9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website are not working.|Must have |YES
 13|Products|As a user I can filter through categories with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
@@ -212,6 +212,7 @@ For this project I created Wireframes with the Balsamiq tool. I decided to do th
 
 ![Contact](/docs/readme/readme_images/balsamic-contact.png)
 </details>
+
 ### Sprints - Milestones
 The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
 
@@ -364,6 +365,9 @@ Framework and Websites
 - CSS Tricks: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ flex box information
 -  Privacy Policy Generator https://www.privacypolicygenerator.info/ Generated policy found inside the footer
 
+## Testing
+All manual testing, validation images, bugs and browser testing can be found [here! ](https://github.com/ElinaBoman/rootme/blob/main/TESTING.md)
+
 ## Code Validation
 All validation has been documented and can be found inside the docs/readme/. There are separete folders for html, CSS, javaScript and pep8 folders.
 All testing can be found [here! ](https://github.com/ElinaBoman/rootme/blob/main/TESTING.md)
@@ -374,7 +378,7 @@ All code has been passed through W3 validation service. One error was left unsol
 <details>
 <summary>basket</summary>
 
-![basket view](/docs/readme/pep8-testing/basket-p8-1.png)
+![basket view](/docs/readme/w3-html-validation/checkout.png)
 </details>
 
 ### CSS validation
@@ -386,31 +390,11 @@ All Pytohn code has been passed trough CI pytohn linter.
 ### Python validator
 All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occur in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up.
 
-## Tests
-## Lighthouse
-![Lighthouse](/docs/readme/lighthouse.png)
-## Manual tests
-
-## Project Bugs and Solutions:
-- Saving information to user profile
-There has been an issue with saving information to user profiles. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleared the tulpe will become a tulpe inside another tulpe and so on. This problem does not occur every time so it has been really hard to find the key to this error. I have printed out the information in the terminal to see what was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because there is not anything wrong with the database as I have tested to use index to get only a part of the value in the input fields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
-Status: Unsolved
-
-<details>
-<summary>Bug</summary>
-
-![Bug documentation](/docs/readme/readme_images/profile-bug.png)
-</details>
-
-- Django Countries
-I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
-Status: Temporarily fix, Unsolved
-
 ## Deployment
 ### Create Heroku app
 - Install Django and Gunicorn
 - Install libraries: dj_database_url and psycopg2
-- Install Cloudinary Libraries
+- 
 - Create requirements.txt file
 - Create a project with the command django-admin startproject rootme . (replace rootme with your project name). Do not forget the ".'' In the end, it's very important.
 - Create app with command: python manage.py startapp blog (Replace 'blog' with name of your app)
@@ -456,7 +440,9 @@ Program starts automagically
 - Choose where you would like to fork the repository
 GitHub will then create a clone of the repository at chosen location. By default you should be directed to forked repository inside your gitHub account
 ### Making a Local Clone
+
 ### Setting up your local environment
+
 ### Getting Stripe keys
 ### Getting email variables from gmail
 ### Setting AWS bucket
