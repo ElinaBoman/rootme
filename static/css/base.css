@@ -241,6 +241,12 @@ a.category-badge > span.badge:hover {
     gap: 30px;
   }
 }
+
+@media (min-width: 761px) {
+    .min-height {
+        min-height: 30vw;
+    }
+}
       /* Pad the top a bit when navbar is collapsed on mobile, copied from Code Institute walkthrough */
     @media (max-width: 991px) {
 
