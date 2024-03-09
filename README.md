@@ -142,7 +142,7 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 4|Products|As a user I can read information about products so that I can decide if the product is suitable for me.|Must have |YES
 5|Basket|As a user I can update my shopping cart so that I can manage my orders.|Must have |YES
 6|Basket|As a user I can delete items in my shopping cart so I can update my orders.|Must have |YES
-7||AccountAs a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
+7||Account| As a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
 8|Products|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
 9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website are not working.|Must have |YES
 13|Products|As a user I can filter through categories with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
@@ -155,9 +155,10 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 -----|-----|-----|-----
 10|Management|As a site owner I can select an add/edit/delete products on the website so that I can manage stock information.|Must have |YES
 11|User information|As a site owner I can have access to user information so that I can contact customers if necessary.|Must have |YES
-12|Social media|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
+12|Marketing|As a site owner I can link customers to our social media platform so that I can display inspiration for gift ideas, decorations and information about products.|Must have |YES
 18|Products|As a site owner I can view information and make suggestions about what compliments that are good to have together with the chosen plant so that I can increase my profit.|Good to have|NO
-### Implementation of User Stories 
+
+### Testing of User Stories 
 - 1. User is able to create an account and save order history by checking the save information box in the checkout form. The Order history can then be accessed inside the user profile.
 - 2. The user can add/edit and delete products in their basket.
 - 3. The user can enter shipping information in checkout form. The user can also add shipping information in My profile.
