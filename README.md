@@ -1,6 +1,6 @@
 # Contents
 ## Root| Me
-![amIresponsive](/media/readme/am-i-responsive.png)
+![amIresponsive](/docs/readme/readme_images/am-i-responsive.png)
 ### Introduction
 Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a alreday planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
 
@@ -72,8 +72,9 @@ The main goal for Root me is to find people who want to buy plants, for themself
 - Use a payment system called Stripe
 - Adding, delete and update products via Product Management link on website
 
-[The live web site can be found here! ](https://rootme-fcab110145ab.herokuapp.com/)
-[Facebook page](https://wwww.facebook.com/profile.php?id=61556797013382)
+ To visit live website click [here! ](https://rootme-fcab110145ab.herokuapp.com/)
+
+To visit Facebook page click [here](https://wwww.facebook.com/profile.php?id=61556797013382)
 
 ## UX
 The design of the website has been created to resemble the main product, plants. The goal was to create a design that was inspired by nature with green and calming tones.
@@ -85,7 +86,7 @@ The green color chosen for the project is called Reseda green, which has a calmi
 
 Most of the text content is black. To be able to prioritize the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) were set to an ashy tone.
 
-![Color-schema](/media/readme/theme-color.png)
+![Color-schema](/docs/readme/readme_images/theme-color.png)
 
 ## Strategy Plane
 In order to create a good user experience and also strategies how to design the project I tried to answer the following questions.
@@ -195,20 +196,20 @@ For this project I created Wireframes with the Balsamiq tool. I decided to do th
 <details>
 <summary>Home</summary>
 
-![Home](/media/readme/balsamiq-home.png)
+![Home](/docs/readme/readme_images//balsamiq-home.png)
 </details>
 
 <details>
 <summary>Products</summary>
 
-![Products](/media/readme/balsamiq-product.png)
+![Products](/docs/readme/readme_images/balsamiq-product.png)
 
 </details>
 
 <details>
 <summary>Contact</summary>
 
-![Contact](/media/readme/balsamic-contact.png)
+![Contact](/docs/readme/readme_images/balsamic-contact.png)
 </details>
 ### Sprints - Milestones
 The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
@@ -240,11 +241,11 @@ Because this is a B2C business it is important to have an easy checkout system a
 #### Facebook
 To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company.
 
-![Facebook](/media/readme/facebook.png)
+![Facebook](/docs/readme/readme_images/facebook.png)
 #### MailChimp
 
-Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
-![Newsletter](/media/readme/news-letter.png)
+Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can ofcourse clean cash and load website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+![Newsletter](/docs/readme/readme_images/news-letter.png)
 
 #### SEO
 Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and
@@ -257,7 +258,7 @@ Before finishing the project a sitemap.xml and robots.txt file was created to op
 ### Database Schema
 Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is an early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
 
-![Database models](/media/readme/database-models.png)
+![Database models](/docs/readme/readme_images/database-models.png)
 
 ## Existing Features
 ### Navbar and Footer
@@ -307,27 +308,26 @@ I would also like to work a bit more with adding stock numbers that will inform 
 - Django-allauth
 
 ### Libraries Used
-- asgiref
-- boto3
-- botocore
-- dj-database-url
-- Django
-- django-allauth
-- django-countries
-- django-crispy-forms
-- django-storages
-- django-summernote
-- jmespath
-- oauthlib
-- pillow
-- psycopg2
-- python3-openid
-- pytz
-- requests-oauthlib
-- s3transfer
-- sqlparse
-- stripe
-- urllib3
+- asgiref: ASGI (Asynchronous Server Gateway Interface) 
+- boto3: Intergrating AWS
+- botocore: Base for boto3
+- dj-database-url:  Django framework to handle database connection URLs
+- django-allauth: Django framework to handle authentication
+- django-countries: Django framework to handle country field
+- django-crispy-forms: Django framework to handle forms
+- django-storages: Django custom storage backend 
+- django-summernote: Djando text-editor
+- jmespath: Query language for JSON
+- oauthlib: Implementation of the OAuth protocol 
+- pillow: Python Imaging Library
+- psycopg2: PostgreSQL adapter, database connection and transaction
+- python3-openid:  Allowing implementation of an OpenID Provider
+- pytz: For working with time zones
+- requests-oauthlib:  Provides OAuth support for Python's requests library
+- s3transfer: Python library provided by Amazon Web Services (AWS) as part of the AWS SDK for Python, Boto3
+- sqlparse: Python library that provides utilities for parsing and formatting SQL
+- Stripe:  API tool to accept payments online
+- urllib3: Python library for making HTTP requests
 
 Framework and Websites
 - Flake8: https://flake8.pycqa.org/en/latest/ To search for errors and unused libraries.
@@ -367,7 +367,7 @@ Framework and Websites
 All validation has been documented and can be found inside the media/readme folders.
 ### HTML Validation
 All code has been passed through W3 validation service. One error was left unsolved. This error was found in checkout.html and it is believed to occur because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
-![Contact error](/media/readme/w3-html-validation/checkout.png)
+![Contact error](/docs/readme/w3-html-validation/checkout.png)
 
 ### CSS validation
 All CSS has been passed trough W3 validation without errors.
@@ -380,7 +380,7 @@ All python code was tested with flake8. Some errors were left unfixed. This was 
 
 ## Tests
 ## Lighthouse
-![Lighthouse](/media/readme/lighthouse.png)
+![Lighthouse](/docs/readme/lighthouse.png)
 ## Manual tests
 
 ## Project Bugs and Solutions:
@@ -391,7 +391,7 @@ Status: Unsolved
 <details>
 <summary>Bug</summary>
 
-![Bug documentation](/media/readme/profile-bug.png)
+![Bug documentation](/docs/readme/readme_images/profile-bug.png)
 </details>
 
 - Django Countries
