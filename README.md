@@ -72,7 +72,7 @@ The main goal for Root me is to find people who want to buy plants, for themself
 - Use a payment system called Stripe
 - Adding, delete and update products via Product Management link on website
 
- To visit live website click [here! ](https://rootme-fcab110145ab.herokuapp.com/)
+To visit live website click [here! ](https://rootme-fcab110145ab.herokuapp.com/)
 
 To visit Facebook page click [here](https://wwww.facebook.com/profile.php?id=61556797013382)
 
@@ -244,7 +244,7 @@ To promote the Root Me website a Facebook site was created. Facebook allows a ch
 ![Facebook](/docs/readme/readme_images/facebook.png)
 #### MailChimp
 
-Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can ofcourse clean cash and load website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can of course clean cash and load website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
 ![Newsletter](/docs/readme/readme_images/news-letter.png)
 
 #### SEO
@@ -364,10 +364,17 @@ Framework and Websites
 -  Privacy Policy Generator https://www.privacypolicygenerator.info/ Generated policy found inside the footer
 
 ## Code Validation
-All validation has been documented and can be found inside the media/readme folders.
+All validation has been documented and can be found inside the docs/readme/. There are separete folders for html, CSS, javaScript and pep8 folders.
+All testing can be found [here! ]()
+
 ### HTML Validation
 All code has been passed through W3 validation service. One error was left unsolved. This error was found in checkout.html and it is believed to occur because the element that the label belongs to is inside an If statement. So this was not considered to be an error and was left unsolved. 
+
+<details>
+<summary>Bug</summary>
+
 ![Contact error](/docs/readme/w3-html-validation/checkout.png)
+</details>
 
 ### CSS validation
 All CSS has been passed trough W3 validation without errors.
@@ -455,6 +462,11 @@ GitHub will then create a clone of the repository at chosen location. By default
 ## Credits
 All product images has been borrowed from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
+
+This project is built from Code Institute walk through project, Boutique Ado :
+https://github.com/Code-Institute-Solutions/boutique_ado_v1
+
+I been inspired by this everneed project: https://github.com/amylour/everneed/tree/main?tab=readme-ov-file#libraries--frameworks  in order to create wishlist app and readme documentation.
 
 I have used chatGPT to generate information about products and to write text content in Q&A. 
 
