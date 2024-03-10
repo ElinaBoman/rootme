@@ -465,7 +465,7 @@ Project has been tested with
 - Safari
 For some reason there were a few product images that weren't displayed. Other than that I did not find any errors.
 
-### Lighthouse Rapport
+### Lighthouse Report
 
 ![Lighthouse](/docs/readme/lighthouse.png)
 
@@ -478,6 +478,5 @@ Project has been tested on
 - Samsung Galaxy S21
 - ASUS HDMI MHL VX239
 
-### Dev Tools
 
 
