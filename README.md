@@ -331,7 +331,7 @@ I would also like to work a bit more with adding stock numbers that will inform 
 - Stripe:  API tool to accept payments online
 - urllib3: Python library for making HTTP requests
 
-Framework and Websites
+### Framework and Websites
 - Flake8: https://flake8.pycqa.org/en/latest/ To search for errors and unused libraries.
 - chatGPT: https://chat.openai.com/ For troubleshooting and writing text content.
 - Pexels: https://www.pexels.com/sv-se/ To search for images.
@@ -431,7 +431,7 @@ import dj_database_url
 - import env
 - SECRET_KEY = os.environ.get("SECRET_KEY") // Your env.py secret key goes inhere.
 
-rEPLACE databases with:
+Replace databases with:
 -     DATABASES = {
       'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
       }
@@ -459,17 +459,17 @@ Elephant SQL
 - Chose app name and region. Click "Create App"
 - Locate the "Deploy" tab. Inside this tab there is a section called "Config Vars". Click "Reveal Config Vars". 
 - Here you add all your KEY:VALUE pairs for your app. Following keys will be in here when we are done setting up our project:
-DATABASE_URL= KEY
-DISABLE_COLLECTSTATIC= 1 // Remove this before finishing up your project
-SECRET_KEY= KEY
-AWS_ACCESS_KEY= KEY
-AWS_SECRET_ACCESS_KEY= KEY
-EMAIL_HOST_PASS= KEY
-EMAIL_HOST_USER= KEY
-STRIPE_PUBLIC_KEY= KEY 
-STRIPE_SECRET_KEY= KEY
-STRIPE_WH_SECRET= KEY
-USE_AWS= KEY
+- DATABASE_URL= KEY
+- DISABLE_COLLECTSTATIC= 1 // Remove this before finishing up your project
+- SECRET_KEY= KEY
+- AWS_ACCESS_KEY= KEY
+- AWS_SECRET_ACCESS_KEY= KEY
+- EMAIL_HOST_PASS= KEY
+- EMAIL_HOST_USER= KEY
+- STRIPE_PUBLIC_KEY= KEY 
+- STRIPE_SECRET_KEY= KEY
+- STRIPE_WH_SECRET= KEY
+- USE_AWS= KEY
 
 - You will need to add heroku host name into ALLOWED_HOSTS in your settings.py file.
 - To deploy this project you will have to set DEBUG=TRUE to FALSE in your setting.py file, don't forget to make your last git add, commit and push to GitHub!
