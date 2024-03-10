@@ -295,6 +295,7 @@ I would like to have better gift planning alternatives. Where the user can enter
 
 I would also like to work a bit more with adding stock numbers that will inform the user/store owner if a product is finished.
 
+I would like to create function for user to delete their Order History. At the moment there is no way for the user to delete the history and therefore the Order History will go on and on. It dosen't look very nice and does not create a great user experience. This is the feature feature I would prioritize above all the other features.
 
 ## Technologies Used
 ### Languages Used

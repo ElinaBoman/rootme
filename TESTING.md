@@ -454,6 +454,9 @@ Status: Unsolved
 I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
 Status: Temporarily fix, Unsolved
 
+- My profile links on Edit product view
+For some reason two otherwise working links to Add Producy and My Profile stops working while on Edit Product view. This is really weird because the links are working on any other page and it is the same nav. 
+Status: Under investigation
 
 ### Browser Testing
 Project has been tested with
