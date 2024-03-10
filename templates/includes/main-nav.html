@@ -1,13 +1,14 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-                <a class="logo-font nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
-                    Home
-                </a>
+        <li class="nav-item d-block">
+            <a class="logo-font nav-link text-black mr-5" href="{% url 'home' %}" id="home-link">
+                <strong> Home</strong>
+            </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold btn-white nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                All Products
+            <a class="logo-font btn-white nav-link text-black mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <strong>All Products</strong> 
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
@@ -17,24 +18,27 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Plants
+            <a class="logo-font nav-link text-black mr-5" href="#" id="clothing-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <strong>Plants</strong> 
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons,rare_plants" class="dropdown-item">All Plants</a>
+                <a href="{% url 'products' %}?category=cuttings,climbing_plants,aroids,hoyas,philidendrons,rare_plants"
+                    class="dropdown-item">All Plants</a>
                 <a href="{% url 'products' %}?category=cuttings" class="dropdown-item">Cuttings</a>
                 <a href="{% url 'products' %}?category=climbing_plants" class="dropdown-item">Climbing Plants</a>
                 <a href="{% url 'products' %}?category=aroids" class="dropdown-item">Aroider</a>
                 <a href="{% url 'products' %}?category=hoyas" class="dropdown-item">Hoyas</a>
                 <a href="{% url 'products' %}?category=philidendrons" class="dropdown-item">Philidendrons</a>
                 <a href="{% url 'products' %}?category=rare_plants" class="dropdown-item">Rare Plants</a>
-                
+
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Planters, Soil & Others
+            <a class="logo-font nav-link text-black mr-5" href="#" id="homeware-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <strong>Planters, Soil & Others</strong> 
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
                 <a href="{% url 'products' %}?category=planters" class="dropdown-item">Planters</a>
@@ -44,8 +48,9 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Last Chance
+            <a class="logo-font nav-link text-black" href="#" id="specials-link" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                    <strong>Last Chance</strong>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?category=last_chance_plants" class="dropdown-item">Plants</a>
@@ -53,7 +58,10 @@
             </div>
         </li>
         <li class="nav-item dropdown d-lg-none">
-            <a class="logo-font font-weight-bold nav-link text-black" aria-haspopup="true" aria-expanded="false" href="{% url 'contact_view' %}">Q&A</a>
+            <a class="logo-font nav-link text-black" aria-haspopup="true" aria-expanded="false"
+                href="{% url 'contact_view' %}">
+                <strong>Q&A</strong>
+            </a>
         </li>
     </ul>
 </div>

@@ -87,7 +87,7 @@
                                     </span>
                                     <span>Keep Shopping!</span>
                                 </a>
-                            <input type="submit" class="btn border-black  btn-lg mt-5" value="Add to Basket">
+                            <input type="submit" class="btn btn-green btn-lg mt-5" value="Add to Basket">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
@@ -103,5 +103,4 @@
 {% block postloadjs%}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-
 {% endblock %}
