@@ -11,7 +11,8 @@ class UserProfile(models.Model):
     with Code Institute walktrough
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_mobile_number = models.IntegerField(null=True, blank=True)
+    default_mobile_number = models.CharField(max_length=20, null=True,
+                                             blank=True)
     default_country = CountryField(blank_label='Country *',
                                    null=True, blank=True)
     default_postalcode = models.CharField(max_length=40, null=True,
