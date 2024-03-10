@@ -13,7 +13,6 @@ The targeted audience are people who want to grow their own plants, but also for
   - [Project Goals](#project-goals)
 - [UX](#ux)
   - [Development](#development)
-  - [Flowchart](#flowchart)
   - [User Stories](#user-stories)
   - [Colors and Fonts](#colors-and-fonts)
   - [Wireframes](#wireframes)
@@ -311,11 +310,11 @@ Here the user can insert information about shipping and billing. Signed in users
 The user can commit several different actions on the website without being a registered user. However, to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will receive an email to confirm the email address. When the email address has been confirmed the user can sign in.
 To then sign in and sign out is very easy. The login and logout buttons are available from my profile in the main navigation bar.
 
-![Sign up](/docs/readme/features/sign-up.png)
+![Sign up](/docs/readme/features/register.png)
 
-![Sign in](/docs/readme/features/sign-in.png)
+![Sign in](/docs/readme/features/signin.png)
 
-![Sign out](/docs/readme/features/sign-out.png)
+![Sign out](/docs/readme/features/signout.png)
 
 ![My profile](/docs/readme/features/my-profile.png)
 
