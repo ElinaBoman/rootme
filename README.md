@@ -2,7 +2,7 @@
 ## Root| Me
 ![amIresponsive](/docs/readme/readme_images/am-i-responsive.png)
 ### Introduction
-Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a alreday planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
+Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a already planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
 
 The targeted audience are people who want to grow their own plants, but also for finding the perfect gift among plant lovers.
 
@@ -36,7 +36,7 @@ The targeted audience are people who want to grow their own plants, but also for
 
 
 ## Overview
-The purpose of this project was to create a project that satisfied the assesment criteria of Code Institutes Project 5, E-commerce module. Some of the criterias were:
+The purpose of this project was to create a project that satisfied the assessment criteria of Code Institutes Project 5, E-commerce module. Some of the criterias were:
 - Create a functioning E-commerce store
 - User can checkout their products via payment system, Stripe. 
 - Have authentication system for users
@@ -50,7 +50,8 @@ The criterias required three custom made models that suited the project. The mod
 The user can store products in a wishlist by clicking the "Add to wish" button in the products view. In the wishlist view the user can see their added wishes and remove them from the wishlist.
 - Contact
 
-The user can send messages to the company from the Q&A view. The user will then recieve a confirmation email that the form has been submitted. The message will be saved into the admin panel. 
+The user can send messages to the company from the Q&A view. The user will then receive a confirmation email that the form has been submitted. The message will be saved into the admin panel. 
+
 - Product
 
 This module was a part of Code Institute walkthrough project, but I have altered it to suit this project and added fields to make it custom made. 
@@ -71,7 +72,7 @@ The main goal for Root me is to find people who want to buy plants, for themself
 - Use a payment system called Stripe
 - Adding, delete and update products via Product Management link on website
 
-To visit live website click [here! ](https://rootme-fcab110145ab.herokuapp.com/)
+To visit live website click [here!](https://rootme-fcab110145ab.herokuapp.com/)
 
 To visit Facebook page click [here](https://wwww.facebook.com/profile.php?id=61556797013382)
 
@@ -81,7 +82,7 @@ The colors used on the website are mostly green and white. The white is to keep 
 To make the product images really pop the background was set to white, which allowed the beautiful product images to really stand out.
 Green elements were instead added to buttons. This created a nice balance that still had the green nature vibe but also would bring the users attention where it should be, at the products.
 
-The green color chosen for the project is called Reseda green, which has a calming green note. Green is a difficult color to work with because too much of it does not create an appeling look. To create a more professional look some buttons have black or white background. This created a more organized over all look on the website. 
+The green color chosen for the project is called Reseda green, which has a calming green note. Green is a difficult color to work with because too much of it does not create an appealing look. To create a more professional look some buttons have black or white background. This created a more organized overall look on the website. 
 
 Most of the text content is black. To be able to prioritize the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) were set to an ashy tone.
 
@@ -128,9 +129,11 @@ How can I help users to discover other relevant parts of web application?
 
 ## Agile Methodologies
 ### Canban board and MosCOW Prioritization
-This project has been planned with with agile methodology. Before any code was written, issues were created for both users and store owner. The issues represents fictive requirements for users and store owner. The requirements were then briefly described with acceptance criterias. This would descipe what I would need to do in order to fullfill the issue. The there is a section called Tasks that descibes what needs to be done in order for the issue to be accepted.
+This project has been planned with agile methodology. Before any code was written, issues were created for both users and store owners. The issues represent fictive requirements for users and store owners. The requirements were then briefly described with acceptance criterias. This would describe what I would need to do in order to fulfill the issue. There is a section called Tasks that describes what needs to be done in order for the issue to be accepted.
 
-The issues were then prioritzed into categories according to MosCoW prioritization. I used GitHub to create structure while planing my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have were to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this projects is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+
+The issues were then prioritized into categories according to MosCoW prioritization. I used GitHub to create structure while planning my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have was to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this project is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+
 
 ### User Stories
 **Issue nr**|**Epic**|**User Stories: As a User**|**Label**|**Finished**
@@ -144,9 +147,9 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 7|Account| As a user I can select view shipping information so that I can make sure my order is being sent to the right address.|Must have |YES
 8|Products|As a user I can filter through items on the website so that it's easy to find relevant products for me.|Must have |YES
 9|Active response|As a user I can easily navigate on the website and have helpful informative messages so that I can understand if my actions on the website are not working.|Must have |YES
-13|Products|As a user I can filter through categories with product needs such as light/water needs so that I can easier find products for me.|Nice to have|NO
+13|Products|As a user I can filter through categories with product needs such as light/water needs so that I can easily find products for me.|Nice to have|NO
 14|Basket|As a user I can add items to the shopping cart and then leave the website and still have items inside so that I can buy them later.|Good to have|YES
-15|Products|As a user I can search on the website for specific products so that I can see if the website have what I'm looking for.|Must have |YES
+15|Products|As a user I can search on the website for specific products so that I can see if the website has what I'm looking for.|Must have |YES
 16|Products|As a user I can select if my order is a gift so that I can gift them with nice wrapping and a card.|Nice to have|NO
 17|Products|As a user I can also buy pots and dirt that are suitable for my products. I can give the best care for my products.|Good to have|YES
 
@@ -166,8 +169,8 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 - 6. The user can delete product items from the shopping basket.
 - 7. The user can view shipping information after the secure checkout is finished. The user will also receive an email with related information. 
 - 8. On the products page the user can filter through categories by product, price or simply search for certain products in the text input field. 
-- 9. The user can easily navigate on the website by using the main navigationbar. The user will receive helpful toast messages when performing actions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
-- 10. The store owner have full CRUD functionallity over the products and can update, edit or delete products.
+- 9. The user can easily navigate on the website by using the main navigation bar. The user will receive helpful toast messages when performing actions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
+- 10. The store owner has full CRUD functionality over the products and can update, edit or delete products.
 - 11. The site owner will have information about the user inside the django admin panel. 
 - 12. The customers can visit Root Me's Facebook page by clicking the social media link in the footer. There are also links to instagram and youtube but there is no content related to Root Me in those links.
 - 14. The users basket is stored in sessions so the user can leave the site but still have their products inside the basket. This will of course not work if the user updates cash since the session disappears. 
@@ -175,7 +178,7 @@ The issues were then prioritzed into categories according to MosCoW prioritizati
 - 17. The user is able to see what pot size the plants require and then search for suitable pots. 
 
 ## Scope plane
-When I started this project I realized quickly that to be able to learn and manage new techniques such as Stripe, there would not be a lot of time to focus on Nice to Have or Good to Have issues. Even though there were some features that I was very eagre to create I had to stick with an MVP. Therefore I decided on which features would be essential for the project and just made sure I finished those first.
+When I started this project I realized quickly that to be able to learn and manage new techniques such as Stripe, there would not be a lot of time to focus on Nice to Have or Good to Have issues. Even though there were some features that I was very eager to create I had to stick with an MVP. Therefore I decided on which features would be essential for the project and just made sure I finished those first.
 
 #### Essential Features:
 - User can create account
@@ -226,10 +229,10 @@ The issues were then categorized into sprints. I tried to create a chronological
 7|Wishlist view and funct.|27/1-24|1/2-24
 8|Overall design, colors, fonts ets...|1/2-24|2/2-2024
 9|Debugging and testing|2/2-24|6/2-24
-10|Read me docs|2/2-24|11/2-24
+10|Readme docs|2/2-24|11/2-24
 
 ## Marketing
-#### Buisiness Module
+#### Business Module
 Root Me is a business-to-consumer (B2C) company. For a B2C company it is important to know who the targeted customers are and how to reach out to them.
 
 In this project a Facebook page was created to be able to reach out to customers. The Facebook page will allow the store owner to publish campaigns and events that will attract the targeted audience.
@@ -245,7 +248,7 @@ To promote the Root Me website a Facebook site was created. Facebook allows a ch
 ![Facebook](/docs/readme/readme_images/facebook.png)
 #### MailChimp
 
-Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can of course clean cash and load website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when the website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can of course clean cash and load the website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
 ![Newsletter](/docs/readme/readme_images/news-letter.png)
 
 #### SEO
@@ -254,7 +257,7 @@ research their relevance and compare it to similar words. When I started finishi
 
 Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons.
  
-Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what foldes they were allowed inside. I choose to diallow accounts and baskets for user privacy reasons. 
+Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons. 
 
 ### Database Schema
 Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is an early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
@@ -329,7 +332,7 @@ Inside the Q&A view the user can read about normally asked questions. If the use
 ![Contact](/docs/readme/features/contact.png)
 
 ### Admin Interface
-If user is signed in as a superuser he/she is able to add/edit and delete products from the website. 
+If the user is signed in as a superuser he/she is able to add/edit and delete products from the website. 
 
 ![Add](/docs/readme/features/add-product.png)
 
@@ -348,7 +351,7 @@ I would like to have better gift planning alternatives. Where the user can enter
 
 I would also like to work a bit more with adding stock numbers that will inform the user/store owner if a product is finished.
 
-I would like to create function for user to delete their Order History. At the moment there is no way for the user to delete the history and therefore the Order History will go on and on. It dosen't look very nice and does not create a great user experience. This is the feature feature I would prioritize above all the other features.
+I would like to create a function for users to delete their Order History. At the moment there is no way for the user to delete the history and therefore the Order History will go on and on. It doesn't look very nice and does not create a great user experience. This is the feature I would prioritize above all the other features.
 
 ## Technologies Used
 ### Languages Used
@@ -372,7 +375,7 @@ I would like to create function for user to delete their Order History. At the m
 - django-countries: Django framework to handle country field
 - django-crispy-forms: Django framework to handle forms
 - django-storages: Django custom storage backend 
-- django-summernote: Djando text-editor
+- django-summernote: Django text-editor
 - jmespath: Query language for JSON
 - oauthlib: Implementation of the OAuth protocol 
 - pillow: Python Imaging Library
@@ -407,7 +410,7 @@ I would like to create function for user to delete their Order History. At the m
 - Heroku: https://dashboard.heroku.com/ To deploy app.
 - PostgreSQL Database.
 - Stack Overflow: https://stackoverflow.com/ Troubleshooting.
-- W3Schools: https://www.w3schools.com/ Readin documentation.
+- W3Schools: https://www.w3schools.com/ Read documentation.
 - Youtube: https://www.youtube.com/ Link in footer and trouble shooting.
 - Coolors: https://coolors.co/ To create a color chart.
 - Am I responsive: https://ui.dev/amiresponsive For testing wireframes.
@@ -423,7 +426,7 @@ I would like to create function for user to delete their Order History. At the m
 All manual testing, validation images, bugs and browser testing can be found [here! ](https://github.com/ElinaBoman/rootme/blob/main/TESTING.md)
 
 ## Code Validation
-All validation has been documented and can be found inside the docs/readme/. There are separete folders for html, CSS, javaScript and pep8 folders.
+All validation has been documented and can be found inside the docs/readme/. There are separate folders for html, CSS, javaScript and pep8 folders.
 All testing can be found [here! ](https://github.com/ElinaBoman/rootme/blob/main/TESTING.md)
 
 ### HTML Validation
@@ -440,9 +443,9 @@ All CSS has been passed trough W3 validation without errors.
 ### JavaScript validation
 
 ### Pep 8
-All Pytohn code has been passed trough CI pytohn linter.
+All Pytohn code has been passed trough CI Pytohn linter.
 ### Python validator
-All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occur in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up.
+All Python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occur in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up.
 
 ## Deployment
 ### Connect to GitHub
@@ -454,36 +457,37 @@ To recreate this project the following steps need to be carried put:
 - When your new repository has been created open up the repository in a IDE of your own choosing. This should generate your new workspace.
 
 ### Django Project Set up
-- Inside your IDE, install Django supporting libraris with
+- Inside your IDE, install Django supporting libraries with
 -      pip3 install 'django<4' gunicorn
--      pip3 install dj_database_url psycopg2 
+-      pip3 install dj_database_url psycopg2
 - Remember to list dependencies in a requirements.txt file. You can do this by using following command:
 -       pip3 freeze --local > requirements.txt
 - Then you are ready to start your new project! Create a project with the command:
--      django-admin startproject rootme . 
+-      django-admin startproject rootme .
 - (replace rootme with your project name). Do not forget the ".'' In the end, it's very important.
 - Create app inside your new project with command:
 -      python manage.py startapp blog (Replace 'blog' with name of your app)
-- To create database models run: 
+- To create database models run:
 -     python manage.py makemigrations
-- Dont forget to add all your apps to INSTALLED_APPS in setting.py
--  Then run this command to follow trough with your migrations: 
+- Don't forget to add all your apps to INSTALLED_APPS in setting.py
+-  Then run this command to follow through with your migrations:
 -     python3 manage.py migrate
-- Now would be a good time to create a super user for your project. Do this by entering 
+- Now would be a good time to create a super user for your project. Do this by entering
 -     python3 manage.py createsuperuser
-- Create a env.py to store sensitive information such as keys to database. Add your env.py to a gitignore file to prevent information from being pushed to GitHub.
+- Create a env.py to store sensitive information such as keys to the database. Add your env.py to a gitignore file to prevent information from being pushed to GitHub.
+
 
 Inside env.py
 - import os
-- os.environ["DATABASE_URL"]="copieDURLfromElephantSQL"  //Replace the string with your URL form ElephnatSQL, we will retrive this in upcomming steps!
-- os.environ["SECRET_KEY"]="superSecretKey" // Replace superSecretKey with secret key 
+- os.environ["DATABASE_URL"]="copieDURLfromElephantSQL"  //Replace the string with your URL form ElephnatSQL, we will retrieve this in upcoming steps!
+- os.environ["SECRET_KEY"]="superSecretKey" // Replace superSecretKey with secret key
 
 Inside settings.py you need to add
 - import os
 import dj_database_url
 - if os.path.exists("env.py"):
 - import env
-- SECRET_KEY = os.environ.get("SECRET_KEY") // Your env.py secret key goes inhere.
+- SECRET_KEY = os.environ.get("SECRET_KEY") // Your env.py secret key goes in here.
 
 Replace databases with:
 -     DATABASES = {
@@ -505,12 +509,12 @@ Elephant SQL
 - Go to Elephant SQL and create a new database for your project.
 - You can chose the Tiny Turtle plan
 - Selects the closest region and data center to you
-- From your new database, locate the dashboard and retrive your url. This is what we will enter inside our env.py file. 
+- From your new database, locate the dashboard and retrieve your url. This is what we will enter inside our env.py file. 
 
 ### Heroku Deployment
 - If you don't have an Heroku account, create one. 
 - When your account has been set up you can find a button "New" in the top right corner. From here chose "Create New App"
-- Chose app name and region. Click "Create App"
+- Choose app name and region. Click "Create App"
 - Locate the "Deploy" tab. Inside this tab there is a section called "Config Vars". Click "Reveal Config Vars". 
 - Here you add all your KEY:VALUE pairs for your app. Following keys will be in here when we are done setting up our project:
 - DATABASE_URL= KEY
@@ -525,20 +529,20 @@ Elephant SQL
 - STRIPE_WH_SECRET= KEY
 - USE_AWS= KEY
 
-- You will need to add heroku host name into ALLOWED_HOSTS in your settings.py file.
+- You will need to add the heroku host name into ALLOWED_HOSTS in your settings.py file.
 - To deploy this project you will have to set DEBUG=TRUE to FALSE in your setting.py file, don't forget to make your last git add, commit and push to GitHub!
 - Go to the "Deploy" tab in Heroku and choose GitHub as deployment method
-- Search for your repositry name, selct branch of your own choosing. Finish up by clicking "Connect" button
-- You can choose if you would like automatic deployments. This means everytime you push changes to GitHub, your project will be deployed. If you would rather do it youself you can choose to have Manual deployment. 
+- Search for your repository name, select a branch of your own choosing. Finish up by clicking "Connect" button
+- You can choose if you would like automatic deployments. This means everytime you push changes to GitHub, your project will be deployed. If you would rather do it yourself you can choose to have Manual deployment.
 - After deploying your project you can view the building process. If everything has been set up correctly you can view your new app by clicking "View". When you are doing your last deployment you will have to remove DISABLE_COLLECTSTATIC from from your config vars!
 
 ### Google Mail Set up
-- Time to set up Gmail Account! If you have an G-mail account you can log in, otherwise you will have to create an account.
-- When you are signd in to G-mail locate the settings tab. Go to Other Google account settings. Go on to Accounts, Import, Other, Account Settings.
+- Time to set up a Gmail Account! If you have an G-mail account you can log in, otherwise you will have to create an account.
+- When you are signed in to G-mail, locate the settings tab. Go to Other Google account settings. Go on to Accounts, Import, Other, Account Settings.
 - Activate 2-step verification
-- Verify access App Passwords and locate Other.
+- Verify access App Passwords and locate Others.
 - Enter a name for your password.
-- Click "Create", this should retrive a key for you. Copy the key. We will now set up Email Settings in settings.py
+- Click "Create", this should retrieve a key for you. Copy the key. We will now set up Email Settings in settings.py
 - In your settings.py add following:
 -     if 'DEVELOPMENT' in os.environ:
       EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -561,7 +565,7 @@ Elephant SQL
 - Allow All Public Access, and check "Bucket will be public" to allow the bucket to connect to Heroku.
 - In object ownership, ACLS enabled, Bucket owner preferred
 - Properties tab, turn on static web hosting and add "index.html" and "error.html" into the assigned fields. Click "Save"
-- Locate Permisosns tab, and pase following CORS configuration:
+- Locate Permissions tab, and pase following CORS configuration:
 -     [
  	      {
  		      "AllowedHeaders": [
@@ -578,7 +582,7 @@ Elephant SQL
       ]
 
 - Copy ARN string
-- From "Bucket Policy" tab, locate the Policy Generator and follow theese steps:
+- From "Bucket Policy" tab, locate the Policy Generator and follow these steps:
   - Policy Type: S3 Bucket Policy
 
   - Effect: Allow
@@ -612,14 +616,14 @@ Elephant SQL
 - In the "Access Control List", "Edit", enable list for "Public Access", accept the warning.
 
 AWS- IAM set up
-- In the AWS service meny, go to "Create New Group"
+- In the AWS service menu, go to "Create New Group"
 - Give group a name
-- Locate Review Policy, User Grups and select your newly created group
-- Locate the Permission tab, Add permisisons and click "Attach Policies"
-- Select policy and Add permissions at the bottom. 
-- From JSON tab, select Import Managed Policy. search for S3 and choose Amazon3fULLaccess polity.
+- Locate Review Policy, User Groups and select your newly created group
+- Locate the Permission tab, Add permissions and click "Attach Policies"
+- Select policy and Add permissions at the bottom.
+- From the JSON tab, select Import Managed Policy. search for S3 and choose Amazon3fULLaccess policy.
 - Import
-- Copy the ARN code form S3 bucket.
+- Copy the ARN code from S3 bucket.
 -       {
               "Version": "2012-10-17",
               "Statement": [
@@ -634,15 +638,15 @@ AWS- IAM set up
                 ]
  	        }
 
-- Click "Rewiew Policy" enter a name and description. Click "Create Policy"
+- Click "Review Policy" and enter a name and description. Click "Create Policy"
 - Search for your new policy and click "Attach Policy
-- Inside User Groups, add user. Give the user a name that suits your project
-- Select AWS Access Type, select Programmatic Access. Add group to your new user. Go to Review, User, Create User
-- Download cvs and make sure to save this on a safe place.
+- Inside User Groups, add users. Give the user a name that suits your project
+- Select AWS Access Type, select Programmatic Access. Add a group to your new user. Go to Review, User, Create User
+- Download cvs and make sure to save this in a safe place.
 
 ### Media Folder Set up
 - In Heroku you will need to remove DISABLE_COLLECTSTATIC 
-- Back in AWS S3, create a new folder called media, add all your project images. You will have to go to Manage Public Permissons and Grant public read access to the objects. Finish this by clicking "Upload"
+- Back in AWS S3, create a new folder called media, add all your project images. You will have to go to Manage Public Permissions and Grant public read access to the objects. Finish this by clicking "Upload"
 
 ### Connect AWS and Django
 - Install following packages to start using your bucket
@@ -653,7 +657,7 @@ AWS- IAM set up
 -     INSTALLED_APPS = [
       'storages',
       ]
-- Then you will of course need to add you AWS variables in your env.py file.
+- Then you will of course need to add your AWS variables in your env.py file.
 - Add following into your setting.py imports
 -     from pathlib import path
 
@@ -718,16 +722,16 @@ Ensure DATABASES are set up like this:
 - In the stripe Dashboard, locate your API keys.
 - Add your STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to your env.py file and Config Vars in Heroku.
 - Set up Webooks Stripe Dashboard, developers, Webhooks, Add EndPoint. Add 'herokuapp url/checkout/wh' to Endpoint.
-- Choose Retrive all events and Add Endpoint
+- Choose Retrieve all events and Add Endpoint
 - Add the new key STRIPE_WH_SECRET in your env.py file and Heroku Config Vars
 - All set!
 
 ## Developers
 ### Making a clone
-Follow theese steps to create local clone on GitHub
+Follow these steps to create local clone on GitHub
 - Log in to GitHub account
-- The Rootme repositry can be found [here! ](https://github.com/ElinaBoman/rootme)
-- In the repositry file section, navigate to the "Code" button.
+- The Rootme repository can be found [here! ](https://github.com/ElinaBoman/rootme)
+- In the repository file section, navigate to the "Code" button.
 - Choose how you would like to clone the project and copy the URL to your clipboard
 - Open your Git Bash terminal
 - Switch the current working directory to the location you would like the cloned directory to be made.
@@ -735,9 +739,9 @@ Follow theese steps to create local clone on GitHub
 -     git clone
 - Paste in the URL that you created earlier
 - Click "Enter". The local clone should now be created
-- Use 
+- Use
 -     pip3 install -r requirements.txt
-- Now the dependencies and libraries needed for project should be installed!
+- Now the dependencies and libraries needed for the project should be installed!
 
 ### Before Deployment
 - Set DEBUG=False in settings.py.

@@ -422,7 +422,7 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 | Complete order btn   | Try buying products; Check Stripe for confirmation; User will receive auto-reply      | Stripe is called
 
 
-### User Storie testing
+### User Stories Testing
 | Issue nr | Epic             | Criteria                                                                                                                          | Accepted |
 |----------|------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
 | 15       | Products         | Have a search field where user can search for specific products                                                                    | YES      |
@@ -433,7 +433,7 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 | 6        | Basket           | User can delete items in shopping cart                                                                                            | YES      |
 | 11       | Account          | "User can contact the company via contact form on the website<br>Message is saved to database<br>User will receive auto-reply"    | YES      |
 | 16       | Products         | Add field that checks if order should be sent as a gift<br>Add product such as wrapping, gift card etc..                        | NO       |
-| 17       | Products         | User has a multipel of pots to chose from<br>User has several maintenance products to chose form                                | NO       |
+| 17       | Products         | User has a multiple of pots to choose from<br>User has several maintenance products to choose form                                | NO       |
 | 18       | Products         | Have a section before checkout with suggested products                                                                            | NO       |
 | 12       | Marketing        | User can visit Facebook page                                                                                                      | YES      |
 | 13       | Products         | "User can filter product by plant needs<br>Several filters for plants are displayed on website<br>Plants has been categorized after needs" | NO       |
@@ -451,11 +451,11 @@ Status: Unsolved
 </details>
 
 - Django Countries
-I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I chose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
+I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I choose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
 Status: Temporarily fix, Unsolved
 
 - My profile links on Edit product view
-For some reason two otherwise working links to Add Producy and My Profile stops working while on Edit Product view. This is really weird because the links are working on any other page and it is the same nav. 
+For some reason two otherwise working links to Add Product and My Profile stop working while on Edit Product view. This is really weird because the links are working on any other page and it is the same nav. 
 Status: Under investigation
 
 ### Browser Testing
@@ -463,9 +463,9 @@ Project has been tested with
 - Chrome
 - Mozilla Firefox
 - Safari
-For some reason there were a few product images that wasn't displayed. Other then that I did not find any errors.
+For some reason there were a few product images that weren't displayed. Other than that I did not find any errors.
 
-### Lighthouse Repport
+### Lighthouse Rapport
 
 ![Lighthouse](/docs/readme/lighthouse.png)
 
