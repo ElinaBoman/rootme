@@ -2,7 +2,7 @@
 ## Root| Me
 ![amIresponsive](/docs/readme/readme_images/am-i-responsive.png)
 ### Introduction
-Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a already planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with a agile development method.
+Root me is an e-commerce store selling plants, cuttings and other plant associated things. The initial idea for Root me was to be selling cuttings instead of a already planted plants. This would allow customers to buy plants at a lower cost, but most importantly grow their own plants. This projects has been developed as a project for Code Institute's full stack software development course. In this project I am using HTML, CSS, JavaScript, Django, Bootstrap and Python. This project was planned with an agile development method.
 
 The targeted audience are people who want to grow their own plants, but also for finding the perfect gift among plant lovers.
 
@@ -38,36 +38,36 @@ The targeted audience are people who want to grow their own plants, but also for
 ## Overview
 The purpose of this project was to create a project that satisfied the assessment criteria of Code Institutes Project 5, E-commerce module. Some of the criterias were:
 - Create a functioning E-commerce store
-- User can checkout their products via payment system, Stripe. 
-- Have authentication system for users
+- User can checkout their products via a payment system, Stripe. 
+- Have a authentication system for users
 - Have full CRUD functionality 
 - Use search engine optimization and descriptive meta tags
-- User is be able to sign up to newsletters 
+- User is able to sign up to newsletters 
 
-The criterias required three custom made models that suited the project. The models I created were 
+The criterias required three custom made models that suited the project. The models I created was 
 - Wishlist
 
 The user can store products in a wishlist by clicking the "Add to wish" button in the products view. In the wishlist view the user can see their added wishes and remove them from the wishlist.
 - Contact
 
-The user can send messages to the company from the Q&A view. The user will then receive a confirmation email that the form has been submitted. The message will be saved into the admin panel. 
+The user can send messages to the company from the Q&A view. The user will then receive an confirmation email that the form has been submitted. The message will be saved into the admin panel. 
 
 - Product
 
 This module was a part of Code Institute walkthrough project, but I have altered it to suit this project and added fields to make it custom made. 
 
 ##### Customer goals
-This project aims to create an inviting and easy navigated website for customers. To achieve this following features has been created:
+This project aims to create a inviting and easy navigated website for customers. To achieve this the following features has been created:
 - The user can search and filter trough products
 - The user can create and manage their user profile.
 - The user can store products that they would like to remember in a wishlist
-- The user can contact Root me via a contact form
+- The user can contact Root Me via a contact form
 - The user can display previously created orders inside their profile
 - The user can sign up to a newsletter
 
 #### Business goals
-The main goal for Root me is to find people who want to buy plants, for themself or as a gift. As a business owner it is therefore important to be able to find these people, but also having an easy to manage inventory on the website. To achieve this following features exist on the website:
-- The admin can manage the store form the live site
+The main goal for Root Me is to find people who want to buy plants, for themself or as a gift. As a business owner it is therefore important to be able to find these people, but also having an easy to manage inventory on the website. To achieve this following features exist on the website:
+- The admin can manage the store form the live website
 - Collect email addresses for newsletter
 - Use a payment system called Stripe
 - Adding, delete and update products via Product Management link on website
@@ -82,14 +82,14 @@ The colors used on the website are mostly green and white. The white is to keep 
 To make the product images really pop the background was set to white, which allowed the beautiful product images to really stand out.
 Green elements were instead added to buttons. This created a nice balance that still had the green nature vibe but also would bring the users attention where it should be, at the products.
 
-The green color chosen for the project is called Reseda green, which has a calming green note. Green is a difficult color to work with because too much of it does not create an appealing look. To create a more professional look some buttons have black or white background. This created a more organized overall look on the website. 
+The green color chosen for the project is called Reseda green, which has a calming green tone. Green is a difficult color to work with because too much of it does not create an appealing look. To create a more professional look some buttons have black or white background. This created a more organized overall look on the website. 
 
-Most of the text content is black. To be able to prioritize the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) were set to an ashy tone.
+Most of the text content is black. To be able to prioritize the content on the website, the content of higher value (ex, product information) was set to black. The content that did not need the users attention straight away (ex, footer) was set to white.
 
 ![Color-schema](/docs/readme/readme_images/theme-color.png)
 
 ## Strategy Plane
-In order to create a good user experience and also strategies how to design the project I tried to answer the following questions.
+In order to create a good user experience and also strategize how to design the project I tried to answer the following questions.
 
  What are the User needs?
 - See prices
@@ -99,7 +99,7 @@ In order to create a good user experience and also strategies how to design the 
 - See images of the plants
 - Be able to buy pots and other compliments
 
-What Features can be provided to satisfy those needs?
+What Features can be provided to satisfy these needs?
 - Have prices and information about the plants displayed
 - Offer to wrap plants as gifts, have gift cards and small presents that can be attached to the plant
 - Show the plants in environments that inspires users to buy the plants
@@ -108,7 +108,7 @@ What Features can be provided to satisfy those needs?
 How can I make information easy to understand?
 - With clear descriptive text 
 - Easy layout to navigate
-- Have filters for users to navigate
+- Have filters for user to navigate
 
 How can I demonstrate expertise, authoritativeness and
 trustworthiness in the content?
@@ -117,22 +117,22 @@ trustworthiness in the content?
 - Nice looking pictures that are consistent in style
 - Easy to navigate website
 - Clear and informative descriptions 
-- Links to social medias where users can check out the business
+- Links to social medias where the user can check out the business
 - Have social media platforms where previous buyers can show off their plants
 
 
 How can I help users to discover other relevant parts of web application?
 - Links to social medias
-- Have a front end that makes users want to stay on the website
+- Have a front end that makes the user want to stay on the website
 - Have features that shows similar plants as the user has been interested in earlier
-- Show plants that are suitable in similar environments
+- Show plants that are suitable in similar environment
 
 ## Agile Methodologies
 ### Canban board and MosCOW Prioritization
 This project has been planned with agile methodology. Before any code was written, issues were created for both users and store owners. The issues represent fictive requirements for users and store owners. The requirements were then briefly described with acceptance criterias. This would describe what I would need to do in order to fulfill the issue. There is a section called Tasks that describes what needs to be done in order for the issue to be accepted.
 
 
-The issues were then prioritized into categories according to MosCoW prioritization. I used GitHub to create structure while planning my project. I gave all my issues labels such as, Good to have, Must have and Nice to have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have was to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this project is an MVP, not all issues were not finished, but all Must have were prioritized and completed.
+The issues were then prioritized into categories according to MosCoW prioritization. I used GitHub to create structure while planning my project. I gave all my issues labels such as, Good to have, Must Have and Nice to Have. The Must have were required for the assessment criterias but from a users perspective. The Good to Have was to improve user experience but not required in the finished project. The Nice to have were from my own perspective of what I would like to create if there was time. As this project is an MVP, not all issues were finished, but all Must have were prioritized and completed.
 
 
 ### User Stories
@@ -172,7 +172,7 @@ The issues were then prioritized into categories according to MosCoW prioritizat
 - 9. The user can easily navigate on the website by using the main navigation bar. The user will receive helpful toast messages when performing actions. The input fields will provide information on what kind of inputs that are expected if the user enters wrong information. 
 - 10. The store owner has full CRUD functionality over the products and can update, edit or delete products.
 - 11. The site owner will have information about the user inside the django admin panel. 
-- 12. The customers can visit Root Me's Facebook page by clicking the social media link in the footer. There are also links to instagram and youtube but there is no content related to Root Me in those links.
+- 12. The customers can visit Root Me's Facebook page by clicking the social media link in the footer. There are also links to Instagram and Youtube but there is no content related to Root Me in those links.
 - 14. The users basket is stored in sessions so the user can leave the site but still have their products inside the basket. This will of course not work if the user updates cash since the session disappears. 
 - 15. The user can enter text input to search for products in main navigation. 
 - 17. The user is able to see what pot size the plants require and then search for suitable pots. 
@@ -216,7 +216,7 @@ For this project I created Wireframes with the Balsamiq tool. I decided to do th
 </details>
 
 ### Sprints - Milestones
-The issues were then categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
+The issues were categorized into sprints. I tried to create a chronological order for how all my issues would be handled in a certain timeframe. This was to make sure that I would be able to finish the project on time with all the Must Have finished. Even though I had my sprints, I was not always able to follow it for various reasons. Sometimes debugging would take a lot of time and to be able to let go of the problem and move on was one of the hardest challenges, but also a valuable lesson. Creating these sprints made me realize early in the project that I had to work on time management to make sure I would at least have an MVP in the end of the project. 
 
 **Sprint**|**Sprint**|**Start**|**Finished**
 :-----:|:-----:|:-----:|:-----:
@@ -233,11 +233,11 @@ The issues were then categorized into sprints. I tried to create a chronological
 
 ## Marketing
 #### Business Module
-Root Me is a business-to-consumer (B2C) company. For a B2C company it is important to know who the targeted customers are and how to reach out to them.
+Root Me is a business-to-consumer (B2C). For a B2C company it is important to know who the targeted customers are and how to reach out to them.
 
 In this project a Facebook page was created to be able to reach out to customers. The Facebook page will allow the store owner to publish campaigns and events that will attract the targeted audience.
 
-In this fictitious e-commerce I would imagine the audience to be people of ages between 15-60 years. They are believed to enjoy working with plants as otherwise it would be easier to buy a plant and not a cutting. The audience would be people who enjoy spending time and money on their plants. The customer would be interested in information about how to take the best care of their plants. One way to satisfy the targeted audience would be to have descriptive text of how to take care of plants. On the Facebook page the owner could publish content about how to properly cut cuttings from plants, or show how to trim certain plants. For this project a newsletter subscription is available for users. The news letter could be used to tell customers about what plants are in season or advertise new products that are available in the store.
+In this fictive e-commerce I would imagine the audience to be people of ages between 15-60 years. They are believed to enjoy working with plants as otherwise it would be easier to buy a plant and not a cutting. The audience would be people who enjoy spending time and money on their plants. The customer would be interested in information about how to take the best care of their plants. One way to satisfy the targeted audience would be to have descriptive text of how to take care of plants. On the Facebook page the owner could publish content about how to properly cut cuttings from plants, or show how to trim certain plants. For this project a newsletter subscription is available for users. The news letter could be used to tell customers about what plants are in season or advertise new products that are available in the store.
 
 Because this is a B2C business it is important to have an easy checkout system as the users are impulsive shoppers. Therefore it is important to design the webpage to make it as easy as possible for the customers to click on a product, add it to their basket and checkout. To create greater revenue it would be a good idea to have related products, or other shoppers also bought section right before the checkout.
 
@@ -252,15 +252,13 @@ Users who visit the website are asked to sign up for Root Me's newsletter via Ma
 ![Newsletter](/docs/readme/readme_images/news-letter.png)
 
 #### SEO
-Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plant. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my KEYwords and
+Early in the project development I started researching and planning search engine optimization. I wrote down keywords that I thought would be appropriate for an e-commerce selling plants. I tried short- and long tailed words. Some of the short tailed words were: cuttings, plants, root. A few longtailed words were: Grow plants yourself, Buy plants as presents, cuttings from plants. I used Wordtracker to filter my key words and
 research their relevance and compare it to similar words. When I started finishing up the project I tried implementing some of these words to improve my search optimization.
 
 Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons.
- 
-Before finishing the project a sitemap.xml and robots.txt file was created to optimize search engine results. The sitemap was created with XML Site map and placed in the root directory of the project. The robots.txt file was also placed in the root directory with instructions for search engine crawlers of what folders they were allowed inside. I choose to disallow accounts and baskets for user privacy reasons. 
 
 ### Database Schema
-Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is an early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
+Early in the project I started thinking about the models that I would need in this project. I started thinking about which models should be related to each other and what kind of table it would be. Below is a early sketch of my models. They were later modified and do not represent the finished product, but the relationship between them stayed the same. The database model sketch was created with Lucidchart.
 
 ![Database models](/docs/readme/readme_images/database-models.png)
 
@@ -273,7 +271,7 @@ The navbar has a clean look with easy navigation. There is a banner encouraging 
 ![Nav-smaller-scr](/docs/readme/features/smaller-screen-nav.png)
 
 ### Footer
-The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wish to contact Root Me a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social media, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content.
+The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wish to contact Root Me, a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social media, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content.
 
 ![Footer](/docs/readme/features/footer.png)
 
@@ -288,7 +286,7 @@ Inside the shop all products are displayed. The user is able to sort the product
 ![Products](/docs/readme/features/products.png)
 
 ### Product Detail 
-By clicking the image on the products page the user is directed to the product detail page. Here the user can read a description of the chosen product. See what stage the plant is in, If it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the Add to basket button.
+By clicking the image on the products page the user is directed to the product detail page. Here the user can read a description of the chosen product. See what stage the plant is in, if it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the "Add to Basket" button.
 The quantity select box will be disabled if the value is too low (0) or too high (99).
 
 ![product detail](/docs/readme/features/product-detail.png) 
@@ -309,6 +307,10 @@ Here the user can insert information about shipping and billing. Signed in users
 
 ![Overlay](/docs/readme/features/overlay.png)
 
+![Auto-reply](/docs/readme/features/auto-reply-checkout.png)
+
+![Stripe](/docs/readme/features/stripe.png)
+
 ### User authentication
 The user can commit several different actions on the website without being a registered user. However, to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will receive an email to confirm the email address. When the email address has been confirmed the user can sign in.
 To then sign in and sign out is very easy. The login and logout buttons are available from my profile in the main navigation bar.
@@ -322,7 +324,7 @@ To then sign in and sign out is very easy. The login and logout buttons are avai
 ![My profile](/docs/readme/features/my-profile.png)
 
 ### Wishlist
-A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also choose to take out the product from the Wishlist by clicking the remove link. 
+A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also choose to remove the product from the Wishlist by clicking the remove link. 
 
 ![wishlist](/docs/readme/features/wishlist.png)
 
@@ -345,11 +347,11 @@ If the user is signed in as a superuser he/she is able to add/edit and delete pr
 ## Future Features
 There are a lot of features that I would like to add. As mentioned in my issues I would like for the user to be able to sort plants into categories such as plant needs. This would be to allow users to filter plants that suit them.
 
-I would also like to improve the wishlist in the future so the user can email their wishlist to themselves or someone else with their wishes.
+I would also like to improve the Wishlist in the future so the user can email their wishlist to themselves or someone else with their wishes.
 
 I would like to have better gift planning alternatives. Where the user can enter different kinds of packaging options, adding giftcard and similar things.
 
-I would also like to work a bit more with adding stock numbers that will inform the user/store owner if a product is finished.
+I would also like to work a bit more with adding stock numbers that will inform the user/store owner if a product is out of stock.
 
 I would like to create a function for users to delete their Order History. At the moment there is no way for the user to delete the history and therefore the Order History will go on and on. It doesn't look very nice and does not create a great user experience. This is the feature I would prioritize above all the other features.
 
@@ -441,7 +443,7 @@ All code has been passed through W3 validation service. One error was left unsol
 ### CSS validation
 All CSS has been passed trough W3 validation without errors.
 ### JavaScript validation
-
+All JavaScript has been tested without errors.
 ### Pep 8
 All Pytohn code has been passed trough CI Pytohn linter.
 ### Python validator
@@ -772,6 +774,6 @@ I have used chatGPT to generate information about products, converting excel she
 
 As always I want to thank my mentor Brian O'Hare, who I am really going to miss after submitting this project. Thank you so much Brian for helping me on my coding journey!
 
-Thanks to all my colleagues on slack, it has been a pleasure getting to know all of you!
+Thanks to all my colleagues on Slack, it has been a pleasure getting to know all of you!
 
 I would like to thank tutoring services at Code Institute and of course Code Institute for this course.

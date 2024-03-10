@@ -136,7 +136,7 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 
 <summary>context</summary>
 
-![context](/docs/readme/pep8-testing/basket-p8.context.png)
+![context](/docs/readme/pep8-testing/basket-p8-context.png)
 </details>
 
 #### Checkout
@@ -195,7 +195,7 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 
 <summary>form</summary>
 
-![form](/docs/readme/pep8-testing/checkout-pep8.form.png)
+![form](/docs/readme/pep8-testing/checkout-pep8-form.png)
 </details>
 
 <details>
@@ -313,8 +313,6 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 
 <details>
 
-<details>
-
 <summary>forms</summary>
 
 ![forms](/docs/readme/pep8-testing/profiles-pep8-forms.png)
@@ -334,23 +332,30 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 ![urls](/docs/readme/pep8-testing/profiles-pep8-urls.png)
 </details>
 
+<details>
+
 <summary>views</summary>
 
 ![views](/docs/readme/pep8-testing/profiles-pep8-views.png)
+
 </details>
 
-<details>
 
 #### Root Me
+
+<details>
 
 <summary>urls</summary>
 
 ![views](/docs/readme/pep8-testing/rootme-pep8-urls.png)
+
 </details>
 
-<details>
+
 
 #### Wishlist
+
+<details>
 
 <summary>admin</summary>
 
@@ -440,8 +445,10 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 | 9        | Active response  | "User can navigate between pages<br>User actions are met with appropriate toast messages"                                        | YES      |
 
 ## Project Bugs and Solutions:
-- Saving information to user profile
+#### Saving information to user profile
+
 There has been an issue with saving information to user profiles. The profile is saved and contains the correct information but when the form is prefilled with information it is added as a tulpe. If the fields are not cleared the tulpe will become a tulpe inside another tulpe and so on. This problem does not occur every time so it has been really hard to find the key to this error. I have printed out the information in the terminal to see what was saved to the database and it contains the right values. I also created a new database and remigrated all models to the new database. For some reason this error will still pop up sometimes. The solution to this problem would be to further investigate the code, because there is not anything wrong with the database as I have tested to use index to get only a part of the value in the input fields. This would fetch the correct information according to the index, but the information would still be inside a tulpe.
+
 Status: Unsolved
 
 <details>
@@ -450,12 +457,14 @@ Status: Unsolved
 ![Bug documentation](/docs/readme/readme_images/profile-bug.png)
 </details>
 
-- Django Countries
+#### Django Countries
 I have a second bug that is thought to be related to the first bug. As Django Countries only accepts 2 characters inside the field. These would create big problems while going through checkout because the intent_success function would not work because the country field is too long. Like previously mentioned it is probably related to the first bug but for the code to work I choose to take out the Country field so the information will not be saved from the form. With this code left out everything worked fine.
+
 Status: Temporarily fix, Unsolved
 
-- My profile links on Edit product view
+#### My profile links on Edit product view
 For some reason two otherwise working links to Add Product and My Profile stop working while on Edit Product view. This is really weird because the links are working on any other page and it is the same nav. 
+
 Status: Under investigation
 
 ### Browser Testing
