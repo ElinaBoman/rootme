@@ -10,7 +10,7 @@ def _send_confirmation_email(customer_email):
     Send confirmation email to customer
     """
     subject = 'Q&A'
-    body = 'Thank you for reaching out, we will be in \
+    body = 'Thank you for reaching out, we will be in\
             contact with you shortly!\n Best regards,\nRoot|Me'
     send_mail(
         subject,
