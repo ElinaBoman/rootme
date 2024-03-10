@@ -391,16 +391,299 @@ All Pytohn code has been passed trough CI pytohn linter.
 All python code was tested with flake8. Some errors were left unfixed. This was because the code that would generate these errors has not been written by me. The errors occur in migrations and make_url. Some lines too long were left inside the webhook and webhook_handler because the code would malfunction if I broke it up.
 
 ## Deployment
-### Create Heroku app
-- Install Django and Gunicorn
-- Install libraries: dj_database_url and psycopg2
-- 
-- Create requirements.txt file
-- Create a project with the command django-admin startproject rootme . (replace rootme with your project name). Do not forget the ".'' In the end, it's very important.
-- Create app with command: python manage.py startapp blog (Replace 'blog' with name of your app)
-- To create database models run: python manage.py makemigrations
-- Then run: python manage.py migrate
+### Connect to GitHub
+To recreate this project the following steps need to be carried put:
+- If you don't have a GitHub account, create one.
+- First of all you will need the Code Institute Full tamplate.
+- Locate this template and click "Use this template" followed by "Create new repository"
+- Choose a name for your repository and click "Create repository from template"
+- When your new repository has been created open up the repository in a IDE of your own choosing. This should generate your new workspace.
+
+### Django Project Set up
+- Inside your IDE, install Django supporting libraris with
+-      pip3 install 'django<4' gunicorn
+-      pip3 install dj_database_url psycopg2 
+- Remember to list dependencies in a requirements.txt file. You can do this by using following command:
+-       pip3 freeze --local > requirements.txt
+- Then you are ready to start your new project! Create a project with the command:
+-      django-admin startproject rootme . 
+- (replace rootme with your project name). Do not forget the ".'' In the end, it's very important.
+- Create app inside your new project with command:
+-      python manage.py startapp blog (Replace 'blog' with name of your app)
+- To create database models run: 
+-     python manage.py makemigrations
+- Dont forget to add all your apps to INSTALLED_APPS in setting.py
+-  Then run this command to follow trough with your migrations: 
+-     python3 manage.py migrate
+- Now would be a good time to create a super user for your project. Do this by entering 
+-     python3 manage.py createsuperuser
+- Create a env.py to store sensitive information such as keys to database. Add your env.py to a gitignore file to prevent information from being pushed to GitHub.
+
+Inside env.py
+- import os
+- os.environ["DATABASE_URL"]="copieDURLfromElephantSQL"  //Replace the string with your URL form ElephnatSQL, we will retrive this in upcomming steps!
+- os.environ["SECRET_KEY"]="superSecretKey" // Replace superSecretKey with secret key 
+
+Inside settings.py you need to add
+- import os
+import dj_database_url
+- if os.path.exists("env.py"):
+- import env
+- SECRET_KEY = os.environ.get("SECRET_KEY") // Your env.py secret key goes inhere.
+
+rEPLACE databases with:
+-     DATABASES = {
+      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      }
+
+- Set up templates 
+-  Under BASE_DIR enter TEMPLATES_DIR = os.path.join(BASE_DIR, ‘templates’)
+- Update TEMPLATES = 'DIRS': [TEMPLATES_DIR] with following:
+-     os.path.join(BASE_DIR, 'templates'),
+      os.path.join(BASE_DIR, 'templates', 'allauth')
+
+- Create the media, static and template directories in your project IDE workspace
+- Create a Procfile and add following inside it:
+-       web: gunicorn rootme.wsgi  // (Your project name)
+- Finish up with running migrations
+
+Elephant SQL
+- Go to Elephant SQL and create a new database for your project.
+- You can chose the Tiny Turtle plan
+- Selects the closest region and data center to you
+- From your new database, locate the dashboard and retrive your url. This is what we will enter inside our env.py file. 
+
+### Heroku Deployment
+- If you don't have an Heroku account, create one. 
+- When your account has been set up you can find a button "New" in the top right corner. From here chose "Create New App"
+- Chose app name and region. Click "Create App"
+- Locate the "Deploy" tab. Inside this tab there is a section called "Config Vars". Click "Reveal Config Vars". 
+- Here you add all your KEY:VALUE pairs for your app. Following keys will be in here when we are done setting up our project:
+DATABASE_URL= KEY
+DISABLE_COLLECTSTATIC= 1 // Remove this before finishing up your project
+SECRET_KEY= KEY
+AWS_ACCESS_KEY= KEY
+AWS_SECRET_ACCESS_KEY= KEY
+EMAIL_HOST_PASS= KEY
+EMAIL_HOST_USER= KEY
+STRIPE_PUBLIC_KEY= KEY 
+STRIPE_SECRET_KEY= KEY
+STRIPE_WH_SECRET= KEY
+USE_AWS= KEY
+
+- You will need to add heroku host name into ALLOWED_HOSTS in your settings.py file.
+- To deploy this project you will have to set DEBUG=TRUE to FALSE in your setting.py file, don't forget to make your last git add, commit and push to GitHub!
+- Go to the "Deploy" tab in Heroku and choose GitHub as deployment method
+- Search for your repositry name, selct branch of your own choosing. Finish up by clicking "Connect" button
+- You can choose if you would like automatic deployments. This means everytime you push changes to GitHub, your project will be deployed. If you would rather do it youself you can choose to have Manual deployment. 
+- After deploying your project you can view the building process. If everything has been set up correctly you can view your new app by clicking "View". When you are doing your last deployment you will have to remove DISABLE_COLLECTSTATIC from from your config vars!
+
+### Google Mail Set up
+- Time to set up Gmail Account! If you have an G-mail account you can log in, otherwise you will have to create an account.
+- When you are signd in to G-mail locate the settings tab. Go to Other Google account settings. Go on to Accounts, Import, Other, Account Settings.
+- Activate 2-step verification
+- Verify access App Passwords and locate Other.
+- Enter a name for your password.
+- Click "Create", this should retrive a key for you. Copy the key. We will now set up Email Settings in settings.py
+- In your settings.py add following:
+-     if 'DEVELOPMENT' in os.environ:
+      EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+      DEFAULT_FROM_EMAIL = 'rootme@example.com'
+
+      else: 
+      EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+      EMAIL_USE_TLS = True
+      EMAIL_PORT = 587
+      EMAIL_HOST = 'smtp.gmail.com'
+      EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+      EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+      DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+- Remember to add EMAIL_HOST_PASSWORD and EMAIL_HOST_USER in your Heroku Config vars.
+
+### Set up AWS
+- Create AWS account and login
+- First we need to set up a bucket. Search for S3 Bucket and name it to match your Heroku app name. Choose the region closest to you.
+- Allow All Public Access, and check "Bucket will be public" to allow the bucket to connect to Heroku.
+- In object ownership, ACLS enabled, Bucket owner preferred
+- Properties tab, turn on static web hosting and add "index.html" and "error.html" into the assigned fields. Click "Save"
+- Locate Permisosns tab, and pase following CORS configuration:
+-     [
+ 	      {
+ 		      "AllowedHeaders": [
+ 			    "Authorization"
+ 		      ],
+ 		      "AllowedMethods": [
+ 			    "GET"
+ 		      ],
+ 		      "AllowedOrigins": [
+ 			    "*"
+ 		      ],
+ 		      "ExposeHeaders": []
+ 	        }
+      ]
+
+- Copy ARN string
+- From "Bucket Policy" tab, locate the Policy Generator and follow theese steps:
+  - Policy Type: S3 Bucket Policy
+
+  - Effect: Allow
+
+  - Principal: *
+
+  - Actions: GetObject
+
+  - Amazon Resource Name (ARN): paste-your-ARN-here
+
+  - Click "Add Statement"
+
+  - Click "Generate Policy"
+
+  - Copy the Policy, and paste it into the "Bucket Policy Editor"
+
+-     {
+        "Version": "2012-10-17",
+        "Id": "Policy1708951183151",
+        "Statement": [
+          {
+            "Sid": "Stmt1708951168443",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::rootme-fcab110145ab/*"
+          }
+        ]
+      }
+- Click "Save"
+- In the "Access Control List", "Edit", enable list for "Public Access", accept the warning.
+
+AWS- IAM set up
+- In the AWS service meny, go to "Create New Group"
+- Give group a name
+- Locate Review Policy, User Grups and select your newly created group
+- Locate the Permission tab, Add permisisons and click "Attach Policies"
+- Select policy and Add permissions at the bottom. 
+- From JSON tab, select Import Managed Policy. search for S3 and choose Amazon3fULLaccess polity.
+- Import
+- Copy the ARN code form S3 bucket.
+-       {
+              "Version": "2012-10-17",
+              "Statement": [
+                      {
+                        "Effect": "Allow",
+                        "Action": "s3:*",
+                        "Resource": [
+                                  "arn:aws:s3:::bucket-name",
+                                  "arn:aws:s3:::bucket-name/*"
+                        ]
+                      }
+                ]
+ 	        }
+
+- Click "Rewiew Policy" enter a name and description. Click "Create Policy"
+- Search for your new policy and click "Attach Policy
+- Inside User Groups, add user. Give the user a name that suits your project
+- Select AWS Access Type, select Programmatic Access. Add group to your new user. Go to Review, User, Create User
+- Download cvs and make sure to save this on a safe place.
+
+### Media Folder Set up
+- In Heroku you will need to remove DISABLE_COLLECTSTATIC 
+- Back in AWS S3, create a new folder called media, add all your project images. You will have to go to Manage Public Permissons and Grant public read access to the objects. Finish this by clicking "Upload"
+
+### Connect AWS and Django
+- Install following packages to start using your bucket
+-     pip3 install boto3
+-     pip3 install django-storages
+
+- In your settings.py add:
+-     INSTALLED_APPS = [
+      'storages',
+      ]
+- Then you will of course need to add you AWS variables in your env.py file.
+- Add following into your setting.py imports
+-     from pathlib import path
+
+Ensure DATABASES are set up like this:
+
+-     if "DATABASE_URL" in os.environ:
+      DATABASES = {
+        "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      }
+      else:
+      DATABASES = {
+        "default": {
+          "ENGINE": "django.db.backends.sqlite3",
+          "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+        }
+      }
+- Set up media and static file storage in settings.py:
+      -STATIC_URL = "/static/"
+      STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+
+      MEDIA_URL = "/media/"
+      MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+- S3 bucket config inside settings.py
+-     if 'USE_AWS' in os.environ:
+      # Cache control
+      AWS_S3_OBJECT_PARAMETERS = {
+          'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+          'CacheControl': 'max-age=94608000',
+      }
+      # Bucket Config
+      AWS_STORAGE_BUCKET_NAME = 'rootme-fcab110145ab'
+      AWS_S3_REGION_NAME = 'us-east-1'
+      AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+      AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+      AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+      # Static and media files
+      STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+      STATICFILES_LOCATION = 'static'
+      DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+      MEDIAFILES_LOCATION = 'media'
+
+      # Override static and media URLs in production
+      STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+      MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+- You will need to create a file called custom_storages.py in your main project directory.
+- Inside this newly created file add:
+-     from django.conf import settings
+      from storages.backends.s3boto3 import S3Boto3Storage
+
+
+      class StaticStorage(S3Boto3Storage):
+          location = settings.STATICFILES_LOCATION
+
+
+      class MediaStorage(S3Boto3Storage):
+          location = settings.MEDIAFILES_LOCATION
+- Now the AWS Bucket should be connected!
+
+### Stripe Set up
+- Create and login to Stripe account
+- In the stripe Dashboard, locate your API keys.
+- Add your STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY to your env.py file and Config Vars in Heroku.
+- Set up Webooks Stripe Dashboard, developers, Webhooks, Add EndPoint. Add 'herokuapp url/checkout/wh' to Endpoint.
+- Choose Retrive all events and Add Endpoint
+- Add the new key STRIPE_WH_SECRET in your env.py file and Heroku Config Vars
+- All set!
+
+## Developers
 ### Making a clone
+Follow theese steps to create local clone on GitHub
+- Log in to GitHub account
+- The Rootme repositry can be found [here! ](https://github.com/ElinaBoman/rootme)
+- In the repositry file section, navigate to the "Code" button.
+- Choose how you would like to clone the project and copy the URL to your clipboard
+- Open your Git Bash terminal
+- Switch the current working directory to the location you would like the cloned directory to be made.
+- Type
+-     git clone
+- Paste in the URL that you created earlier
+- Click "Enter". The local clone should now be created
+- Use 
+-     pip3 install -r requirements.txt
+- Now the dependencies and libraries needed for project should be installed!
 
 ### Before Deployment
 - Set DEBUG=False in settings.py.
@@ -411,41 +694,13 @@ All python code was tested with flake8. Some errors were left unfixed. This was 
 - To run a website you need to add allowed_hosts under ALLOWED_HOSTS in settings.py. You
 can find the hostname if you try opening up the project with: python manage.py runserver.
 
-### Deployment to heroku
-- Create a Heroku account
-- Login to Heroku account
-- In the dashboard choose "Create new app". It's located in the middle of the dashboard
-- Give the new app a name and choose what region you are from
-- When information is entered, find the tabs to Overview, Resources, Deploy, Metrics, Activity, - Access and Settings. This should be in the upper right of the site. Click the "Settings" tab
-- Find the Config Vars section and click the "Reveal Config Vars" Enter information if there is hidden information in the GitHub repository. In this project a creds.json file was entered. If you don't have any hidden information in GitHub, step over the two following sections
-- Inside Create config vars, enter KEYS and VALUE. Inside KEYS enter CREDS and copy and paste information from creds.json file, into VALUE. 
-- Click the "Add" button
-- Add a new KEY with PORT and VALUE 8000. Click the "Add" button
-- Scroll down to the Buildpacks section. Click the"Add buildpack" button
-- Choose buildpack Python and "Save changes". Add another buildpack with nodjs. Save changes. It is important that the buildpacks are added in the correct order. Drag and drop buildpacks if they are in the wrong order
-- When buildpacks are in order. Locate the "Deploy" tab. It's found on the left side of the "Settings" tab
-- In the Deployment method section, choose GitHub to connect to the repository. Confirm request to connect to GitHub
-- Search for the repo-name. This is the name of the repository. Click "Search"
-- Click "Connect" to link Heroku app to GitHub repository
-- Scroll down to Automatic deploy section and Manual deploy section
-- Choose how the project should be deployed. If Enable Automatic Deploys, Heroku rebuilds the app every time new changes are pushed inside the working environment
-- If Manual deploy is chosen the current state of the project will be deployed. For this alternative click "Deploy Branch".
-When the project is deployed there will be four green circles with check marks inside. There should be a message "Your app was successfully deployed.".
-- Click the "View" button to see the deployed project. If steps are followed there should be a mock terminal with a project inside of it. 
-Program starts automagically
 ### Forking the GitHub Repository
 - Log in to your GitHub account, or create a account if you don't have one
 - Go to the GitHub repository that you would like to fork. To find the repository, search for the repository URL inside the search bar
 - At the top of the site in the right corner of the repository page there should be a button called "Fork". Click this button
 - Choose where you would like to fork the repository
 GitHub will then create a clone of the repository at chosen location. By default you should be directed to forked repository inside your gitHub account
-### Making a Local Clone
 
-### Setting up your local environment
-
-### Getting Stripe keys
-### Getting email variables from gmail
-### Setting AWS bucket
 ## Credits
 All product images has been borrowed from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
