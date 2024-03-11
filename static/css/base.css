@@ -50,6 +50,14 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
+.cart-btn:hover,
+.cart-btn-active,
+.cart-btn-focus {
+    background: #000000;
+    color: rgb(255, 255, 255);
+}
+
+
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,

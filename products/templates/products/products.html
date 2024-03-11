@@ -68,27 +68,30 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        {% if request.user.is_authenticated %}
-                                        <form action="{% url 'add_product_to_wishlist' product.id %}" id="wishform" class="form" method="POST" enctype="multipart/form-data">
-                                            {% csrf_token %}
-                                            <Button type="submit" class="border-black float-right btn-sm btn-green">Add To Wishlist! <i class="fas fa-heart"></i></Button>
-                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        </form>
-                                    {% endif %}
                                         <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                         {% if product.category %}
-                                        <p class="small mt-1 mb-0">
+                                        <p class="small mt-1 mb-1">
                                             <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
                                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                             </a>
                                         </p>
-                                        <a href="{% url 'product_detail' product.id %}" type="submit" class="btn btn-green border-black float-right"><i class="fa-solid fa-cart-plus"></i></a>
+                                        {% endif %}
+                                        <a href="{% url 'product_detail' product.id %}" type="submit" class="btn btn-white cart-btn float-right"><i class="fa-solid fa-cart-plus"></i></a>
                                         {% if request.user.is_authenticated %}
+                                        <form action="{% url 'add_product_to_wishlist' product.id %}" id="wishform" class="form" method="POST" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            <Button type="submit" class="border-black btn-sm btn-green">Add To Wishlist! <i class="fas fa-heart"></i></Button>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
+                                        <br>
+                                        {% endif %}
+                                        {% if request.user.is_authenticated %}
+                                        <div>
                                         <small>
                                             <a class="info" href="{% url 'edit_product' product.id %}">Edit |</a>
                                             <a  class="text-danger" href="{% url 'delete_product_view' product.id %}">Delete</a>
                                         </small>
-                                        {% endif %}
+                                        </div>
                                         {% endif %}
                                     </div>
                                 </div>
