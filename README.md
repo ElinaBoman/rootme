@@ -276,83 +276,177 @@ Early in the project I started thinking about the models that I would need in th
 ### Navbar
 The navbar has a clean look with easy navigation. There is a banner encouraging users to spend more money to get free delivery. The profile Fontawsome icon will change if the user is signed in. The navbar categories will not be displayed on smaller screen sizes as they will instead be placed inside a hamburger bar. 
 
+<details>
+<summary>Navbar</summary>
+
 ![Nav-big-scr](/docs/readme/features/nav.png)
+</details>
+
+<details>
+<summary>Smaller navbar</summary>
 
 ![Nav-smaller-scr](/docs/readme/features/smaller-screen-nav.png)
+</details>
+
 
 ### Footer
 The footer has some contact information describing how to get in contact with Root Me. To make it easy for users who wish to contact Root Me, a link has been placed inside the contact us block. The link will direct the user to the Q&A contact form. There are also links to social media, Facebook, Instagram and Youtube. At the moment it is only the Facebook link that has been connected to store related content.
 
+<details>
+<summary>Footer</summary>
+
 ![Footer](/docs/readme/features/footer.png)
+</details>
 
 ### Home 
 The Home page has some made up reviews displayed from happy customers. There is also a big button for users to go directly into the product section.
 
+<details>
+<summary>Home</summary>
+
 ![Index/home](/docs/readme/features/index.png)
+</details>
 
 ### Shop
 Inside the shop all products are displayed. The user is able to sort the products through a sort by field. The products are represented with image, name, price and category. If the user is signed in there is also an "Add to Wishlist" button. To make it easy for the user to navigate the products page there is a "Up to Top" button along the right hand side.
 
+<details>
+<summary>Shop</summary>
+
 ![Products](/docs/readme/features/products.png)
+</details>
 
 ### Product Detail 
 By clicking the image on the products page the user is directed to the product detail page. Here the user can read a description of the chosen product. See what stage the plant is in, if it is a cutting, or if the plant has already been planted. The user can also see what pot-size the plant needs if it has already been planted. The user can start adding products in their basket by selecting Quantity and then click the "Add to Basket" button.
 The quantity select box will be disabled if the value is too low (0) or too high (99).
 
+<details>
+<summary>Product detail</summary>
+
 ![product detail](/docs/readme/features/product-detail.png) 
+</details>
 
 ### Shopping Basket
 Inside the basket the user has full CRUD functionality. The user can See, read, update and delete products. When the user is ready there is a Secure Checkout button that takes the user to the Checkout form. 
 
+<details>
+<summary>Basket</summary>
+
 ![Basket](/docs/readme/features/shopping-basket.png)
+</details>
+
+<details>
+<summary>Basket smaller</summary>
 
 ![Basket](/docs/readme/features/shopping-basket-smaller.png)
+</details>
 
 ### Checkout form 
 Here the user can insert information about shipping and billing. Signed in users can also choose to save information to their user profile. If the user is not signed in he/she is provided with links to create an account if they wish to save contact form information. When the form has been finished the user can enter card information. To test this use the following information, Card Number: 4242 4242 4242 4242. Add then any numbers to fill out the expiration date and CVC. To test unsuccessful card payment use, Card Number: 4000 0000 0000 0002. Add any numbers to finish the input field. If the payment has been successful the user is redirected to a success view where the order and shipping information is displayed.
 
+<details>
+<summary>Checkout form</summary>
+
 ![Checkout form](/docs/readme/features/checkout-form.png)
+</details>
+
+<details>
+<summary>Checkout success</summary>
 
 ![Checkout success](/docs/readme/features/checkout-success.png)
+</details>
+
+<details>
+<summary>Payment Overlay</summary>
 
 ![Overlay](/docs/readme/features/overlay.png)
+</details>
+
+<details>
+<summary>Auto-reply checkout success</summary>
 
 ![Auto-reply](/docs/readme/features/auto-reply-checkout.png)
+</details>
+
+<details>
+<summary>Stripe success payment</summary>
 
 ![Stripe](/docs/readme/features/stripe.png)
+</details>
 
 ### User authentication
 The user can commit several different actions on the website without being a registered user. However, to be able to store information the user has to register. The registration form is easy to use and will let the user know if there is anything wrong with user inputs. When the form is finished the user will receive an email to confirm the email address. When the email address has been confirmed the user can sign in.
 To then sign in and sign out is very easy. The login and logout buttons are available from my profile in the main navigation bar.
 
+<details>
+<summary>Registration</summary>
+
 ![Sign up](/docs/readme/features/register.png)
+</details>
+
+<details>
+<summary>Sign in</summary>
 
 ![Sign in](/docs/readme/features/signin.png)
+</details>
+
+<details>
+<summary>Sign out</summary>
+
 
 ![Sign out](/docs/readme/features/signout.png)
+</details>
+
+<details>
+<summary>My Profile</summary>
 
 ![My profile](/docs/readme/features/my-profile.png)
+</details>
 
 ### Wishlist
 A signed in user is able to store products inside a wishlist. Inside the Wishlist view the user can view the product image, name and price. The user can also choose to remove the product from the Wishlist by clicking the remove link. 
 
+<details>
+<summary>Wishlist</summary>
+
 ![wishlist](/docs/readme/features/wishlist.png)
+</details>
 
 ### Contact 
 Inside the Q&A view the user can read about normally asked questions. If the user has a question that has not been answered within the Q&A he/she is instructed to use the contact form. 
 
+<details>
+<summary>Contact Q&A</summary>
+
 ![Contact](/docs/readme/features/contact.png)
+</details>
 
 ### Admin Interface
 If the user is signed in as a superuser he/she is able to add/edit and delete products from the website. 
 
+<details>
+<summary>Admin Add</summary>
+
 ![Add](/docs/readme/features/add-product.png)
+</details>
+
+<details>
+<summary>Admin edit</summary>
 
 ![Edit](/docs/readme/features/edit.png)
+</details>
+
+<details>
+<summary>Admin delete</summary>
 
 ![Delete](/docs/readme/features/delete.png)
+</details>
+
+<details>
+<summary>Admin Django panel</summary>
 
 ![Admin panel](/docs/readme/features/django-admin.png)
+</details>
 
 ## Future Features
 There are a lot of features that I would like to add. As mentioned in my issues I would like for the user to be able to sort plants into categories such as plant needs. This would be to allow users to filter plants that suit them.
