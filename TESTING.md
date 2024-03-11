@@ -477,9 +477,14 @@ I have a second bug that is thought to be related to the first bug. As Django Co
 Status: Temporarily fix, Unsolved
 
 #### My profile links on Edit product view
-For some reason two otherwise working links to Add Product and My Profile stop working while on Edit Product view. This is really weird because the links are working on any other page and it is the same nav. 
+For some reason, two otherwise working links to 'Add Product' and 'My Profile' stoped working while on the 'Edit Product' view. This was really weird because the links were working on any other page and it was the same nav. After some investigation and with some help from tutor support at Code Institute, the problem was solved. The cause for the nav links not to work was the message toast blocking the links. This is really interesting since it is the same toast on all pages with the exact same placement. And even if I could locate the toast with DevTools, the toast was not visible but at the same time blocking the nav links. This bug was fixed temporarily by removing the info toast while updating product in the edit view.
 
-Status: Under investigation
+Status: Fixed
+
+#### Quantity input Basket view
+The quantity input field should not accept values under or over 1-99. This works perfectly in the Product Detail view but not inside the Basket view. The buttons are disabled as they should be, but the user can still enter any number manually. The JavaScript and HTML classes are the same in both views, but they are not acting in the same way. I checked the classes for min and max value in the input field which should take care of this problem, but for some reason, they do not work inside the Basket view. I have been in contact with tutor support at Code Institute, and they agreed that this was a weird bug. I would need to further investigate this bug in order to have an understanding of how to fix it.
+
+Status: Unsolved
 
 ### Browser Testing
 Project has been tested with
