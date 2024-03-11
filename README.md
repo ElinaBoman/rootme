@@ -422,7 +422,7 @@ Inside the Q&A view the user can read about normally asked questions. If the use
 </details>
 
 ### Admin Interface
-If the user is signed in as a superuser he/she is able to add/edit and delete products from the website. 
+If the user is signed in as a superuser he/she is able to add/edit and delete products from the website. The sku number for every product comes from a naming system I have made up. The category name will be the first letter of the sku number followed by a small p for plant. So for example if I would like to add a product into the Climbing plant category, it would have sku number Cp, followed by in which order this product was added. Let's say this is the first product in the Cp category, then it will have the sku Cp0001. 
 
 <details>
 <summary>Admin Add</summary>
