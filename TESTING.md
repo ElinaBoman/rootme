@@ -4,6 +4,21 @@ This is a TESTING file for the Root|Me project
 
 Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 
+## Table of Contents
+
+- [Validation](#validation)
+- [HTML](#html)
+- [CSS](#css)
+  - [JavaScript](#javascript)
+  - [Python](#python)
+- [Manual Testing](#manual-testing)
+- [User Stories Testing](#user-stories-testing)
+- [Project Bugs and Solutions](#project-bugs-and-solutions)
+- [Browser Testing](#browser-testing)
+- [Lighthouse Report](#lighthouse-report)
+- [Responsiveness](#responsiveness)
+- [Real World Device Testing](#real-world-device-testing)
+
 ## Validation
 ### HTML
 <details>
@@ -352,7 +367,6 @@ Return to README.md [here! ](https://github.com/ElinaBoman/rootme)
 </details>
 
 
-
 #### Wishlist
 
 <details>
@@ -482,7 +496,7 @@ For some reason there were a few product images that weren't displayed. Other th
 Responsiveness has been tested without significant flaws. However, there have been some issues with the footer floating into the text content. The cause of this issue is not entirely clear. Since this project was based on the Boutique Ado project from Code Institute, there may be some issues arising from modifications made to the code. It seems that there is a problem with the height of the project, which leads to issues when adjusting the footer. I attempted to add CSS classes such as position: fixed or absolute, but both classes interfered with the main content and overlapped it. Although the issue was fixed, on very large screens, the footer still places itself directly under the content. This is more of a design flaw and does not disrupt the overall functionality.
 
 ### Real World Device Testing
-Project has been tested on 
+Project has been tested on following devices without any issues
 - MacBook Air
 - Samsung Galaxy S21
 - ASUS HDMI MHL VX239

@@ -8,30 +8,38 @@ The targeted audience are people who want to grow their own plants, but also for
 
 ## Table of Contents
 
-- [General](#general)
-  - [Table of Contents](#table-of-contents)
-  - [Project Goals](#project-goals)
+- [Contents](#general)
+- [Table of Contents](#table-of-contents)
+- [Overview](#project-goals)
+  - [Customer goals](#customer-goals)
+  - [Business goals](#business-goals)
 - [UX](#ux)
-  - [Development](#development)
+- [Strategy Plane](#strategy-plane)
+- [Agile Methodologies](#agile-methodologies)
+  - [Canban board and MosCOW Prioritization](#canban-board-and-moscow-prioritization)
   - [User Stories](#user-stories)
-  - [Colors and Fonts](#colors-and-fonts)
+- [Scope plane](#scope-plane)
+- [Structural Plane](#structural-plane)
+- [Skeleton & Surface Planes](#skeleton-&-surface-planes)
   - [Wireframes](#wireframes)
-- [General Features](#general-features)
-  - [Features](#features)
-- [Database](#database)
-- [Testing](#testing)
-  - [Code Validation](#code-validation)
-  - [Testing User Stories](#testing-user-stories)
-  - [Manual Testing](https://github.com/ElinaBoman/the-muscle-factory/blob/main/docs/readme%20docs/README-TESTING.md)
-  - [Lighthouse Testing](#lighthouse-testing)
-  - [Browser Testing](#browser-testing)
-- [Future Improvements](#future-improvements)
-- [Bugs](#bugs)
+  - [Sprints](sprints)
+- [Marketing](#marketing)
+    - [Business Module](#business-module)
+    - [Facebook](#facebook)
+    - [Mailchimp](#mailchimp)
+    - [SEO](#seo)
+    - [Database Schema](#database-schema)
+- [Existing Features](#existing-features)
+- [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
-  - [Libraries](#libraries)
-    - [Packages](#packages)
+  - [Languages Used](#languages-used)
+  - [Framework and Programs Used](#framework-and-programs-used)
+  - [Libraries Used](#libraries-used)
   - [Framework and Websites](#framework-and-websites)
+- [Testing](#testing)
+- [Code Validation](#code-validation)
 - [Deployment](#deployment)
+- [Developers](#developers)
 - [Credits](#credits)
 
 
@@ -246,9 +254,11 @@ Because this is a B2C business it is important to have an easy checkout system a
 To promote the Root Me website a Facebook site was created. Facebook allows a cheap and easy way to promote websites and companies. The Root Me Facebook pages can be used to promote sales or events and help users to find the website. This would hopefully generate greater revenue for the Root Me company.
 
 ![Facebook](/docs/readme/readme_images/facebook.png)
+
 #### MailChimp
 
 Users who visit the website are asked to sign up for Root Me's newsletter via MailChimp. The newsletter subscription will pop up when the website is opened. I chose to do it like this because I didn't like the design of the mailchimp input field. I wanted to keep the website clean and not have this distractive form. Doing so there is no way for the user to subscribe for the newsletter if the newsletter window has been closed. The user can of course clean cash and load the website again, but for a normal user this would not be obvious. This is not optimal and would be something I would work more on in the feature. The user is not forced to sign up but in the future it would be a good idea to offer some form of discounts if users sign up to the newsletter.
+
 ![Newsletter](/docs/readme/readme_images/news-letter.png)
 
 #### SEO
@@ -406,7 +416,7 @@ I would like to create a function for users to delete their Order History. At th
 - Google Fonts: https://fonts.google.com/ To search for and borrow fonts.
 - Font Awesome: https://fontawesome.com/ For borrowing font icons.
 - Bootstrap: https://getbootstrap.com/ and https://getbootstrap.com/docs/5.3/getting-started/introduction/ To create classes.
-- Favicon: https://favicon.io/ To create Kettlebell image - image was taken from google and then converted to favicon.
+- Favicon: https://favicon.io/ To create seedling image - image was taken from google and then converted to favicon.
 - Amazon: https://www.amazon.se/ref=nav_bb_logo - to store images
 - Google Excel: https://www.google.com/sheets/about/ To create sheets for documentation.
 - Heroku: https://dashboard.heroku.com/ To deploy app.
@@ -765,10 +775,9 @@ GitHub will then create a clone of the repository at chosen location. By default
 All product images has been borrowed from: https://gronvaxtriket.se/
 I have been in contact with Gröna Växtriket who gave me permission to use their images in this project. Thank you so much for letting me use your beautiful images!
 
-This project is built from Code Institute walk through project, Boutique Ado :
-https://github.com/Code-Institute-Solutions/boutique_ado_v1
+This project is built from Code Institute walk through project, Boutique Ado : [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
-I been inspired by this everneed project: https://github.com/amylour/everneed/tree/main?tab=readme-ov-file#libraries--frameworks  in order to create wishlist app and readme documentation.
+I been inspired by the Everneed project: [everneed project](https://github.com/amylour/everneed/tree/main?tab=readme-ov-file#libraries--frameworks) in order to create wishlist app and readme documentation.
 
 I have used chatGPT to generate information about products, converting excel sheets into readme markdown and to write text content in Q&A. 
 
