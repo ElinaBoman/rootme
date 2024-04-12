@@ -6,6 +6,7 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
 
+
 import json
 import time
 import stripe
@@ -15,6 +16,7 @@ class StripeWH_Handler:
     """
     Handle Stripe webhooks
     """
+    print('test is function is runned twice')
     def __init__(self, request):
         self.request = request
 
@@ -38,6 +40,7 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
+        print('is handle_event runned twice?')
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
@@ -134,14 +137,6 @@ class StripeWH_Handler:
                             )
                         order_line_item.save()
 
-                product = Product.objects.get(id=item_id)
-                if isinstance(item_data, int):
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()

@@ -66,6 +66,11 @@ def checkout(request):
         if order_form.is_valid():
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
+            # Check for existing order with the same stripe_pid
+            existing_order = Order.objects.filter(stripe_pid=pid).first()
+            if existing_order:
+                messages.info(request, "This payment has already been processed!")
+                return redirect(reverse('checkout_success', args=[existing_order.order_id]))
             order.stripe_pid = pid
             order.original_basket = json.dumps(basket)
             order.save()
