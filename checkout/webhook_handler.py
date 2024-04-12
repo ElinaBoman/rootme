@@ -115,7 +115,7 @@ class StripeWH_Handler:
                     user_profile=profile,
                     email=billing_details.email,
                     mobile_number=shipping_details.phone,
-                    country=shipping_details.address.country,
+                    #country=shipping_details.address.country,
                     postalcode=shipping_details.address.postal_code,
                     city=shipping_details.address.city,
                     street_address1=shipping_details.address.line1,
