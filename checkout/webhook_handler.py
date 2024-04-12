@@ -39,7 +39,6 @@ class StripeWH_Handler:
         """
         Handle a generic/unknown/unexpected webhook event
         """
-        print('is handle_event runned twice?')
         return HttpResponse(
             content=f'Unhandled webhook received: {event["type"]}',
             status=200)
