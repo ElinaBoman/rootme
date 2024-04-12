@@ -15,7 +15,6 @@ class StripeWH_Handler:
     """
     Handle Stripe webhooks
     """
-    print('test is function is runned twice')
     def __init__(self, request):
         self.request = request
 
