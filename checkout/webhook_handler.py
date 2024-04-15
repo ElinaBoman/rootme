@@ -80,7 +80,7 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
-        while attempt <= 1:
+        while attempt <= 5:
             try:
                     order = Order.objects.get(
                     user_name__iexact=shipping_details.name,
@@ -104,8 +104,7 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=(f'Unhandled webhook received: {event["type"]} | SUCCESS: '
-                        'Verified order already in database'),
+                content=f'Unhandled webhook received: {event["type"]} | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
