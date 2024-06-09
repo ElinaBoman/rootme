@@ -85,7 +85,7 @@
                                         </form>
                                         <br>
                                         {% endif %}
-                                        {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
                                         <div>
                                         <small>
                                             <a class="info" href="{% url 'edit_product' product.id %}">Edit |</a>
